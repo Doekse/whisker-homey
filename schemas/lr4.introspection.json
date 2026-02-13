@@ -9330,44 +9330,32 @@
           "possibleTypes": null
         },
         {
-          "kind": "INPUT_OBJECT",
-          "name": "ToFSensorSlopesInputType",
+          "kind": "ENUM",
+          "name": "TOFBoardTypeHex",
           "description": null,
           "fields": null,
-          "inputFields": [
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
             {
-              "name": "ToFSensorSlopeLeft",
+              "name": "H_2909_0A00",
               "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
+              "isDeprecated": false,
+              "deprecationReason": null
             },
             {
-              "name": "ToFSensorSlopeMiddle",
+              "name": "H_2901_0A00",
               "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
+              "isDeprecated": false,
+              "deprecationReason": null
             },
             {
-              "name": "ToFSensorSlopeRight",
+              "name": "UNKNOWN",
               "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
+              "isDeprecated": false,
+              "deprecationReason": null
             }
           ],
-          "interfaces": null,
-          "enumValues": null,
           "possibleTypes": null
         },
         {
@@ -9411,35 +9399,6 @@
           "inputFields": null,
           "interfaces": [],
           "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "ENUM",
-          "name": "TOFBoardTypeHex",
-          "description": null,
-          "fields": null,
-          "inputFields": null,
-          "interfaces": null,
-          "enumValues": [
-            {
-              "name": "H_2909_0A00",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "H_2901_0A00",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "UNKNOWN",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
           "possibleTypes": null
         },
         {
@@ -9527,32 +9486,44 @@
           "possibleTypes": null
         },
         {
-          "kind": "ENUM",
-          "name": "TOFBoardTypeDec",
+          "kind": "INPUT_OBJECT",
+          "name": "ToFSensorSlopesInputType",
           "description": null,
           "fields": null,
-          "inputFields": null,
-          "interfaces": null,
-          "enumValues": [
+          "inputFields": [
             {
-              "name": "D_10505_2560",
+              "name": "ToFSensorSlopeLeft",
               "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
             },
             {
-              "name": "D_10497_2560",
+              "name": "ToFSensorSlopeMiddle",
               "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
             },
             {
-              "name": "UNKNOWN",
+              "name": "ToFSensorSlopeRight",
               "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
             }
           ],
+          "interfaces": null,
+          "enumValues": null,
           "possibleTypes": null
         },
         {
@@ -10467,6 +10438,35 @@
           "possibleTypes": null
         },
         {
+          "kind": "ENUM",
+          "name": "TOFBoardTypeDec",
+          "description": null,
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "D_10505_2560",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "D_10497_2560",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "UNKNOWN",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
           "kind": "OBJECT",
           "name": "__Schema",
           "description": "A GraphQL Introspection defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, the entry points for query, mutation, and subscription operations.",
@@ -11339,6 +11339,81 @@
           "args": []
         },
         {
+          "name": "deprecated",
+          "description": null,
+          "locations": [
+            "FIELD_DEFINITION",
+            "ENUM_VALUE"
+          ],
+          "args": [
+            {
+              "name": "reason",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": "\"No longer supported\""
+            }
+          ]
+        },
+        {
+          "name": "aws_auth",
+          "description": "Directs the schema to enforce authorization on a field",
+          "locations": [
+            "FIELD_DEFINITION"
+          ],
+          "args": [
+            {
+              "name": "cognito_groups",
+              "description": "List of cognito user pool groups which have access on this field",
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ]
+        },
+        {
+          "name": "aws_oidc",
+          "description": "Tells the service this field/object has access authorized by an OIDC token.",
+          "locations": [
+            "OBJECT",
+            "FIELD_DEFINITION"
+          ],
+          "args": []
+        },
+        {
+          "name": "aws_subscribe",
+          "description": "Tells the service which mutation triggers this subscription.",
+          "locations": [
+            "FIELD_DEFINITION"
+          ],
+          "args": [
+            {
+              "name": "mutations",
+              "description": "List of mutations which will trigger this subscription when they are called.",
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ]
+        },
+        {
           "name": "aws_cognito_user_pools",
           "description": "Tells the service this field/object has access authorized by a Cognito User Pools token.",
           "locations": [
@@ -11363,27 +11438,13 @@
           ]
         },
         {
-          "name": "aws_subscribe",
-          "description": "Tells the service which mutation triggers this subscription.",
+          "name": "aws_api_key",
+          "description": "Tells the service this field/object has access authorized by an API key.",
           "locations": [
+            "OBJECT",
             "FIELD_DEFINITION"
           ],
-          "args": [
-            {
-              "name": "mutations",
-              "description": "List of mutations which will trigger this subscription when they are called.",
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            }
-          ]
+          "args": []
         },
         {
           "name": "aws_iam",
@@ -11425,67 +11486,6 @@
               "defaultValue": null
             }
           ]
-        },
-        {
-          "name": "deprecated",
-          "description": null,
-          "locations": [
-            "FIELD_DEFINITION",
-            "ENUM_VALUE"
-          ],
-          "args": [
-            {
-              "name": "reason",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": "\"No longer supported\""
-            }
-          ]
-        },
-        {
-          "name": "aws_api_key",
-          "description": "Tells the service this field/object has access authorized by an API key.",
-          "locations": [
-            "OBJECT",
-            "FIELD_DEFINITION"
-          ],
-          "args": []
-        },
-        {
-          "name": "aws_auth",
-          "description": "Directs the schema to enforce authorization on a field",
-          "locations": [
-            "FIELD_DEFINITION"
-          ],
-          "args": [
-            {
-              "name": "cognito_groups",
-              "description": "List of cognito user pool groups which have access on this field",
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            }
-          ]
-        },
-        {
-          "name": "aws_oidc",
-          "description": "Tells the service this field/object has access authorized by an OIDC token.",
-          "locations": [
-            "OBJECT",
-            "FIELD_DEFINITION"
-          ],
-          "args": []
         }
       ]
     }

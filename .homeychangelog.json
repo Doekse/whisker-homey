@@ -94,5 +94,8 @@
   },
   "2.0.6": {
     "en": "Fixed some issues with device repair flow"
+  },
+  "2.0.7": {
+    "en": "Fixed pet driver updates not coming in"
   }
 }

@@ -755,6 +755,18 @@
               "deprecationReason": null
             },
             {
+              "name": "petTagId",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "weightIdFeatureEnabled",
               "description": "  feature flag for weight based id",
               "args": [],
@@ -832,6 +844,30 @@
             },
             {
               "name": "zodiacSign",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "petTag",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "PetTag",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "microchipNumber",
               "description": null,
               "args": [],
               "type": {
@@ -1475,7 +1511,31 @@
               "deprecationReason": null
             },
             {
-              "name": "createdAt",
+              "name": "lostPetMode",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "onboardingMethod",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "QRCount",
               "description": null,
               "args": [],
               "type": {
@@ -1487,12 +1547,12 @@
               "deprecationReason": null
             },
             {
-              "name": "updatedAt",
-              "description": "  Timestamp in milliseconds when tag was onboarded",
+              "name": "lostAt",
+              "description": null,
               "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "Int",
+                "name": "Long",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1508,6 +1568,16 @@
           "kind": "SCALAR",
           "name": "ID",
           "description": "Built-in ID",
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "SCALAR",
+          "name": "Long",
+          "description": "Long type",
           "fields": null,
           "inputFields": null,
           "interfaces": null,
@@ -2660,6 +2730,16 @@
                 "ofType": null
               },
               "defaultValue": null
+            },
+            {
+              "name": "microchipNumber",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
             }
           ],
           "interfaces": null,
@@ -3003,6 +3083,16 @@
             },
             {
               "name": "personalNotes",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "microchipNumber",
               "description": null,
               "type": {
                 "kind": "SCALAR",
@@ -4154,8 +4244,40 @@
           ]
         },
         {
-          "name": "aws_oidc",
-          "description": "Tells the service this field/object has access authorized by an OIDC token.",
+          "name": "aws_lambda",
+          "description": "Tells the service this field/object has access authorized by a Lambda Authorizer.",
+          "locations": [
+            "OBJECT",
+            "FIELD_DEFINITION"
+          ],
+          "args": []
+        },
+        {
+          "name": "aws_auth",
+          "description": "Directs the schema to enforce authorization on a field",
+          "locations": [
+            "FIELD_DEFINITION"
+          ],
+          "args": [
+            {
+              "name": "cognito_groups",
+              "description": "List of cognito user pool groups which have access on this field",
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            }
+          ]
+        },
+        {
+          "name": "aws_api_key",
+          "description": "Tells the service this field/object has access authorized by an API key.",
           "locations": [
             "OBJECT",
             "FIELD_DEFINITION"
@@ -4196,38 +4318,6 @@
           "args": []
         },
         {
-          "name": "aws_auth",
-          "description": "Directs the schema to enforce authorization on a field",
-          "locations": [
-            "FIELD_DEFINITION"
-          ],
-          "args": [
-            {
-              "name": "cognito_groups",
-              "description": "List of cognito user pool groups which have access on this field",
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            }
-          ]
-        },
-        {
-          "name": "aws_lambda",
-          "description": "Tells the service this field/object has access authorized by a Lambda Authorizer.",
-          "locations": [
-            "OBJECT",
-            "FIELD_DEFINITION"
-          ],
-          "args": []
-        },
-        {
           "name": "deprecated",
           "description": null,
           "locations": [
@@ -4246,6 +4336,15 @@
               "defaultValue": "\"No longer supported\""
             }
           ]
+        },
+        {
+          "name": "aws_oidc",
+          "description": "Tells the service this field/object has access authorized by an OIDC token.",
+          "locations": [
+            "OBJECT",
+            "FIELD_DEFINITION"
+          ],
+          "args": []
         },
         {
           "name": "aws_subscribe",
@@ -4269,15 +4368,6 @@
               "defaultValue": null
             }
           ]
-        },
-        {
-          "name": "aws_api_key",
-          "description": "Tells the service this field/object has access authorized by an API key.",
-          "locations": [
-            "OBJECT",
-            "FIELD_DEFINITION"
-          ],
-          "args": []
         }
       ]
     }
