@@ -1,0 +1,217 @@
+# Pet Tag API (f4cjexpfpbbllpsz44lxl5gxxy.appsync-api.us-east-1.amazonaws.com/graphql)
+# Auth: Bearer access_token
+
+"""This directive allows results to be deferred during execution"""
+directive @defer on FIELD
+
+"""
+Tells the service this field/object has access authorized by a Cognito User Pools token.
+"""
+directive @aws_cognito_user_pools(
+  """List of cognito user pool groups which have access on this field"""
+  cognito_groups: [String]
+) on OBJECT | FIELD_DEFINITION
+
+"""Tells the service which mutation triggers this subscription."""
+directive @aws_subscribe(
+  """
+  List of mutations which will trigger this subscription when they are called.
+  """
+  mutations: [String]
+) on FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by an OIDC token.
+"""
+directive @aws_oidc on OBJECT | FIELD_DEFINITION
+
+"""Directs the schema to enforce authorization on a field"""
+directive @aws_auth(
+  """List of cognito user pool groups which have access on this field"""
+  cognito_groups: [String]
+) on FIELD_DEFINITION
+
+"""
+Tells the service which subscriptions will be published to when this mutation is called. This directive is deprecated use @aws_susbscribe directive instead.
+"""
+directive @aws_publish(
+  """
+  List of subscriptions which will be published to when this mutation is called.
+  """
+  subscriptions: [String]
+) on FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by sigv4 signing.
+"""
+directive @aws_iam on OBJECT | FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by an API key.
+"""
+directive @aws_api_key on OBJECT | FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by a Lambda Authorizer.
+"""
+directive @aws_lambda on OBJECT | FIELD_DEFINITION
+
+"""  Query type will be defined later"""
+type Query {
+  getPetTagByTagId(petTagId: ID!): PetTag
+  getPetTagsByUser(userId: String!): [PetTag]
+  getDetectedPetTags(userId: String!): [DetectedPetTag]
+  getLostPetData(input: LostPetInput!): LostPetData
+}
+
+"""  PetTag type, aligned with pet_profile schema"""
+type PetTag {
+  petTagId: ID!
+
+  """  Changed from String! to ID! to match common practice, ensure consistency
+  """
+  userId: String!
+
+  """  Added as required based on pet_profile schema"""
+  petId: String
+
+  """  Optional, as in pet_profile schema"""
+  batteryLevel: Float
+  lostPetMode: Boolean
+
+  """  Flag to indicate that assigned pet is lost"""
+  onboardingMethod: OnboardingMethod
+
+  """  How the tag was onboarded"""
+  QRCount: Int
+
+  """  Amount of times a QR screenshot has been taken"""
+  lostAt: Long
+}
+
+"""  Enums"""
+enum OnboardingMethod {
+  QR_SCREENSHOT
+  RFID
+}
+
+"""Long type"""
+scalar Long
+
+"""  DetectedPetTag type, aligned with detected_pet_tag schema"""
+type DetectedPetTag {
+  detectionId: ID!
+  petTagId: String!
+  userId: String!
+  status: String!
+  detectedAt: Int
+}
+
+"""  LostPetData type, not exposing all pet data"""
+type LostPetData {
+  petId: String!
+  userId: String!
+  name: String!
+  type: PetType!
+  gender: PetGender!
+  weight: Float!
+  age: Int
+  profileImage: PetImage
+  environmentType: PetEnvironment
+  healthConcerns: [String]
+  isHealthy: Boolean
+  isActive: Boolean
+  petTagId: String
+}
+
+enum PetType {
+  CAT
+  DOG
+}
+
+enum PetGender {
+  FEMALE
+  MALE
+}
+
+type PetImage {
+  imagePath: String
+  s3ImageURL: String
+}
+
+enum PetEnvironment {
+  INDOOR
+  OUTDOOR
+  BOTH
+}
+
+input LostPetInput {
+  petTagId: ID!
+}
+
+"  Placeholder for Pet type if needed for return types, but ideally PetTag ops return PetTag\n type Pet { ... }"
+type Mutation {
+  "  Onboards a new pet tag or updates an existing one if it's not fully onboarded.\n If petId is provided, it implies an attempt to associate the tag with a pet.\n The service will primarily manage the PetTag entity.\n Association with a Pet entity in pet-profile will be handled separately or via events."
+  onboardPetTag(input: OnboardPetTagInput!): PetTag
+  assignPetTag(input: AssignPetTagInput!): PetTag
+  reassignPetTag(input: ReassignPetTagInput!): String
+  unassignPetTag(input: UnassignPetTagInput!): PetTag
+  offboardPetTag(input: OffboardPetTagInput!): String
+  changeLostPetModeStatus(input: ChangeLostPetModeStatusInput!): PetTag
+  reportLostPet(input: ReportLostPetInput!): Boolean
+}
+
+"""  Input for onboarding a pet tag, aligned with pet_profile schema"""
+input OnboardPetTagInput {
+  petTagId: ID!
+
+  """  Changed from String! to ID!"""
+  petId: String
+
+  """  Optional, as in pet_profile schema"""
+  userId: String!
+
+  """  Required, as in pet_profile schema"""
+  onboardingMethod: OnboardingMethod
+}
+
+"""  Input for assigning a pet tag to a pet"""
+input AssignPetTagInput {
+  petTagId: ID!
+  petId: String!
+}
+
+"""  Input for reassigning a pet tag"""
+input ReassignPetTagInput {
+  petTagId: ID!
+
+  """  Changed from String! to ID!"""
+  newPetId: String!
+}
+
+"""  Input for unassigning a pet tag (unlinking from a pet without deleting the tag)
+"""
+input UnassignPetTagInput {
+  petTagId: ID!
+}
+
+"""  Input for offboarding a pet tag"""
+input OffboardPetTagInput {
+  petTagId: ID!
+
+  """  Changed from String! to ID!"""
+  petId: String
+}
+
+input ChangeLostPetModeStatusInput {
+  lostPetMode: Boolean!
+  petTagId: ID!
+}
+
+input ReportLostPetInput {
+  petTagId: String!
+  name: String!
+  phone: String!
+  email: String!
+  note: String
+}

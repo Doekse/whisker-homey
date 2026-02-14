@@ -1,0 +1,635 @@
+# Notifications API (notifications.iothings.site/graphql)
+# Auth: Bearer id_token/access_token
+
+"""This directive allows results to be deferred during execution"""
+directive @defer on FIELD
+
+"""
+Tells the service this field/object has access authorized by an API key.
+"""
+directive @aws_api_key on OBJECT | FIELD_DEFINITION
+
+"""Tells the service which mutation triggers this subscription."""
+directive @aws_subscribe(
+  """
+  List of mutations which will trigger this subscription when they are called.
+  """
+  mutations: [String]
+) on FIELD_DEFINITION
+
+"""Directs the schema to enforce authorization on a field"""
+directive @aws_auth(
+  """List of cognito user pool groups which have access on this field"""
+  cognito_groups: [String]
+) on FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by an OIDC token.
+"""
+directive @aws_oidc on OBJECT | FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by a Cognito User Pools token.
+"""
+directive @aws_cognito_user_pools(
+  """List of cognito user pool groups which have access on this field"""
+  cognito_groups: [String]
+) on OBJECT | FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by a Lambda Authorizer.
+"""
+directive @aws_lambda on OBJECT | FIELD_DEFINITION
+
+"""
+Tells the service which subscriptions will be published to when this mutation is called. This directive is deprecated use @aws_susbscribe directive instead.
+"""
+directive @aws_publish(
+  """
+  List of subscriptions which will be published to when this mutation is called.
+  """
+  subscriptions: [String]
+) on FIELD_DEFINITION
+
+"""
+Tells the service this field/object has access authorized by sigv4 signing.
+"""
+directive @aws_iam on OBJECT | FIELD_DEFINITION
+
+type Query {
+  getUserByUserId(userId: String!): User
+  getNotificationHistoryByUser(userId: String!, timestamp: String!): [NotificationHistory]
+}
+
+type User {
+  userId: ID!
+  magentoId: String!
+  language: LanguageEnum!
+  useMetric: Boolean
+  settings: UserSettings
+  settingsV2: UserSettingsV2
+  OneSignalDevices: [Device]
+  LR4Devices: [Device]
+}
+
+enum LanguageEnum {
+  EN
+  NL
+  FR
+  DE
+  IT
+  JA
+  KO
+  PL
+  RO
+  RU
+  ES
+  TH
+  UK
+  ET
+  LV
+  LT
+}
+
+type UserSettings {
+  FR1Notifications: FR1UserNotificationSettings
+  LF1Notifications: LF1UserNotificationSettings
+  LR3Notifications: LR3UserNotificationSettings
+  LR4Notifications: LR4UserNotificationSettings
+}
+
+type FR1UserNotificationSettings {
+  all: Boolean
+  mealDispensed: Boolean
+  snackDispensed: Boolean
+  snackRejected: Boolean
+  dispenseFailed: Boolean
+  motorFault: Boolean
+  defectiveSensor: Boolean
+  levelLow: Boolean
+  chuteFullExt: Boolean
+}
+
+type LF1UserNotificationSettings {
+  all: Boolean
+  mealDispensed: Boolean
+  snackDispensed: Boolean
+  snackRejected: Boolean
+  dispenseFailed: Boolean
+  motorFault: Boolean
+  defectiveSensor: Boolean
+  levelLow: Boolean
+  chuteFullExt: Boolean
+}
+
+type LR3UserNotificationSettings {
+  all_notifications: Boolean
+  CCC_notifications: Boolean
+  CSI_notifications: Boolean
+  DFI_notifications: Boolean
+  fault_notifications: Boolean
+  CSF_notifications: Boolean
+  PD_notifications: Boolean
+  OTF_notifications: Boolean
+  DHF_notifications: Boolean
+  BR_notifications: Boolean
+  general_notifications: Boolean
+  offline_notifications: Boolean
+  CD_notifications: Boolean
+}
+
+type LR4UserNotificationSettings {
+  all_notifications: Boolean
+  CCC_notifications: Boolean
+  CSI_notifications: Boolean
+  DFI_notifications: Boolean
+  fault_notifications: Boolean
+  CSF_notifications: Boolean
+  PD_notifications: Boolean
+  OTF_notifications: Boolean
+  DHF_notifications: Boolean
+  BR_notifications: Boolean
+  general_notifications: Boolean
+  offline_notifications: Boolean
+  MTF_notifications: Boolean
+  MID_notifications: Boolean
+  LF_notifications: Boolean
+  SAL_notifications: Boolean
+  LL_notifications: Boolean
+  HPE_notifications: Boolean
+  FUS_notifications: Boolean
+  EH_notifications: Boolean
+  HMS_notifications: Boolean
+  HMO_notifications: Boolean
+  HMD_notifications: Boolean
+  CD_notifications: Boolean
+  TAG_notifications: Boolean
+  TRE_notifications: Boolean
+  TCE_notifications: Boolean
+  TDU_notifications: Boolean
+}
+
+type UserSettingsV2 {
+  FR1Notifications: FR1UserNotificationSettingsV2
+  LF1Notifications: LF1UserNotificationSettingsV2
+  LR3Notifications: LR3UserNotificationSettingsV2
+  LR4Notifications: LR4UserNotificationSettingsV2
+  LRENotifications: LREUserNotificationSettingsV2
+  LRXNotifications: LRXUserNotificationSettingsV2
+  LR5Notifications: LR5UserNotificationSettingsV2
+  LR5ProNotifications: LR5ProUserNotificationSettingsV2
+  WC1Notifications: WC1UserNotificationSettingsV2
+}
+
+type FR1UserNotificationSettingsV2 {
+  allRobotUsage: Boolean
+  mealDispensed: Boolean
+  snackDispensed: Boolean
+  levelLow: Boolean
+  allErrors: Boolean
+}
+
+type LF1UserNotificationSettingsV2 {
+  allRobotUsage: Boolean
+  mealDispensed: Boolean
+  snackDispensed: Boolean
+  levelLow: Boolean
+  allErrors: Boolean
+}
+
+type LR3UserNotificationSettingsV2 {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+}
+
+type LR4UserNotificationSettingsV2 {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  lowLitter: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  alexaCommands: Boolean
+  hopperEnabled: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+}
+
+type LREUserNotificationSettingsV2 {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  offlineAlert: Boolean
+  alexaCommands: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+}
+
+type LRXUserNotificationSettingsV2 {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  offlineAlert: Boolean
+  alexaCommands: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+}
+
+type LR5UserNotificationSettingsV2 {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  lowLitter: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  offlineAlert: Boolean
+  alexaCommands: Boolean
+  hopperEnabled: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+  visitHistory: Boolean
+}
+
+type LR5ProUserNotificationSettingsV2 {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  lowLitter: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  offlineAlert: Boolean
+  alexaCommands: Boolean
+  hopperEnabled: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+  visitHistory: Boolean
+  allCameraUsage: Boolean
+  allVideoEvents: Boolean
+  petVideoEvents: Boolean
+  audioEvents: Boolean
+}
+
+type WC1UserNotificationSettingsV2 {
+  allCameraUsage: Boolean
+  allVideoEvents: Boolean
+  petVideoEvents: Boolean
+  audioEvents: Boolean
+}
+
+type Device {
+  oneSignalPlayerId: String!
+  deviceId: String!
+  version: String!
+  os: String
+  osVersion: String
+}
+
+type NotificationHistory {
+  notificationId: ID!
+  measureName: String
+  serial: String
+  notificationType: String
+  robotType: String
+  petName: String
+  userId: String
+  activityTimestamp: String
+  responseStatusCode: String
+  responseReason: String
+  responseContent: String
+  timestamp: String
+  robotId: String
+  robotNickname: String
+  notificationSettings: String
+  shouldNotifyActivity: Boolean
+  notificationHeading: String
+  notificationMessage: String
+  oneSignalPlayerIds: [String]
+  oneSignalPlayerIdsInactive: [String]
+  oneSignalPlayerVersion: String
+  userHouseholdId: String
+  userUUID: String
+  errorMessage: String
+  ttlExpiration: Int
+}
+
+type Mutation {
+  addUser(input: AddUserInput!): AddUserOutput
+  addMobileDevice(input: AddMobileDeviceInput!): AddMobileDeviceOutput
+  deleteMobileDevice(input: DeleteMobileDeviceInput!): DeleteMobileDeviceOutput
+  updateUserSettings(input: UpdateUserSettingsInput!): UpdateUserSettingsOutput
+  updateUserSettingsV2(input: UpdateUserSettingsV2Input!): UpdateUserSettingsOutput
+  notificationSettingsUpdate(input: NotificationSettingsUpdateInput!): User
+}
+
+type AddUserOutput {
+  user: User
+  statusCode: Int!
+  body: String!
+}
+
+input AddUserInput {
+  userId: String!
+  magentoId: String!
+  language: LanguageEnum!
+  useMetric: Boolean
+}
+
+type AddMobileDeviceOutput {
+  user: User
+  statusCode: Int!
+  body: String!
+}
+
+input AddMobileDeviceInput {
+  userId: String!
+  language: LanguageEnum!
+  oneSignalPlayerId: String!
+  version: String!
+  os: String
+  osVersion: String
+  useMetric: Boolean
+}
+
+type DeleteMobileDeviceOutput {
+  user: User
+  statusCode: Int!
+  body: String!
+}
+
+input DeleteMobileDeviceInput {
+  userId: String!
+  language: LanguageEnum!
+  oneSignalPlayerId: String!
+}
+
+type UpdateUserSettingsOutput {
+  user: User
+  statusCode: Int!
+  body: String!
+}
+
+input UpdateUserSettingsInput {
+  userId: String!
+  language: LanguageEnum!
+  FR1Notifications: FR1UserNotificationSettingsInput
+  LF1Notifications: LF1UserNotificationSettingsInput
+  LR3Notifications: LR3UserNotificationSettingsInput
+  LR4Notifications: LR4UserNotificationSettingsInput
+  useMetric: Boolean
+}
+
+input FR1UserNotificationSettingsInput {
+  all: Boolean
+  mealDispensed: Boolean
+  snackDispensed: Boolean
+  dispenseFailed: Boolean
+  motorFault: Boolean
+  defectiveSensor: Boolean
+  levelLow: Boolean
+  chuteFullExt: Boolean
+  snackRejected: Boolean
+}
+
+input LF1UserNotificationSettingsInput {
+  all: Boolean
+  mealDispensed: Boolean
+  snackDispensed: Boolean
+  dispenseFailed: Boolean
+  motorFault: Boolean
+  defectiveSensor: Boolean
+  levelLow: Boolean
+  chuteFullExt: Boolean
+  snackRejected: Boolean
+}
+
+input LR3UserNotificationSettingsInput {
+  all_notifications: Boolean
+  CCC_notifications: Boolean
+  CSI_notifications: Boolean
+  DFI_notifications: Boolean
+  fault_notifications: Boolean
+  CSF_notifications: Boolean
+  PD_notifications: Boolean
+  OTF_notifications: Boolean
+  DHF_notifications: Boolean
+  BR_notifications: Boolean
+  general_notifications: Boolean
+  offline_notifications: Boolean
+  CD_notifications: Boolean
+}
+
+input LR4UserNotificationSettingsInput {
+  all_notifications: Boolean
+  CCC_notifications: Boolean
+  CSI_notifications: Boolean
+  DFI_notifications: Boolean
+  fault_notifications: Boolean
+  CSF_notifications: Boolean
+  PD_notifications: Boolean
+  OTF_notifications: Boolean
+  DHF_notifications: Boolean
+  BR_notifications: Boolean
+  LF_notifications: Boolean
+  general_notifications: Boolean
+  offline_notifications: Boolean
+  MTF_notifications: Boolean
+  MID_notifications: Boolean
+  LL_notifications: Boolean
+  HPE_notifications: Boolean
+  FUS_notifications: Boolean
+  EH_notifications: Boolean
+  HMS_notifications: Boolean
+  HMO_notifications: Boolean
+  HMD_notifications: Boolean
+  CD_notifications: Boolean
+  TAG_notifications: Boolean
+  TRE_notifications: Boolean
+  TCE_notifications: Boolean
+  TDU_notifications: Boolean
+}
+
+input UpdateUserSettingsV2Input {
+  FR1Notifications: FR1UserNotificationSettingsV2Input
+  LF1Notifications: LF1UserNotificationSettingsV2Input
+  LR3Notifications: LR3UserNotificationSettingsV2Input
+  LR4Notifications: LR4UserNotificationSettingsV2Input
+  LRENotifications: LREUserNotificationSettingsV2Input
+  LRXNotifications: LRXUserNotificationSettingsV2Input
+  LR5Notifications: LR5UserNotificationSettingsV2Input
+  LR5ProNotifications: LR5ProUserNotificationSettingsV2Input
+  WC1Notifications: WC1NotificationSettingsV2Input
+  language: LanguageEnum!
+  useMetric: Boolean
+  userId: String!
+}
+
+input FR1UserNotificationSettingsV2Input {
+  allRobotUsage: Boolean
+  mealDispensed: Boolean
+  snackDispensed: Boolean
+  levelLow: Boolean
+  allErrors: Boolean
+}
+
+input LF1UserNotificationSettingsV2Input {
+  allRobotUsage: Boolean
+  mealDispensed: Boolean
+  snackDispensed: Boolean
+  levelLow: Boolean
+  allErrors: Boolean
+}
+
+input LR3UserNotificationSettingsV2Input {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+}
+
+input LR4UserNotificationSettingsV2Input {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  lowLitter: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  alexaCommands: Boolean
+  hopperEnabled: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+}
+
+input LREUserNotificationSettingsV2Input {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  offlineAlert: Boolean
+  alexaCommands: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+}
+
+input LRXUserNotificationSettingsV2Input {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  offlineAlert: Boolean
+  alexaCommands: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+}
+
+input LR5UserNotificationSettingsV2Input {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  lowLitter: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  offlineAlert: Boolean
+  alexaCommands: Boolean
+  hopperEnabled: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+  visitHistory: Boolean
+}
+
+input LR5ProUserNotificationSettingsV2Input {
+  allRobotUsage: Boolean
+  drawerFull: Boolean
+  lowLitter: Boolean
+  cleanCycleComplete: Boolean
+  cleanCycleInterrupted: Boolean
+  catDetectedInDrawer: Boolean
+  petInactivity: Boolean
+  offlineAlert: Boolean
+  alexaCommands: Boolean
+  hopperEnabled: Boolean
+  firmwareUpdateSuccessful: Boolean
+  allErrors: Boolean
+  cycleDelay: Boolean
+  visitHistory: Boolean
+  allCameraUsage: Boolean
+  allVideoEvents: Boolean
+  petVideoEvents: Boolean
+  audioEvents: Boolean
+}
+
+input WC1NotificationSettingsV2Input {
+  allCameraUsage: Boolean
+  allVideoEvents: Boolean
+  petVideoEvents: Boolean
+  audioEvents: Boolean
+}
+
+input NotificationSettingsUpdateInput {
+  userId: String!
+  magentoId: String!
+  language: LanguageEnum!
+  settings: UserSettingsInput
+  OneSignalDevices: [DeviceInput]
+  useMetric: Boolean
+}
+
+input UserSettingsInput {
+  FR1Notifications: FR1UserNotificationSettingsInput
+  LF1Notifications: LF1UserNotificationSettingsInput
+  LR3Notifications: LR3UserNotificationSettingsInput
+  LR4Notifications: LR4UserNotificationSettingsInput
+  useMetric: Boolean
+}
+
+input DeviceInput {
+  oneSignalPlayerId: String!
+  deviceId: String!
+  version: String!
+  os: String
+  osVersion: String
+}
+
+type Subscription {
+  getUserSettingsSubscription(userId: String!): User
+}
+
+enum RobotTypeEnum {
+  FR1
+  LF1
+  LR3
+  LR4
+  LRE
+  LRX
+  LR5
+  LR5_PRO
+}
