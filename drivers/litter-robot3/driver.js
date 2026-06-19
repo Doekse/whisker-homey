@@ -270,7 +270,7 @@ module.exports = class LitterRobot3Driver extends Homey.Driver {
       this.log(colorize(LOG_COLORS.INFO, `Repair login with username: ${username}`));
       try {
         const tempSession = await this.homey.app.validateCredentials(username, password);
-        
+
         const robotsData = await tempSession.getRobots();
         const robot = robotsData.lr3.find((r) => String(r.litterRobotSerial) === String(id));
         if (!robot) {
@@ -279,7 +279,7 @@ module.exports = class LitterRobot3Driver extends Homey.Driver {
 
         await this.homey.app.signOut();
         await this.homey.app.initializeSession(username, password);
-        
+
         await device._fetchRobotData();
         this.log(colorize(LOG_COLORS.SUCCESS, 'Re-authentication successful'));
       } catch (err) {

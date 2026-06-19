@@ -199,7 +199,7 @@ module.exports = class LitterRobot3Device extends Homey.Device {
 
       const eventEmitter = session.getEventEmitter();
 
-      this._websocketUnsubscribe = eventEmitter.on(EVENTS.DATA_RECEIVED, (data) => {
+      const dataHandler = (data) => {
         if (data.deviceId === this.robotSerial) {
           // LR3 API wraps data in nested structure; normalize to consistent format
           const normalizedData = data.data.data || data.data;
@@ -207,7 +207,25 @@ module.exports = class LitterRobot3Device extends Homey.Device {
             this.error(colorize(LOG_COLORS.ERROR, 'Failed to handle robot update:'), err);
           });
         }
-      });
+      };
+
+      // Re-sync state on each (re)connection so the device recovers after a
+      // dropped connection instead of waiting for the next spontaneous update.
+      const connectedHandler = (info) => {
+        if (info.deviceId !== this.robotSerial) return;
+        this.log(colorize(LOG_COLORS.INFO, 'WebSocket (re)connected, requesting current state'));
+        this.homey.setTimeout(() => {
+          this._requestInitialState();
+        }, 3000);
+      };
+
+      eventEmitter.on(EVENTS.DATA_RECEIVED, dataHandler);
+      eventEmitter.on(EVENTS.CONNECTED, connectedHandler);
+      // EventEmitter.on() returns the emitter, not an unsubscribe fn, so build one.
+      this._websocketUnsubscribe = () => {
+        eventEmitter.removeListener(EVENTS.DATA_RECEIVED, dataHandler);
+        eventEmitter.removeListener(EVENTS.CONNECTED, connectedHandler);
+      };
 
       this.log(colorize(LOG_COLORS.SUCCESS, 'WebSocket connection established'));
 
