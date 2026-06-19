@@ -315,9 +315,24 @@ module.exports = class LitterRobotDevice extends Homey.Device {
         }
       };
 
+      // The LR4 subscription only pushes when the robot's state changes, so after
+      // an automatic reconnect (e.g. following a 1006 abnormal closure) the device
+      // would receive nothing until the robot next changes on its own. Re-request
+      // the current state on each reconnect so capabilities resync immediately.
+      const connectedHandler = (info) => {
+        if (info.deviceId !== this.robotSerial) return;
+        this.log(colorize(LOG_COLORS.INFO, 'WebSocket (re)connected, requesting current state'));
+        // Delay so the subscription is registered before the robot pushes state.
+        this.homey.setTimeout(() => {
+          this._requestInitialState();
+        }, 3000);
+      };
+
       eventEmitter.on(EVENTS.DATA_RECEIVED, dataHandler);
+      eventEmitter.on(EVENTS.CONNECTED, connectedHandler);
       this._websocketUnsubscribe = () => {
         eventEmitter.removeListener(EVENTS.DATA_RECEIVED, dataHandler);
+        eventEmitter.removeListener(EVENTS.CONNECTED, connectedHandler);
       };
 
       this.log(colorize(LOG_COLORS.SUCCESS, 'WebSocket connection established'));

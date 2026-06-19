@@ -120,7 +120,7 @@ module.exports = class PetDriver extends Homey.Driver {
       this.log(colorize(LOG_COLORS.INFO, `Repair login with username: ${username}`));
       try {
         const tempSession = await this.homey.app.validateCredentials(username, password);
-        
+
         const pets = await tempSession.getPets();
         const pet = pets.find((p) => String(p.petId) === String(id));
         if (!pet) {
@@ -128,8 +128,8 @@ module.exports = class PetDriver extends Homey.Driver {
         }
 
         await this.homey.app.signOut();
-        const apiSession = await this.homey.app.initializeSession(username, password);
-        
+        await this.homey.app.initializeSession(username, password);
+
         device.petData = new PetData({ pet });
         this.log(colorize(LOG_COLORS.SUCCESS, 'Re-authentication successful'));
       } catch (err) {
