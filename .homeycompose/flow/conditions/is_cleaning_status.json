@@ -1,0 +1,97 @@
+{
+  "title": {
+    "en": "The cleaning status !{{is|is not}}",
+    "nl": "De reinigingsstatus !{{is|is niet}}",
+    "de": "Der Reinigungsstatus !{{ist|ist nicht}}",
+    "fr": "Le statut de nettoyage !{{est|n'est pas}}",
+    "it": "Lo stato della pulizia !{{è|non è}}",
+    "sv": "Stästatusen !{{är|är inte}}",
+    "no": "Rengjøringsstatusen !{{er|er ikke}}",
+    "es": "El estado de limpieza !{{es|no es}}",
+    "da": "Rengøringsstatussen !{{er|er ikke}}",
+    "ru": "Статус очистки !{{|не}}",
+    "pl": "Status czyszczenia !{{to|nie to}}",
+    "ko": "청소 상태가 !{{|아님}}"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    },
+    {
+      "name": "status",
+      "type": "autocomplete",
+      "title": {
+        "en": "Status",
+        "nl": "Status",
+        "de": "Status",
+        "fr": "Statut",
+        "it": "Stato",
+        "sv": "Status",
+        "no": "Status",
+        "es": "Estado",
+        "da": "Status",
+        "ru": "Статус",
+        "pl": "Status",
+        "ko": "상태"
+      },
+      "placeholder": {
+        "en": "Idle",
+        "nl": "Inactief",
+        "de": "Leerlauf",
+        "fr": "Inactif",
+        "it": "Inattivo",
+        "sv": "Vilande",
+        "no": "Inaktiv",
+        "es": "Inactivo",
+        "da": "Inaktiv",
+        "ru": "Простой",
+        "pl": "Bezczynny",
+        "ko": "대기"
+      }
+    }
+  ],
+  "hint": {
+    "en": "Returns true if the current cleaning status matches the selected value.",
+    "nl": "Geeft true terug wanneer de huidige reinigingsstatus overeenkomt met de geselecteerde waarde.",
+    "de": "Gibt true zurück, wenn der aktuelle Reinigungsstatus mit dem ausgewählten Wert übereinstimmt.",
+    "fr": "Renvoie vrai si le statut de nettoyage actuel correspond à la valeur sélectionnée.",
+    "it": "Restituisce true se lo stato di pulizia corrente corrisponde al valore selezionato.",
+    "sv": "Returnerar sant om det aktuella rengöringsstatusen matchar det valda värdet.",
+    "no": "Returnerer true hvis den nåværende rengjøringsstatusen samsvarer med den valgte verdien.",
+    "es": "Devuelve verdadero si el estado de limpieza actual coincide con el valor seleccionado.",
+    "da": "Returnerer sandt, hvis den aktuelle rengøringsstatus svarer til den valgte værdi.",
+    "ru": "Возвращает true, если текущий статус очистки соответствует выбранному значению.",
+    "pl": "Zwraca true, jeśli bieżący status czyszczenia odpowiada wybranej wartości.",
+    "ko": "현재 청소 상태가 선택한 값과 일치하면 true를 반환합니다."
+  },
+  "titleFormatted": {
+    "en": "The cleaning status is [[status]]",
+    "nl": "De reinigingsstatus is [[status]]",
+    "de": "Der Reinigungsstatus ist [[status]]",
+    "fr": "Le statut de nettoyage est [[status]]",
+    "it": "Lo stato della pulizia è [[status]]",
+    "sv": "Stästatusen är [[status]]",
+    "no": "Rengjøringsstatusen er [[status]]",
+    "es": "El estado de limpieza es [[status]]",
+    "da": "Rengøringsstatussen er [[status]]",
+    "ru": "Статус очистки [[status]]",
+    "pl": "Status czyszczenia to [[status]]",
+    "ko": "청소 상태가 [[status]]"
+  }
+}

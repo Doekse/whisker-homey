@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Start cleaning cycle",
+    "nl": "Start reinigingscyclus",
+    "de": "Reinigungszyklus starten",
+    "fr": "Démarrer le cycle de nettoyage",
+    "it": "Avvia ciclo di pulizia",
+    "sv": "Starta rengöringscykel",
+    "no": "Start rengjøringssyklus",
+    "es": "Iniciar ciclo de limpieza",
+    "da": "Start rengøringscyklus",
+    "ru": "Запустить цикл очистки",
+    "pl": "Rozpocznij cykl czyszczenia",
+    "ko": "청소 사이클 시작"
+  },
+  "hint": {
+    "en": "Starts a cleaning cycle for the Litter-Robot.",
+    "nl": "Start een reinigingscyclus voor de Litter-Robot.",
+    "de": "Startet einen Reinigungszyklus für den Litter-Robot.",
+    "fr": "Démarre un cycle de nettoyage pour le Litter-Robot.",
+    "it": "Avvia un ciclo di pulizia per il Litter-Robot.",
+    "sv": "Startar en rengöringscykel för Litter-Robot.",
+    "no": "Starter en rengjøringssyklus for Litter-Robot.",
+    "es": "Inicia un ciclo de limpieza para el Litter-Robot.",
+    "da": "Starter en rengøringscyklus for Litter-Robot.",
+    "ru": "Запускает цикл очистки для Litter-Robot.",
+    "pl": "Rozpoczyna cykl czyszczenia dla Litter-Robot.",
+    "ko": "Litter-Robot의 청소 사이클을 시작합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

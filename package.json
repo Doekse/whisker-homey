@@ -1,7 +1,10 @@
 {
   "name": "com.whisker",
-  "version": "2.0.7",
+  "version": "3.0.0",
   "main": "app.js",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore ."
   },
@@ -16,7 +19,6 @@
     "cron": "^4.3.1",
     "graphql-ws": "^5.16.2",
     "jsonwebtoken": "^9.0.2",
-    "node-fetch": "^2.6.7",
     "ws": "^8.18.2"
   }
 }

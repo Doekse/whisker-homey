@@ -1,0 +1,170 @@
+{
+  "title": {
+    "en": "Set clean cycle wait time to",
+    "nl": "Stel wachttijd reinigingscyclus in op",
+    "de": "Reinigungszyklus-Wartezeit einstellen",
+    "fr": "Définir le temps d'attente du cycle de nettoyage",
+    "it": "Imposta tempo di attesa ciclo di pulizia",
+    "sv": "Ställ in väntetid för rengöringscykel",
+    "no": "Sett ventetid for rengjøringssyklus",
+    "es": "Establecer tiempo de espera del ciclo de limpieza",
+    "da": "Indstil ventetid for rengøringscyklus",
+    "ru": "Установить время ожидания цикла очистки",
+    "pl": "Ustaw czas oczekiwania na cykl czyszczenia",
+    "ko": "청소 사이클 대기 시간 설정"
+  },
+  "titleFormatted": {
+    "en": "Set the clean cycle wait time to [[wait_time]]",
+    "nl": "Stel de wachttijd van de reinigingscyclus in op [[wait_time]]",
+    "de": "Setze die Reinigungszyklus-Wartezeit auf [[wait_time]]",
+    "fr": "Définir le temps d'attente du cycle de nettoyage à [[wait_time]]",
+    "it": "Imposta il tempo di attesa del ciclo di pulizia su [[wait_time]]",
+    "sv": "Ställ in väntetiden för rengöringscykeln till [[wait_time]]",
+    "no": "Sett ventetiden for rengjøringssyklus til [[wait_time]]",
+    "es": "Establecer el tiempo de espera del ciclo de limpieza en [[wait_time]]",
+    "da": "Indstil ventetiden for rengøringscyklus til [[wait_time]]",
+    "ru": "Установить время ожидания цикла очистки на [[wait_time]]",
+    "pl": "Ustaw czas oczekiwania na cykl czyszczenia na [[wait_time]]",
+    "ko": "청소 사이클 대기 시간을 [[wait_time]]로 설정"
+  },
+  "hint": {
+    "en": "Adjust the time the Litter-Robot takes for the litter to clump and start a cleaning cycle.",
+    "nl": "Pas de tijd aan die de Litter-Robot wacht voordat de reinigingscyclus start.",
+    "de": "Stelle die Zeit ein, die der Litter-Robot wartet, bevor der Reinigungszyklus startet.",
+    "fr": "Ajustez le temps que le Litter-Robot attend avant de démarrer le cycle de nettoyage.",
+    "it": "Regola il tempo che il Litter-Robot attende prima di avviare il ciclo di pulizia.",
+    "sv": "Justera tiden Litter-Robot väntar innan rengöringscykeln startar.",
+    "no": "Juster tiden Litter-Robot venter før rengjøringssyklusen starter.",
+    "es": "Ajusta el tiempo que el Litter-Robot espera antes de iniciar el ciclo de limpieza.",
+    "da": "Juster tiden, Litter-Robot venter, før rengøringscyklussen starter.",
+    "ru": "Настройте время, которое Litter-Robot ждет перед запуском цикла очистки.",
+    "pl": "Dostosuj czas, jaki Litter-Robot czeka przed rozpoczęciem cyklu czyszczenia.",
+    "ko": "Litter-Robot가 청소 사이클을 시작하기 전에 기다리는 시간을 조정합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot4"
+    },
+    {
+      "name": "wait_time",
+      "type": "dropdown",
+      "title": {
+        "en": "Wait time",
+        "nl": "Wachttijd",
+        "de": "Wartezeit",
+        "fr": "Temps d'attente",
+        "it": "Tempo di attesa",
+        "sv": "Väntetid",
+        "no": "Ventetid",
+        "es": "Tiempo de espera",
+        "da": "Ventetid",
+        "ru": "Время ожидания",
+        "pl": "Czas oczekiwania",
+        "ko": "대기 시간"
+      },
+      "values": [
+        {
+          "id": "3",
+          "label": {
+            "en": "3 minutes",
+            "nl": "3 minuten",
+            "de": "3 Minuten",
+            "fr": "3 minutes",
+            "it": "3 minuti",
+            "sv": "3 minuter",
+            "no": "3 minutter",
+            "es": "3 minutos",
+            "da": "3 minutter",
+            "ru": "3 минуты",
+            "pl": "3 minuty",
+            "ko": "3분"
+          }
+        },
+        {
+          "id": "7",
+          "label": {
+            "en": "7 minutes",
+            "nl": "7 minuten",
+            "de": "7 Minuten",
+            "fr": "7 minutes",
+            "it": "7 minuti",
+            "sv": "7 minuter",
+            "no": "7 minutter",
+            "es": "7 minutos",
+            "da": "7 minutter",
+            "ru": "7 минут",
+            "pl": "7 minut",
+            "ko": "7분"
+          }
+        },
+        {
+          "id": "15",
+          "label": {
+            "en": "15 minutes",
+            "nl": "15 minuten",
+            "de": "15 Minuten",
+            "fr": "15 minutes",
+            "it": "15 minuti",
+            "sv": "15 minuter",
+            "no": "15 minutter",
+            "es": "15 minutos",
+            "da": "15 minutter",
+            "ru": "15 минут",
+            "pl": "15 minut",
+            "ko": "15분"
+          }
+        },
+        {
+          "id": "25",
+          "label": {
+            "en": "25 minutes",
+            "nl": "25 minuten",
+            "de": "25 Minuten",
+            "fr": "25 minutes",
+            "it": "25 minuti",
+            "sv": "25 minuter",
+            "no": "25 minutter",
+            "es": "25 minutos",
+            "da": "25 minutter",
+            "ru": "25 минут",
+            "pl": "25 minut",
+            "ko": "25분"
+          }
+        },
+        {
+          "id": "30",
+          "label": {
+            "en": "30 minutes",
+            "nl": "30 minuten",
+            "de": "30 Minuten",
+            "fr": "30 minutes",
+            "it": "30 minuti",
+            "sv": "30 minuter",
+            "no": "30 minutter",
+            "es": "30 minutos",
+            "da": "30 minutter",
+            "ru": "30 минут",
+            "pl": "30 minut",
+            "ko": "30분"
+          }
+        }
+      ]
+    }
+  ]
+}

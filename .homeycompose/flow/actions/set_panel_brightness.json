@@ -1,0 +1,136 @@
+{
+  "title": {
+    "en": "Set panel brightness to",
+    "nl": "Stel helderheid bedieningspaneel in op",
+    "de": "Stelle Bedienfeldhelligkeit ein",
+    "fr": "Définir la luminosité du panneau de contrôle",
+    "it": "Imposta luminosità pannello di controllo",
+    "sv": "Ställ in kontrollpanelens ljusstyrka",
+    "no": "Sett panellysstyrke",
+    "es": "Establecer brillo del panel",
+    "da": "Indstil panellysstyrke",
+    "ru": "Установить яркость панели",
+    "pl": "Ustaw jasność panelu",
+    "ko": "패널 밝기 설정"
+  },
+  "hint": {
+    "en": "Adjust the brightness of the Litter-Robot control panel.",
+    "nl": "Pas de helderheid van het Litter-Robot bedieningspaneel aan.",
+    "de": "Stelle die Helligkeit des Litter-Robot Bedienfelds ein.",
+    "fr": "Ajustez la luminosité du panneau de contrôle du Litter-Robot.",
+    "it": "Regola la luminosità del pannello di controllo del Litter-Robot.",
+    "sv": "Justera ljusstyrkan på Litter-Robot kontrollpanelen.",
+    "no": "Juster lysstyrken på Litter-Robot kontrollpanelet.",
+    "es": "Ajusta el brillo del panel de control del Litter-Robot.",
+    "da": "Juster lysstyrken på Litter-Robot kontrolpanelet.",
+    "ru": "Отрегулируйте яркость панели управления Litter-Robot.",
+    "pl": "Dostosuj jasność panelu sterowania Litter-Robot.",
+    "ko": "Litter-Robot 제어 패널의 밝기를 조정합니다."
+  },
+  "titleFormatted": {
+    "en": "Set panel brightness to [[brightness]]",
+    "nl": "Stel helderheid bedieningspaneel in op [[brightness]]",
+    "de": "Stelle Bedienfeldhelligkeit ein auf [[brightness]]",
+    "fr": "Définir la luminosité du panneau de contrôle sur [[brightness]]",
+    "it": "Imposta luminosità pannello di controllo su [[brightness]]",
+    "sv": "Ställ in kontrollpanelens ljusstyrka till [[brightness]]",
+    "no": "Sett panellysstyrke til [[brightness]]",
+    "es": "Establecer brillo del panel en [[brightness]]",
+    "da": "Indstil panellysstyrke til [[brightness]]",
+    "ru": "Установить яркость панели на [[brightness]]",
+    "pl": "Ustaw jasność panelu na [[brightness]]",
+    "ko": "패널 밝기를 [[brightness]]로 설정"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot4"
+    },
+    {
+      "name": "brightness",
+      "type": "dropdown",
+      "title": {
+        "en": "Brightness",
+        "nl": "Helderheid",
+        "de": "Helligkeit",
+        "fr": "Luminosité",
+        "it": "Luminosità",
+        "sv": "Ljusstyrka",
+        "no": "Lysstyrke",
+        "es": "Brillo",
+        "da": "Lysstyrke",
+        "ru": "Яркость",
+        "pl": "Jasność",
+        "ko": "밝기"
+      },
+      "values": [
+        {
+          "id": "low",
+          "title": {
+            "en": "Low",
+            "nl": "Laag",
+            "de": "Niedrig",
+            "fr": "Faible",
+            "it": "Basso",
+            "sv": "Låg",
+            "no": "Lav",
+            "es": "Bajo",
+            "da": "Lav",
+            "ru": "Низкая",
+            "pl": "Niska",
+            "ko": "낮음"
+          }
+        },
+        {
+          "id": "medium",
+          "title": {
+            "en": "Medium",
+            "nl": "Middel",
+            "de": "Mittel",
+            "fr": "Moyenne",
+            "it": "Media",
+            "sv": "Medel",
+            "no": "Middels",
+            "es": "Media",
+            "da": "Mellem",
+            "ru": "Средняя",
+            "pl": "Średnia",
+            "ko": "중간"
+          }
+        },
+        {
+          "id": "high",
+          "title": {
+            "en": "High",
+            "nl": "Hoog",
+            "de": "Hoch",
+            "fr": "Élevée",
+            "it": "Alto",
+            "sv": "Hög",
+            "no": "Høy",
+            "es": "Alto",
+            "da": "Høj",
+            "ru": "Высокая",
+            "pl": "Wysoka",
+            "ko": "높음"
+          }
+        }
+      ]
+    }
+  ]
+}

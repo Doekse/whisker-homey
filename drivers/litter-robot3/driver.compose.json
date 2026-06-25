@@ -1,6 +1,17 @@
 {
   "name": {
-    "en": "Litter-Robot 3"
+    "en": "Litter-Robot 3",
+    "nl": "Litter-Robot 3",
+    "de": "Litter-Robot 3",
+    "fr": "Litter-Robot 3",
+    "it": "Litter-Robot 3",
+    "sv": "Litter-Robot 3",
+    "no": "Litter-Robot 3",
+    "es": "Litter-Robot 3",
+    "da": "Litter-Robot 3",
+    "ru": "Litter-Robot 3",
+    "pl": "Litter-Robot 3",
+    "ko": "Litter-Robot 3"
   },
   "class": "other",
   "capabilities": [
@@ -74,6 +85,10 @@
     "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
   },
   "pair": [
+    {
+      "id": "loading",
+      "template": "loading"
+    },
     {
       "id": "login",
       "template": "login_credentials",

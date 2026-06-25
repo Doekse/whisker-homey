@@ -1,0 +1,41 @@
+{
+  "errors": {
+    "session_unavailable": "Ingen API-session tillgänglig. Reparera enheten.",
+    "invalid_device_data_missing_serial": "Ogiltiga enhetsdata. Robotens serienummer saknas.",
+    "invalid_device_data_missing_pet_id": "Ogiltiga enhetsdata. Husdjurs-ID saknas.",
+    "invalid_device_data_missing_robot_id": "Ogiltiga enhetsdata. Robot-ID saknas.",
+    "invalid_wait_time": "Ogiltigt väntetidsvärde",
+    "invalid_panel_brightness": "Ogiltigt värde för kontrollpanelens ljusstyrka",
+    "invalid_night_light_brightness": "Ogiltigt värde för nattljusets ljusstyrka",
+    "invalid_night_light_mode": "Ogiltigt nattljusläge",
+    "robot_not_found": "Robot med serienummer __serial__ hittades inte"
+  },
+  "pairing": {
+    "credentials_required": "Användarnamn och lösenord krävs för parkoppling",
+    "credentials_required_repair": "Användarnamn och lösenord krävs för reparation",
+    "no_devices_found": "Ingen __product__ hittades för detta konto",
+    "robot_not_found": "__product__ med serienummer __serial__ hittades inte",
+    "no_pets_found": "Inga husdjur hittades för detta konto",
+    "pet_not_found": "Husdjur med ID __id__ hittades inte"
+  },
+  "state": {
+    "loading": "Laddar...",
+    "unknown": "Okänd",
+    "not_set": "Inte inställt",
+    "currently_connected": "Ansluten just nu"
+  },
+  "age": {
+    "month": "__count__ månad",
+    "months": "__count__ månader",
+    "year": "__count__ år",
+    "years": "__count__ år",
+    "invalid_date": "Ogiltigt datum"
+  },
+  "notifications": {
+    "cat_visit_generic": "En katt har besökt __robot__ 🐱",
+    "cat_visit": "__name__ har besökt __robot__ och vägde __grams__ g 🐱",
+    "waste_drawer_full": "Avfallslådan på __robot__ är full 🗑️",
+    "robot_fault": "__robot__ rapporterade ett problem: __fault__ ⚠️",
+    "robot_fault_generic": "__robot__ rapporterade ett problem ⚠️"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Lock the keypad",
+    "nl": "Vergrendel het bedieningspaneel",
+    "de": "Tastatur sperren",
+    "fr": "Verrouiller le clavier",
+    "it": "Blocca la tastiera",
+    "sv": "Lås knappsatsen",
+    "no": "Lås tastaturet",
+    "es": "Bloquear el teclado",
+    "da": "Lås tastaturet",
+    "ru": "Заблокировать клавиатуру",
+    "pl": "Zablokuj klawiaturę",
+    "ko": "키패드 잠금"
+  },
+  "hint": {
+    "en": "Locks the keypad to prevent accidental presses.",
+    "nl": "Vergrendelt het bedieningspaneel om onbedoelde aanrakingen te voorkomen.",
+    "de": "Sperrt die Tastatur, um versehentliche Tastenbetätigungen zu vermeiden.",
+    "fr": "Verrouille le clavier pour éviter les pressions accidentelles.",
+    "it": "Blocca la tastiera per evitare pressioni accidentali.",
+    "sv": "Låser knappsatsen för att förhindra oavsiktliga tryck.",
+    "no": "Låser tastaturet for å forhindre utilsiktede trykk.",
+    "es": "Bloquea el teclado para evitar pulsaciones accidentales.",
+    "da": "Låser tastaturet for at forhindre utilsigtede tryk.",
+    "ru": "Блокирует клавиатуру, чтобы избежать случайных нажатий.",
+    "pl": "Blokuje klawiaturę, aby zapobiec przypadkowym naciśnięciom.",
+    "ko": "실수로 누르는 것을 방지하기 위해 키패드를 잠급니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

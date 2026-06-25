@@ -1,7 +1,5 @@
-
-
 {
-  "type": "string",
+  "type": "enum",
   "title": {
     "en": "Diet",
     "nl": "Dieet",
@@ -19,5 +17,75 @@
   "getable": true,
   "setable": false,
   "uiComponent": "sensor",
-  "icon": "/assets/capabilities/label_food.svg"
+  "icon": "/assets/capabilities/label_food.svg",
+  "values": [
+    {
+      "id": "DRY_FOOD",
+      "title": {
+        "en": "Dry food",
+        "nl": "Droogvoer",
+        "de": "Trockenfutter",
+        "fr": "Nourriture sèche",
+        "it": "Cibo secco",
+        "sv": "Torrmat",
+        "no": "Tørrfôr",
+        "es": "Comida seca",
+        "da": "Tørfoder",
+        "ru": "Сухой корм",
+        "pl": "Sucha karma",
+        "ko": "건사료"
+      }
+    },
+    {
+      "id": "WET_FOOD",
+      "title": {
+        "en": "Wet food",
+        "nl": "Natvoer",
+        "de": "Nassfutter",
+        "fr": "Nourriture humide",
+        "it": "Cibo umido",
+        "sv": "Våtfoder",
+        "no": "Våtfôr",
+        "es": "Comida húmeda",
+        "da": "Vådfoder",
+        "ru": "Влажный корм",
+        "pl": "Mokra karma",
+        "ko": "습사료"
+      }
+    },
+    {
+      "id": "MIXED_FOOD",
+      "title": {
+        "en": "Mixed food",
+        "nl": "Gemengd voer",
+        "de": "Mischfutter",
+        "fr": "Nourriture mixte",
+        "it": "Cibo misto",
+        "sv": "Blandad kost",
+        "no": "Blandet fôr",
+        "es": "Comida mixta",
+        "da": "Blandet foder",
+        "ru": "Смешанный корм",
+        "pl": "Karma mieszana",
+        "ko": "혼합 사료"
+      }
+    },
+    {
+      "id": "UNKNOWN",
+      "title": {
+        "en": "Unknown",
+        "nl": "Onbekend",
+        "de": "Unbekannt",
+        "fr": "Inconnu",
+        "it": "Sconosciuto",
+        "sv": "Okänt",
+        "no": "Ukjent",
+        "es": "Desconocido",
+        "da": "Ukendt",
+        "ru": "Неизвестно",
+        "pl": "Nieznane",
+        "ko": "알 수 없음"
+      }
+    }
+  ]
 }

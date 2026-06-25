@@ -1,0 +1,41 @@
+{
+  "errors": {
+    "session_unavailable": "Aucune session API disponible. Veuillez réparer l'appareil.",
+    "invalid_device_data_missing_serial": "Données d'appareil invalides. Numéro de série du robot manquant.",
+    "invalid_device_data_missing_pet_id": "Données d'appareil invalides. ID de l'animal manquant.",
+    "invalid_device_data_missing_robot_id": "Données d'appareil invalides. ID du robot manquant.",
+    "invalid_wait_time": "Valeur de temps d'attente invalide",
+    "invalid_panel_brightness": "Valeur de luminosité du panneau de contrôle invalide",
+    "invalid_night_light_brightness": "Valeur de luminosité de la veilleuse invalide",
+    "invalid_night_light_mode": "Mode de veilleuse invalide",
+    "robot_not_found": "Robot avec le numéro de série __serial__ introuvable"
+  },
+  "pairing": {
+    "credentials_required": "Le nom d'utilisateur et le mot de passe sont requis pour l'appairage",
+    "credentials_required_repair": "Le nom d'utilisateur et le mot de passe sont requis pour la réparation",
+    "no_devices_found": "Aucun __product__ trouvé pour ce compte",
+    "robot_not_found": "__product__ avec le numéro de série __serial__ introuvable",
+    "no_pets_found": "Aucun animal trouvé pour ce compte",
+    "pet_not_found": "Animal avec l'ID __id__ introuvable"
+  },
+  "state": {
+    "loading": "Chargement...",
+    "unknown": "Inconnu",
+    "not_set": "Non défini",
+    "currently_connected": "Actuellement connecté"
+  },
+  "age": {
+    "month": "__count__ mois",
+    "months": "__count__ mois",
+    "year": "__count__ an",
+    "years": "__count__ ans",
+    "invalid_date": "Date invalide"
+  },
+  "notifications": {
+    "cat_visit_generic": "Un chat a visité __robot__ 🐱",
+    "cat_visit": "__name__ a visité __robot__ et a pesé __grams__ g 🐱",
+    "waste_drawer_full": "Le tiroir à déchets de __robot__ est plein 🗑️",
+    "robot_fault": "__robot__ a signalé un problème : __fault__ ⚠️",
+    "robot_fault_generic": "__robot__ a signalé un problème ⚠️"
+  }
+}

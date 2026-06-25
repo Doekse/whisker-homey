@@ -4,9 +4,9 @@
     "type": "number",
     "label": {
       "en": "Waste drawer full threshold (%)",
-      "nl": "Drempel afvalbak (%)",
-      "de": "Füllstandsschwelle für Abfallbehälter (%)",
-      "fr": "Seuil de remplissage du bac à déchets (%)",
+      "nl": "Drempel afvallade (%)",
+      "de": "Füllstandsschwelle für Abfallschublade (%)",
+      "fr": "Seuil de remplissage du tiroir à déchets (%)",
       "it": "Soglia piena del cassetto dei rifiuti (%)",
       "sv": "Tröskelvärde för full avfallsbehållare (%)",
       "no": "Terskel for full avfallsbeholder (%)",
@@ -18,9 +18,9 @@
     },
     "hint": {
       "en": "Adjust this percentage to determine when the Waste Drawer Full alarm should trigger, the default is 80%",
-      "nl": "Pas dit percentage aan om te bepalen wanneer de afvalbak als vol wordt gemeld. Standaard is dit 80%.",
-      "de": "Passen Sie diesen Prozentsatz an, um festzulegen, wann die Meldung Abfallbehälter voll ausgelöst wird. Standard ist 80%.",
-      "fr": "Ajustez ce pourcentage pour déterminer quand l'alerte bac à déchets plein doit se déclencher. Par défaut : 80%.",
+      "nl": "Pas dit percentage aan om te bepalen wanneer de afvallade als vol wordt gemeld. Standaard is dit 80%.",
+      "de": "Passen Sie diesen Prozentsatz an, um festzulegen, wann die Meldung Abfallschublade voll ausgelöst wird. Standard ist 80%.",
+      "fr": "Ajustez ce pourcentage pour déterminer quand l'alerte tiroir à déchets plein doit se déclencher. Par défaut : 80%.",
       "it": "Modifica questa percentuale per decidere quando attivare l'allarme del cassetto pieno. Predefinito: 80%.",
       "sv": "Justera denna procentsats för att avgöra när larmet för full avfallsbehållare ska utlösas. Standard är 80%.",
       "no": "Juster denne prosenten for å angi når varsel om full avfallsbeholder skal utløses. Standard er 80%.",
@@ -125,18 +125,18 @@
       "ko": "LitterHopper 기능"
     },
     "hint": {
-      "en": "Choose how LitterHopper functionality should be managed. Detect automatically detects from the device, Disabled hides all hopper features, Enabled shows all hopper features.",
-      "nl": "Kies hoe LitterHopper-functionaliteit moet worden beheerd. Automatisch detecteren detecteert van het apparaat, Uitgeschakeld verbergt alle hopper-functies, Ingeschakeld toont alle hopper-functies.",
-      "de": "Wählen Sie, wie LitterHopper-Funktionalität verwaltet werden soll. Automatisch erkennen erkennt vom Gerät, Deaktiviert versteckt alle Hopper-Funktionen, Aktiviert zeigt alle Hopper-Funktionen.",
-      "fr": "Choisissez comment la fonctionnalité LitterHopper doit être gérée. Détecter automatiquement détecte depuis l'appareil, Désactivé masque toutes les fonctionnalités hopper, Activé affiche toutes les fonctionnalités hopper.",
-      "it": "Scegli come gestire la funzionalità LitterHopper. Rileva automaticamente rileva dal dispositivo, Disabilitato nasconde tutte le funzionalità hopper, Abilitato mostra tutte le funzionalità hopper.",
-      "sv": "Välj hur LitterHopper-funktionalitet ska hanteras. Upptäck automatiskt upptäcker från enheten, Inaktiverad döljer alla hopper-funktioner, Aktiverad visar alla hopper-funktioner.",
-      "no": "Velg hvordan LitterHopper-funksjonalitet skal administreres. Oppdag automatisk oppdager fra enheten, Deaktivert skjuler alle hopper-funksjoner, Aktivert viser alle hopper-funksjoner.",
-      "es": "Elige cómo se debe gestionar la funcionalidad de LitterHopper. Detectar automáticamente detecta desde el dispositivo, Deshabilitado oculta todas las funciones de hopper, Habilitado muestra todas las funciones de hopper.",
-      "da": "Vælg hvordan LitterHopper-funktionalitet skal administreres. Opdag automatisk opdager fra enheden, Deaktiveret skjuler alle hopper-funktioner, Aktiveret viser alle hopper-funktioner.",
-      "ru": "Выберите, как должна управляться функциональность LitterHopper. Обнаруживать автоматически обнаруживает с устройства, Отключено скрывает все функции hopper, Включено показывает все функции hopper.",
-      "pl": "Wybierz, jak funkcjonalność LitterHopper powinna być zarządzana. Wykrywaj automatycznie wykrywa z urządzenia, Wyłączone ukrywa wszystkie funkcje hopper, Włączone pokazuje wszystkie funkcje hopper.",
-      "ko": "LitterHopper 기능을 관리하는 방법을 선택하세요. 자동 감지는 장치에서 감지하고, 비활성화는 모든 hopper 기능을 숨기고, 활성화는 모든 hopper 기능을 표시합니다."
+      "en": "Choose how LitterHopper functionality should be managed. Detect automatically detects from the device, Disabled hides all LitterHopper features, Enabled shows all LitterHopper features.",
+      "nl": "Kies hoe LitterHopper-functionaliteit moet worden beheerd. Automatisch detecteren detecteert van het apparaat, Uitgeschakeld verbergt alle LitterHopper-functies, Ingeschakeld toont alle LitterHopper-functies.",
+      "de": "Wählen Sie, wie LitterHopper-Funktionalität verwaltet werden soll. Automatisch erkennen erkennt vom Gerät, Deaktiviert versteckt alle LitterHopper-Funktionen, Aktiviert zeigt alle LitterHopper-Funktionen.",
+      "fr": "Choisissez comment la fonctionnalité LitterHopper doit être gérée. Détecter automatiquement détecte depuis l'appareil, Désactivé masque toutes les fonctionnalités LitterHopper, Activé affiche toutes les fonctionnalités LitterHopper.",
+      "it": "Scegli come gestire la funzionalità LitterHopper. Rileva automaticamente rileva dal dispositivo, Disabilitato nasconde tutte le funzionalità LitterHopper, Abilitato mostra tutte le funzionalità LitterHopper.",
+      "sv": "Välj hur LitterHopper-funktionalitet ska hanteras. Upptäck automatiskt upptäcker från enheten, Inaktiverad döljer alla LitterHopper-funktioner, Aktiverad visar alla LitterHopper-funktioner.",
+      "no": "Velg hvordan LitterHopper-funksjonalitet skal administreres. Oppdag automatisk oppdager fra enheten, Deaktivert skjuler alle LitterHopper-funksjoner, Aktivert viser alle LitterHopper-funksjoner.",
+      "es": "Elige cómo se debe gestionar la funcionalidad de LitterHopper. Detectar automáticamente detecta desde el dispositivo, Deshabilitado oculta todas las funciones de LitterHopper, Habilitado muestra todas las funciones de LitterHopper.",
+      "da": "Vælg hvordan LitterHopper-funktionalitet skal administreres. Opdag automatisk opdager fra enheden, Deaktiveret skjuler alle LitterHopper-funktioner, Aktiveret viser alle LitterHopper-funktioner.",
+      "ru": "Выберите, как должна управляться функциональность LitterHopper. Обнаруживать автоматически обнаруживает с устройства, Отключено скрывает все функции LitterHopper, Включено показывает все функции LitterHopper.",
+      "pl": "Wybierz, jak funkcjonalność LitterHopper powinna być zarządzana. Wykrywaj automatycznie wykrywa z urządzenia, Wyłączone ukrywa wszystkie funkcje LitterHopper, Włączone pokazuje wszystkie funkcje LitterHopper.",
+      "ko": "LitterHopper 기능을 관리하는 방법을 선택하세요. 자동 감지는 장치에서 감지하고, 비활성화는 모든 LitterHopper 기능을 숨기고, 활성화는 모든 LitterHopper 기능을 표시합니다."
     },
     "value": "automatic",
     "values": [
@@ -193,6 +193,125 @@
       }
     ],
     "required": true
+  },
+  {
+    "id": "notifications",
+    "type": "group",
+    "label": {
+      "en": "Notifications",
+      "nl": "Meldingen",
+      "de": "Benachrichtigungen",
+      "fr": "Notifications",
+      "it": "Notifiche",
+      "sv": "Aviseringar",
+      "no": "Varsler",
+      "es": "Notificaciones",
+      "da": "Notifikationer",
+      "ru": "Уведомления",
+      "pl": "Powiadomienia",
+      "ko": "알림"
+    },
+    "children": [
+      {
+        "id": "cat_visit_timeline_notifications",
+        "type": "checkbox",
+        "value": true,
+        "label": {
+          "en": "Cat visits",
+          "nl": "Kattenbezoeken",
+          "de": "Katzenbesuche",
+          "fr": "Visites du chat",
+          "it": "Visite del gatto",
+          "sv": "Kattbesök",
+          "no": "Kattbesøk",
+          "es": "Visitas del gato",
+          "da": "Kattebesøg",
+          "ru": "Визиты кота",
+          "pl": "Wizyty kota",
+          "ko": "고양이 방문"
+        },
+        "hint": {
+          "en": "When enabled, a timeline notification is created when a cat visit is detected. The notification includes the cat's name and weight when a matching pet profile is found.",
+          "nl": "Wanneer ingeschakeld, wordt er een tijdlijnmelding gemaakt wanneer een kattenbezoek wordt gedetecteerd. De melding bevat de naam en het gewicht van de kat wanneer een overeenkomend huisdierprofiel is gevonden.",
+          "de": "Wenn aktiviert, wird eine Zeitachsen-Benachrichtigung erstellt, wenn ein Katzenbesuch erkannt wird. Die Benachrichtigung enthält den Namen und das Gewicht der Katze, wenn ein passendes Haustierprofil gefunden wird.",
+          "fr": "Lorsque cette option est activée, une notification de la timeline est créée lorsqu'une visite du chat est détectée. La notification inclut le nom et le poids du chat lorsqu'un profil d'animal correspondant est trouvé.",
+          "it": "Quando abilitato, viene creata una notifica timeline quando viene rilevata una visita del gatto. La notifica include il nome e il peso del gatto quando viene trovato un profilo animale corrispondente.",
+          "sv": "När aktiverat skapas en tidslinjeavisering när ett kattbesök upptäcks. Aviseringen innehåller kattens namn och vikt när en matchande husdjursprofil hittas.",
+          "no": "Når aktivert opprettes et tidslinjevarsel når et kattbesøk oppdages. Varslet inkluderer kattens navn og vekt når en matchende kjæledyrprofil finnes.",
+          "es": "Cuando está habilitado, se crea una notificación en la línea de tiempo cuando se detecta una visita del gato. La notificación incluye el nombre y el peso del gato cuando se encuentra un perfil de mascota coincidente.",
+          "da": "Når aktiveret oprettes en tidslinjenotifikation, når et kattebesøg registreres. Notifikationen inkluderer kattens navn og vægt, når en matchende kæledyrsprofil findes.",
+          "ru": "При включении создаётся уведомление в ленте при обнаружении визита кота. Уведомление включает имя и вес кота, если найден соответствующий профиль питомца.",
+          "pl": "Po włączeniu tworzone jest powiadomienie na osi czasu po wykryciu wizyty kota. Powiadomienie zawiera imię i wagę kota, gdy znaleziono pasujący profil zwierzęcia.",
+          "ko": "활성화하면 고양이 방문이 감지될 때 타임라인 알림이 생성됩니다. 일치하는 반려동물 프로필이 있으면 알림에 고양이 이름과 체중이 포함됩니다."
+        }
+      },
+      {
+        "id": "waste_drawer_full_timeline_notifications",
+        "type": "checkbox",
+        "value": true,
+        "label": {
+          "en": "Waste drawer full",
+          "nl": "Afvallade vol",
+          "de": "Abfallschublade voll",
+          "fr": "Tiroir à déchets plein",
+          "it": "Vaschetta dei rifiuti pieno",
+          "sv": "Avfallslåda full",
+          "no": "Avfallsskuffe full",
+          "es": "Cajón de residuos lleno",
+          "da": "Affaldsskuffe fuld",
+          "ru": "Контейнер для отходов полный",
+          "pl": "Szuflada na odpady pełny",
+          "ko": "폐기물 서랍 가득참"
+        },
+        "hint": {
+          "en": "When enabled, a timeline notification is created when the waste drawer becomes full.",
+          "nl": "Wanneer ingeschakeld, wordt er een tijdlijnmelding gemaakt wanneer de afvallade vol is.",
+          "de": "Wenn aktiviert, wird eine Zeitachsen-Benachrichtigung erstellt, wenn die Abfallschublade voll ist.",
+          "fr": "Lorsque cette option est activée, une notification de la timeline est créée lorsque le tiroir à déchets est plein.",
+          "it": "Quando abilitato, viene creata una notifica timeline quando il vaschetta dei rifiuti è pieno.",
+          "sv": "När aktiverat skapas en tidslinjeavisering när avfallslådan är full.",
+          "no": "Når aktivert opprettes et tidslinjevarsel når avfallsskuffen er full.",
+          "es": "Cuando está habilitado, se crea una notificación en la línea de tiempo cuando el cajón de residuos está lleno.",
+          "da": "Når aktiveret oprettes en tidslinjenotifikation, når affaldsskuffen er fuld.",
+          "ru": "При включении создаётся уведомление в ленте, когда контейнер для отходов заполнен.",
+          "pl": "Po włączeniu tworzone jest powiadomienie na osi czasu, gdy szuflada na odpady jest pełny.",
+          "ko": "활성화하면 폐기물 서랍이 가득 찼을 때 타임라인 알림이 생성됩니다."
+        }
+      },
+      {
+        "id": "robot_fault_timeline_notifications",
+        "type": "checkbox",
+        "value": true,
+        "label": {
+          "en": "Robot faults",
+          "nl": "Robotstoringen",
+          "de": "Roboterfehler",
+          "fr": "Défauts du robot",
+          "it": "Guasti del robot",
+          "sv": "Robotfel",
+          "no": "Robotfeil",
+          "es": "Fallos del robot",
+          "da": "Robotfejl",
+          "ru": "Неисправности робота",
+          "pl": "Usterki robota",
+          "ko": "로봇 오류"
+        },
+        "hint": {
+          "en": "When enabled, a timeline notification is created when a hardware fault is detected, such as a pinch, motor error, or hopper motor fault.",
+          "nl": "Wanneer ingeschakeld, wordt er een tijdlijnmelding gemaakt wanneer een hardwarestoring wordt gedetecteerd, zoals een klem, motorfout of LitterHopper-motorstoring.",
+          "de": "Wenn aktiviert, wird eine Zeitachsen-Benachrichtigung erstellt, wenn ein Hardwarefehler erkannt wird, z. B. Quetschung, Motorfehler oder LitterHopper-Motorfehler.",
+          "fr": "Lorsque cette option est activée, une notification de la timeline est créée lorsqu'un défaut matériel est détecté, par exemple un pincement, une erreur moteur ou un défaut moteur LitterHopper.",
+          "it": "Quando abilitato, viene creata una notifica timeline quando viene rilevato un guasto hardware, ad esempio un pizzicamento, un errore del motore o un guasto del motore LitterHopper.",
+          "sv": "När aktiverat skapas en tidslinjeavisering när ett maskinvarufel upptäcks, till exempel klämning, motorfel eller LitterHopper-motorfel.",
+          "no": "Når aktivert opprettes et tidslinjevarsel når en maskinvarefeil oppdages, for eksempel klem, motorfeil eller LitterHopper-motorfeil.",
+          "es": "Cuando está habilitado, se crea una notificación en la línea de tiempo cuando se detecta un fallo de hardware, como un pellizco, error del motor o fallo del motor LitterHopper.",
+          "da": "Når aktiveret oprettes en tidslinjenotifikation, når en hardwarefejl registreres, f.eks. klem, motorfejl eller LitterHopper-motorfejl.",
+          "ru": "При включении создаётся уведомление в ленте при обнаружении аппаратной неисправности, например защемления, ошибки двигателя или неисправности двигателя LitterHopper.",
+          "pl": "Po włączeniu tworzone jest powiadomienie na osi czasu po wykryciu usterki sprzętowej, np. zaciśnięcia, błędu silnika lub usterki silnika LitterHopper.",
+          "ko": "활성화하면 끼임, 모터 오류 또는 LitterHopper 모터 오류와 같은 하드웨어 오류가 감지될 때 타임라인 알림이 생성됩니다."
+        }
+      }
+    ]
   },
   {
     "id": "device_information",

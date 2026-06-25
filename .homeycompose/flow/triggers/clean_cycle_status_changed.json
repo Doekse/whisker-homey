@@ -1,0 +1,71 @@
+{
+  "title": {
+    "en": "The cleaning status changes",
+    "nl": "De reinigingsstatus verandert",
+    "de": "Der Reinigungsstatus ändert sich",
+    "fr": "Le statut de nettoyage change",
+    "it": "Lo stato della pulizia cambia",
+    "sv": "Stästatusen ändras",
+    "no": "Rengjøringsstatusen endres",
+    "es": "El estado de limpieza cambia",
+    "da": "Rengøringsstatussen ændres",
+    "ru": "Статус очистки изменяется",
+    "pl": "Status czyszczenia się zmienia",
+    "ko": "청소 상태가 변경됩니다"
+  },
+  "hint": {
+    "en": "Triggers when the cleaning status of the Litter-Robot changes.",
+    "nl": "Wordt geactiveerd wanneer de reinigingsstatus van de Litter-Robot verandert.",
+    "de": "Wird ausgelöst, wenn sich der Reinigungsstatus des Litter-Robots ändert.",
+    "fr": "Se déclenche lorsque le statut de nettoyage du Litter-Robot change.",
+    "it": "Si attiva quando lo stato della pulizia del Litter-Robot cambia.",
+    "sv": "Utlöses när Litter-Robots stästatus ändras.",
+    "no": "Utøses når Litter-Robots rengjøringsstatus endres.",
+    "es": "Se activa cuando cambia el estado de limpieza del Litter-Robot.",
+    "da": "Udløses, når Litter-Robots rengøringsstatus ændres.",
+    "ru": "Срабатывает при изменении статуса очистки Litter-Robot.",
+    "pl": "Uruchamia się, gdy zmienia się status czyszczenia Litter-Robot.",
+    "ko": "Litter-Robot의 청소 상태가 변경될 때 트리거됩니다."
+  },
+  "tokens": [
+    {
+      "name": "clean_cycle_status",
+      "type": "string",
+      "title": {
+        "en": "Cleaning status",
+        "nl": "Reinigingsstatus",
+        "de": "Reinigungsstatus",
+        "fr": "Statut de nettoyage",
+        "it": "Stato della pulizia",
+        "sv": "Stästatus",
+        "no": "Rengjøringsstatus",
+        "es": "Estado de limpieza",
+        "da": "Rengøringsstatus",
+        "ru": "Статус очистки",
+        "pl": "Status czyszczenia",
+        "ko": "청소 상태"
+      }
+    }
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

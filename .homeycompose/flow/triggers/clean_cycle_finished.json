@@ -1,0 +1,71 @@
+{
+  "title": {
+    "en": "A cleaning cycle is finished",
+    "nl": "Een reinigingscyclus is voltooid",
+    "de": "Ein Reinigungszyklus ist abgeschlossen",
+    "fr": "Un cycle de nettoyage est terminé",
+    "it": "Un ciclo di pulizia è completato",
+    "sv": "En rengöringscykel är slutförd",
+    "no": "En rengjøringssyklus er fullført",
+    "es": "Un ciclo de limpieza ha terminado",
+    "da": "En rengøringscyklus er afsluttet",
+    "ru": "Цикл очистки завершен",
+    "pl": "Cykl czyszczenia został zakończony",
+    "ko": "청소 사이클이 완료되었습니다"
+  },
+  "hint": {
+    "en": "Triggers each time a cleaning cycle is finished.",
+    "nl": "Wordt geactiveerd elke keer dat een reinigingscyclus is voltooid.",
+    "de": "Wird jedes Mal ausgelöst, wenn ein Reinigungszyklus abgeschlossen ist.",
+    "fr": "Se déclenche à chaque fois qu'un cycle de nettoyage est terminé.",
+    "it": "Si attiva ogni volta che un ciclo di pulizia è completato.",
+    "sv": "Utlöses varje gång en rengöringscykel är slutförd.",
+    "no": "Utøses hver gang en rengjøringssyklus er fullført.",
+    "es": "Se activa cada vez que se termina un ciclo de limpieza.",
+    "da": "Udløses hver gang en rengøringscyklus er afsluttet.",
+    "ru": "Срабатывает каждый раз при завершении цикла очистки.",
+    "pl": "Uruchamia się za każdym razem, gdy cykl czyszczenia zostanie zakończony.",
+    "ko": "청소 사이클이 완료될 때마다 트리거됩니다."
+  },
+  "tokens": [
+    {
+      "name": "total_clean_cycles",
+      "type": "number",
+      "title": {
+        "en": "Total completed clean cycles",
+        "nl": "Totaal voltooide reinigingscycli",
+        "de": "Insgesamt abgeschlossene Reinigungszyklen",
+        "fr": "Total des cycles de nettoyage terminés",
+        "it": "Totale cicli di pulizia completati",
+        "sv": "Totalt slutförda rengöringscykler",
+        "no": "Totalt fullførte rengjøringssykluser",
+        "es": "Ciclos de limpieza completados",
+        "da": "Samlet antal afsluttede rengøringscyklusser",
+        "ru": "Всего завершено циклов очистки",
+        "pl": "Łączna liczba zakończonych cykli czyszczenia",
+        "ko": "완료된 총 청소 사이클 수"
+      }
+    }
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

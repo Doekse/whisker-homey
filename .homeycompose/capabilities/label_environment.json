@@ -1,7 +1,5 @@
-
-
 {
-  "type": "string",  
+  "type": "enum",
   "title": {
     "en": "Environment",
     "nl": "Omgeving",
@@ -19,5 +17,75 @@
   "getable": true,
   "setable": false,
   "uiComponent": "sensor",
-  "icon": "/assets/capabilities/label_environment.svg"
+  "icon": "/assets/capabilities/label_environment.svg",
+  "values": [
+    {
+      "id": "INDOOR",
+      "title": {
+        "en": "Indoor",
+        "nl": "Binnen",
+        "de": "Innen",
+        "fr": "Intérieur",
+        "it": "Interno",
+        "sv": "Inomhus",
+        "no": "Innendørs",
+        "es": "Interior",
+        "da": "Indendørs",
+        "ru": "Домашний",
+        "pl": "W domu",
+        "ko": "실내"
+      }
+    },
+    {
+      "id": "OUTDOOR",
+      "title": {
+        "en": "Outdoor",
+        "nl": "Buiten",
+        "de": "Außen",
+        "fr": "Extérieur",
+        "it": "Esterno",
+        "sv": "Utomhus",
+        "no": "Utendørs",
+        "es": "Exterior",
+        "da": "Udendørs",
+        "ru": "На улице",
+        "pl": "Na dworze",
+        "ko": "실외"
+      }
+    },
+    {
+      "id": "INDOOR_OUTDOOR",
+      "title": {
+        "en": "Indoor & Outdoor",
+        "nl": "Binnen & buiten",
+        "de": "Innen & außen",
+        "fr": "Intérieur & extérieur",
+        "it": "Interno & esterno",
+        "sv": "Inomhus & utomhus",
+        "no": "Innendørs & utendørs",
+        "es": "Interior & exterior",
+        "da": "Indendørs & udendørs",
+        "ru": "Домашний & на улице",
+        "pl": "W domu & na dworze",
+        "ko": "실내 & 실외"
+      }
+    },
+    {
+      "id": "UNKNOWN",
+      "title": {
+        "en": "Unknown",
+        "nl": "Onbekend",
+        "de": "Unbekannt",
+        "fr": "Inconnu",
+        "it": "Sconosciuto",
+        "sv": "Okänt",
+        "no": "Ukjent",
+        "es": "Desconocido",
+        "da": "Ukendt",
+        "ru": "Неизвестно",
+        "pl": "Nieznane",
+        "ko": "알 수 없음"
+      }
+    }
+  ]
 }

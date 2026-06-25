@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Sleep mode is activated",
+    "nl": "Slaapstand is geactiveerd",
+    "de": "Schlafmodus ist aktiviert",
+    "fr": "Le mode veille est activé",
+    "it": "La modalità sospensione è attivata",
+    "sv": "Viloläge är aktiverat",
+    "no": "Dvalemodus er aktivert",
+    "es": "El modo de reposo está activado",
+    "da": "Dvaletilstand er aktiveret",
+    "ru": "Режим сна активирован",
+    "pl": "Tryb uśpienia jest aktywowany",
+    "ko": "수면 모드가 활성화되었습니다"
+  },
+  "hint": {
+    "en": "Triggers when the Litter-Robot enters sleep mode.",
+    "nl": "Wordt geactiveerd wanneer de Litter-Robot in de slaapstand gaat.",
+    "de": "Wird ausgelöst, wenn der Litter-Robot in den Schlafmodus wechselt.",
+    "fr": "Déclenché lorsque le Litter-Robot passe en mode veille.",
+    "it": "Si attiva quando il Litter-Robot entra in modalità sospensione.",
+    "sv": "Utlöses när Litter-Robot går in i viloläge.",
+    "no": "Utøses når Litter-Robot går inn i dvalemodus.",
+    "es": "Se activa cuando el Litter-Robot entra en modo de reposo.",
+    "da": "Udløses når Litter-Robot går i dvaletilstand.",
+    "ru": "Срабатывает, когда Litter-Robot переходит в режим сна.",
+    "pl": "Uruchamiany, gdy Litter-Robot przechodzi w tryb uśpienia.",
+    "ko": "리터로봇이 수면 모드로 전환되면 트리거됩니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

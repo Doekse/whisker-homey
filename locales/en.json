@@ -1,0 +1,41 @@
+{
+  "errors": {
+    "session_unavailable": "No API session available. Please repair device.",
+    "invalid_device_data_missing_serial": "Invalid device data. Missing robot serial.",
+    "invalid_device_data_missing_pet_id": "Invalid device data. Missing pet ID.",
+    "invalid_device_data_missing_robot_id": "Invalid device data. Missing robot ID.",
+    "invalid_wait_time": "Invalid wait time value",
+    "invalid_panel_brightness": "Invalid panel brightness value",
+    "invalid_night_light_brightness": "Invalid night light brightness value",
+    "invalid_night_light_mode": "Invalid night light mode value",
+    "robot_not_found": "Robot with serial __serial__ not found"
+  },
+  "pairing": {
+    "credentials_required": "Username and password are required for pairing",
+    "credentials_required_repair": "Username and password are required for repair",
+    "no_devices_found": "No __product__ found for this account",
+    "robot_not_found": "__product__ with serial __serial__ not found",
+    "no_pets_found": "No pets found for this account",
+    "pet_not_found": "Pet with ID __id__ not found"
+  },
+  "state": {
+    "loading": "Loading...",
+    "unknown": "Unknown",
+    "not_set": "Not set",
+    "currently_connected": "Currently connected"
+  },
+  "age": {
+    "month": "__count__ month",
+    "months": "__count__ months",
+    "year": "__count__ year",
+    "years": "__count__ years",
+    "invalid_date": "Invalid date"
+  },
+  "notifications": {
+    "cat_visit_generic": "A cat has visited __robot__ 🐱",
+    "cat_visit": "__name__ has visited __robot__ and weighed in at __grams__ g 🐱",
+    "waste_drawer_full": "The waste drawer on __robot__ is full 🗑️",
+    "robot_fault": "__robot__ reported a problem: __fault__ ⚠️",
+    "robot_fault_generic": "__robot__ reported a problem ⚠️"
+  }
+}

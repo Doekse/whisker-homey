@@ -1,6 +1,6 @@
 {
   "id": "com.whisker",
-  "version": "2.0.7",
+  "version": "3.0.0",
   "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [
@@ -9,7 +9,18 @@
   ],
   "brandColor": "#faa321",
   "name": {
-    "en": "Whisker"
+    "en": "Whisker",
+    "nl": "Whisker",
+    "de": "Whisker",
+    "fr": "Whisker",
+    "it": "Whisker",
+    "sv": "Whisker",
+    "no": "Whisker",
+    "es": "Whisker",
+    "da": "Whisker",
+    "ru": "Whisker",
+    "pl": "Whisker",
+    "ko": "Whisker"
   },
   "description": {
     "en": "Life with your pet, endlessly better.",

@@ -1,0 +1,97 @@
+{
+  "title": {
+    "en": "The Litter-Robot status !{{is|is not}}",
+    "nl": "De Litter-Robot status !{{is|is niet}}",
+    "de": "Der Litter-Robot Status !{{ist|ist nicht}}",
+    "fr": "Le statut du Litter-Robot !{{est|n'est pas}}",
+    "it": "Lo stato del Litter-Robot !{{è|non è}}",
+    "sv": "Litter-Robot status !{{är|är inte}}",
+    "no": "Litter-Robot status !{{er|er ikke}}",
+    "es": "El estado del Litter-Robot !{{es|no es}}",
+    "da": "Litter-Robot status !{{er|er ikke}}",
+    "ru": "Статус Litter-Robot !{{|не}}",
+    "pl": "Status Litter-Robot !{{to|nie to}}",
+    "ko": "Litter-Robot 상태가 !{{|아님}}"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    },
+    {
+      "name": "status",
+      "type": "autocomplete",
+      "title": {
+        "en": "Status",
+        "nl": "Status",
+        "de": "Status",
+        "fr": "Statut",
+        "it": "Stato",
+        "sv": "Status",
+        "no": "Status",
+        "es": "Estado",
+        "da": "Status",
+        "ru": "Статус",
+        "pl": "Status",
+        "ko": "상태"
+      },
+      "placeholder": {
+        "en": "Ready",
+        "nl": "Gereed",
+        "de": "Bereit",
+        "fr": "Prêt",
+        "it": "Pronto",
+        "sv": "Redo",
+        "no": "Klar",
+        "es": "Listo",
+        "da": "Klar",
+        "ru": "Готов",
+        "pl": "Gotowy",
+        "ko": "준비됨"
+      }
+    }
+  ],
+  "hint": {
+    "en": "Returns true if the current Litter-Robot status matches the selected value.",
+    "nl": "Geeft true terug wanneer de huidige Litter-Robot status overeenkomt met de geselecteerde waarde.",
+    "de": "Gibt true zurück, wenn der aktuelle Litter-Robot Status mit dem ausgewählten Wert übereinstimmt.",
+    "fr": "Renvoie vrai si le statut actuel du Litter-Robot correspond à la valeur sélectionnée.",
+    "it": "Restituisce true se lo stato corrente del Litter-Robot corrisponde al valore selezionato.",
+    "sv": "Returnerar sant om det aktuella Litter-Robot statusen matchar det valda värdet.",
+    "no": "Returnerer true hvis den nåværende Litter-Robot statusen samsvarer med den valgte verdien.",
+    "es": "Devuelve verdadero si el estado actual del Litter-Robot coincide con el valor seleccionado.",
+    "da": "Returnerer sandt, hvis den aktuelle Litter-Robot status svarer til den valgte værdi.",
+    "ru": "Возвращает true, если текущий статус Litter-Robot соответствует выбранному значению.",
+    "pl": "Zwraca true, jeśli bieżący status Litter-Robot odpowiada wybranej wartości.",
+    "ko": "현재 Litter-Robot 상태가 선택한 값과 일치하면 true를 반환합니다."
+  },
+  "titleFormatted": {
+    "en": "The Litter-Robot status is [[status]]",
+    "nl": "De Litter-Robot status is [[status]]",
+    "de": "Der Litter-Robot Status ist [[status]]",
+    "fr": "Le statut du Litter-Robot est [[status]]",
+    "it": "Lo stato del Litter-Robot è [[status]]",
+    "sv": "Litter-Robot status är [[status]]",
+    "no": "Litter-Robot status er [[status]]",
+    "es": "El estado del Litter-Robot es [[status]]",
+    "da": "Litter-Robot status er [[status]]",
+    "ru": "Статус Litter-Robot [[status]]",
+    "pl": "Status Litter-Robot to [[status]]",
+    "ko": "Litter-Robot 상태가 [[status]]"
+  }
+}

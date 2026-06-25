@@ -1,0 +1,52 @@
+{
+  "highlight": true,
+  "title": {
+    "en": "A cat is detected",
+    "nl": "Er is een kat gedetecteerd",
+    "de": "Eine Katze wurde erkannt",
+    "fr": "Un chat est détecté",
+    "it": "Un gatto è stato rilevato",
+    "sv": "En katt har upptäckts",
+    "no": "En katt er oppdaget",
+    "es": "Se ha detectado un gato",
+    "da": "En kat er blevet registreret",
+    "ru": "Обнаружена кошка",
+    "pl": "Wykryto kota",
+    "ko": "고양이가 감지되었습니다"
+  },
+  "hint": {
+    "en": "Triggers when a cat is detected in the Litter-Robot.",
+    "nl": "Wordt geactiveerd wanneer een kat wordt gedetecteerd in de Litter-Robot.",
+    "de": "Wird ausgelöst, wenn eine Katze in der Litter-Robot erkannt wird.",
+    "fr": "Se déclenche lorsqu'un chat est détecté dans le Litter-Robot.",
+    "it": "Si attiva quando un gatto viene rilevato nel Litter-Robot.",
+    "sv": "Utlöses när en katt upptäcks i Litter-Robot.",
+    "no": "Utøses når en katt oppdages i Litter-Robot.",
+    "es": "Se activa cuando se detecta un gato en el Litter-Robot.",
+    "da": "Udløses, når en kat registreres i Litter-Robot.",
+    "ru": "Срабатывает при обнаружении кошки в Litter-Robot.",
+    "pl": "Wyzwalane po wykryciu kota w Litter-Robot.",
+    "ko": "Litter-Robot에서 고양이를 감지하면 트리거됩니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

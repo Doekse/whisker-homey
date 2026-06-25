@@ -41,6 +41,10 @@
   ],
   "pair": [
     {
+      "id": "loading",
+      "template": "loading"
+    },
+    {
       "id": "login",
       "template": "login_credentials",
       "options": {

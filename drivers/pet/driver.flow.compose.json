@@ -178,7 +178,7 @@
       ]
     },
     {
-      "id": "age_changed",
+      "id": "label_age_changed",
       "title": {
         "en": "The age changed",
         "nl": "De leeftijd is veranderd",
@@ -223,7 +223,7 @@
       },
       "tokens": [
         {
-          "name": "age",
+          "name": "label_age",
           "type": "string",
           "title": {
             "en": "Age",
@@ -243,7 +243,7 @@
       ]
     },
     {
-      "id": "environment_changed",
+      "id": "label_environment_changed",
       "title": {
         "en": "The environment changed",
         "nl": "De omgeving is veranderd",
@@ -288,7 +288,7 @@
       },
       "tokens": [
         {
-          "name": "environment",
+          "name": "label_environment",
           "type": "string",
           "title": {
             "en": "Environment",
@@ -308,7 +308,7 @@
       ]
     },
     {
-      "id": "diet_changed",
+      "id": "label_food_changed",
       "title": {
         "en": "The diet changed",
         "nl": "Het dieet is veranderd",
@@ -353,7 +353,7 @@
       },
       "tokens": [
         {
-          "name": "diet",
+          "name": "label_food",
           "type": "string",
           "title": {
             "en": "Diet",

@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Toggle globe light",
+    "nl": "Wissel nachtlamp",
+    "de": "Nachtlicht umschalten",
+    "fr": "Basculer la veilleuse",
+    "it": "Commuta luce notturna",
+    "sv": "Växla nattljus",
+    "no": "Veksle nattlys",
+    "es": "Alternar luz nocturna",
+    "da": "Skift natlys",
+    "ru": "Переключить ночное освещение",
+    "pl": "Przełącz nocne oświetlenie",
+    "ko": "야간등 토글"
+  },
+  "hint": {
+    "en": "Toggles the globe light on or off.",
+    "nl": "Wisselt de nachtlamp aan of uit.",
+    "de": "Schaltet das Nachtlicht ein oder aus.",
+    "fr": "Bascule la veilleuse allumée ou éteinte.",
+    "it": "Commuta la luce notturna accesa o spenta.",
+    "sv": "Växlar nattljuset på eller av.",
+    "no": "Veksler nattlyset på eller av.",
+    "es": "Alterna la luz nocturna encendida o apagada.",
+    "da": "Skifter natlyset til eller fra.",
+    "ru": "Переключает ночное освещение включенным или выключенным.",
+    "pl": "Przełącza nocne oświetlenie włączone lub wyłączone.",
+    "ko": "야간등을 켜거나 끕니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3"
+    }
+  ]
+}

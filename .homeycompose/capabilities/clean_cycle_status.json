@@ -1,5 +1,5 @@
 {
-  "type": "string",
+  "type": "enum",
   "title": {
     "en": "Cleaning status",
     "nl": "Reinigingsstatus",
@@ -17,5 +17,415 @@
   "getable": true,
   "setable": false,
   "uiComponent": "sensor",
-  "icon": "/assets/capabilities/clean_cycle_status.svg"
+  "icon": "/assets/capabilities/clean_cycle_status.svg",
+  "values": [
+    {
+      "id": "CCC",
+      "title": {
+        "en": "Cleaning cycle complete",
+        "nl": "Reinigingscyclus voltooid",
+        "de": "Reinigungszyklus abgeschlossen",
+        "fr": "Cycle de nettoyage terminé",
+        "it": "Ciclo di pulizia completato",
+        "sv": "Rengöringscykel klar",
+        "no": "Rengjøringssyklus fullført",
+        "es": "Ciclo de limpieza completado",
+        "da": "Rengøringscyklus fuldført",
+        "ru": "Цикл очистки завершён",
+        "pl": "Cykl czyszczenia zakończony",
+        "ko": "청소 주기 완료"
+      }
+    },
+    {
+      "id": "CCP",
+      "title": {
+        "en": "Cleaning",
+        "nl": "Reinigen",
+        "de": "Reinigen",
+        "fr": "Nettoyage",
+        "it": "Pulizia",
+        "sv": "Rengör",
+        "no": "Rengjør",
+        "es": "Limpiando",
+        "da": "Rengører",
+        "ru": "Очистка",
+        "pl": "Czyszczenie",
+        "ko": "청소 중"
+      }
+    },
+    {
+      "id": "CST",
+      "title": {
+        "en": "Waiting to start",
+        "nl": "Wachten om te starten",
+        "de": "Wartet auf Start",
+        "fr": "En attente de démarrage",
+        "it": "In attesa di avvio",
+        "sv": "Väntar på start",
+        "no": "Venter på start",
+        "es": "Esperando para iniciar",
+        "da": "Venter på start",
+        "ru": "Ожидание запуска",
+        "pl": "Oczekiwanie na start",
+        "ko": "시작 대기 중"
+      }
+    },
+    {
+      "id": "CYCLE_CAT_REL_DFI",
+      "title": {
+        "en": "Dumping",
+        "nl": "Legen",
+        "de": "Entleeren",
+        "fr": "Vidage",
+        "it": "Scarico",
+        "sv": "Tömmer ut",
+        "no": "Tømmer ut",
+        "es": "Volcando",
+        "da": "Tømmer ud",
+        "ru": "Сброс",
+        "pl": "Zrzut",
+        "ko": "버리는 중"
+      }
+    },
+    {
+      "id": "CYCLE_CAT_REL_LEVEL",
+      "title": {
+        "en": "Leveling",
+        "nl": "Nivelleren",
+        "de": "Nivellieren",
+        "fr": "Nivellement",
+        "it": "Livellamento",
+        "sv": "Nivellerar",
+        "no": "Nivellerer",
+        "es": "Nivelando",
+        "da": "Nivellerer",
+        "ru": "Выравнивание",
+        "pl": "Wyrównywanie",
+        "ko": "평탄화 중"
+      }
+    },
+    {
+      "id": "CYCLE_CAT_RELEASE",
+      "title": {
+        "en": "Releasing cat",
+        "nl": "Kat bevrijden",
+        "de": "Katze befreien",
+        "fr": "Libération du chat",
+        "it": "Liberazione del gatto",
+        "sv": "Frigör katt",
+        "no": "Frigir katt",
+        "es": "Liberando gato",
+        "da": "Frigiver kat",
+        "ru": "Освобождение кошки",
+        "pl": "Uwalnianie kota",
+        "ko": "고양이 해제 중"
+      }
+    },
+    {
+      "id": "CYCLE_CHANGE_FILTER",
+      "title": {
+        "en": "Moving to filter position",
+        "nl": "Naar filterpositie",
+        "de": "Fahrt zur Filterposition",
+        "fr": "Rotation vers le filtre",
+        "it": "Spostamento in posizione filtro",
+        "sv": "Roterar till filterposition",
+        "no": "Roterer til filterposisjon",
+        "es": "Moviendo a posición de filtro",
+        "da": "Roterer til filterposition",
+        "ru": "Поворот к позиции фильтра",
+        "pl": "Jazda do pozycji filtra",
+        "ko": "필터 위치로 이동 중"
+      }
+    },
+    {
+      "id": "CYCLE_CHANGE_FILTER2",
+      "title": {
+        "en": "Ready to replace filter",
+        "nl": "Klaar om filter te vervangen",
+        "de": "Bereit zum Filterwechsel",
+        "fr": "Prêt à remplacer le filtre",
+        "it": "Pronto per sostituire il filtro",
+        "sv": "Redo att byta filter",
+        "no": "Klar til å bytte filter",
+        "es": "Listo para cambiar filtro",
+        "da": "Klar til at skifte filter",
+        "ru": "Готов к замене фильтра",
+        "pl": "Gotowy do wymiany filtra",
+        "ko": "필터 교체 준비됨"
+      }
+    },
+    {
+      "id": "CYCLE_COMPLETE",
+      "title": {
+        "en": "Completed",
+        "nl": "Voltooid",
+        "de": "Abgeschlossen",
+        "fr": "Terminé",
+        "it": "Completato",
+        "sv": "Slutförd",
+        "no": "Fullført",
+        "es": "Completado",
+        "da": "Fuldført",
+        "ru": "Завершено",
+        "pl": "Zakończone",
+        "ko": "완료"
+      }
+    },
+    {
+      "id": "CYCLE_DFI",
+      "title": {
+        "en": "Dumping",
+        "nl": "Legen",
+        "de": "Entleeren",
+        "fr": "Vidage",
+        "it": "Scarico",
+        "sv": "Tömmer ut",
+        "no": "Tømmer ut",
+        "es": "Volcando",
+        "da": "Tømmer ud",
+        "ru": "Сброс",
+        "pl": "Zrzut",
+        "ko": "버리는 중"
+      }
+    },
+    {
+      "id": "CYCLE_DUMP",
+      "title": {
+        "en": "Scooping",
+        "nl": "Scheppen",
+        "de": "Schaufeln",
+        "fr": "Raclage",
+        "it": "Raccolta",
+        "sv": "Skopar",
+        "no": "Skraper",
+        "es": "Recogiendo",
+        "da": "Skovler",
+        "ru": "Сбор",
+        "pl": "Zbieranie",
+        "ko": "퍼내는 중"
+      }
+    },
+    {
+      "id": "CYCLE_EMPTY",
+      "title": {
+        "en": "Emptying",
+        "nl": "Legen",
+        "de": "Entleeren",
+        "fr": "Vidage",
+        "it": "Svuotamento",
+        "sv": "Tömmer",
+        "no": "Tømmer",
+        "es": "Vaciando",
+        "da": "Tømmer",
+        "ru": "Опустошение",
+        "pl": "Opróżnianie",
+        "ko": "비우는 중"
+      }
+    },
+    {
+      "id": "CYCLE_EMPTY_ABORT",
+      "title": {
+        "en": "Emptying aborted",
+        "nl": "Legen afgebroken",
+        "de": "Entleeren abgebrochen",
+        "fr": "Vidage annulé",
+        "it": "Svuotamento interrotto",
+        "sv": "Tömning avbruten",
+        "no": "Tømming avbrutt",
+        "es": "Vaciado cancelado",
+        "da": "Tømning afbrudt",
+        "ru": "Опустошение прервано",
+        "pl": "Opróżnianie przerwane",
+        "ko": "비우기 중단됨"
+      }
+    },
+    {
+      "id": "CYCLE_EMPTY_HOME",
+      "title": {
+        "en": "Emptying",
+        "nl": "Legen",
+        "de": "Entleeren",
+        "fr": "Vidage",
+        "it": "Svuotamento",
+        "sv": "Tömmer",
+        "no": "Tømmer",
+        "es": "Vaciando",
+        "da": "Tømmer",
+        "ru": "Опустошение",
+        "pl": "Opróżnianie",
+        "ko": "비우는 중"
+      }
+    },
+    {
+      "id": "CYCLE_FIND_DUMP",
+      "title": {
+        "en": "Finding dump position",
+        "nl": "Stortpositie zoeken",
+        "de": "Entleerposition suchen",
+        "fr": "Recherche position vidage",
+        "it": "Ricerca posizione svuotamento",
+        "sv": "Söker tömposition",
+        "no": "Finner tømmeposisjon",
+        "es": "Buscando posición de vaciado",
+        "da": "Finder tømposition",
+        "ru": "Поиск позиции сброса",
+        "pl": "Wyszukiwanie pozycji zrzutu",
+        "ko": "덤프 위치 찾는 중"
+      }
+    },
+    {
+      "id": "CYCLE_HOME",
+      "title": {
+        "en": "Completed",
+        "nl": "Voltooid",
+        "de": "Abgeschlossen",
+        "fr": "Terminé",
+        "it": "Completato",
+        "sv": "Slutförd",
+        "no": "Fullført",
+        "es": "Completado",
+        "da": "Fuldført",
+        "ru": "Завершено",
+        "pl": "Zakończone",
+        "ko": "완료"
+      }
+    },
+    {
+      "id": "CYCLE_IDLE",
+      "title": {
+        "en": "Idle",
+        "nl": "Inactief",
+        "de": "Leerlauf",
+        "fr": "Inactif",
+        "it": "Inattivo",
+        "sv": "Vilande",
+        "no": "Inaktiv",
+        "es": "Inactivo",
+        "da": "Inaktiv",
+        "ru": "Простой",
+        "pl": "Bezczynny",
+        "ko": "대기"
+      }
+    },
+    {
+      "id": "CYCLE_LEVEL",
+      "title": {
+        "en": "Leveling",
+        "nl": "Nivelleren",
+        "de": "Nivellieren",
+        "fr": "Nivellement",
+        "it": "Livellamento",
+        "sv": "Nivellerar",
+        "no": "Nivellerer",
+        "es": "Nivelando",
+        "da": "Nivellerer",
+        "ru": "Выравнивание",
+        "pl": "Wyrównywanie",
+        "ko": "평탄화 중"
+      }
+    },
+    {
+      "id": "CYCLE_PENDING",
+      "title": {
+        "en": "Waiting to start",
+        "nl": "Wachten om te starten",
+        "de": "Wartet auf Start",
+        "fr": "En attente de démarrage",
+        "it": "In attesa di avvio",
+        "sv": "Väntar på start",
+        "no": "Venter på start",
+        "es": "Esperando para iniciar",
+        "da": "Venter på start",
+        "ru": "Ожидание запуска",
+        "pl": "Oczekiwanie na start",
+        "ko": "시작 대기 중"
+      }
+    },
+    {
+      "id": "EC",
+      "title": {
+        "en": "Emptying",
+        "nl": "Legen",
+        "de": "Entleeren",
+        "fr": "Vidage",
+        "it": "Svuotamento",
+        "sv": "Tömmer",
+        "no": "Tømmer",
+        "es": "Vaciando",
+        "da": "Tømmer",
+        "ru": "Опустошение",
+        "pl": "Opróżnianie",
+        "ko": "비우는 중"
+      }
+    },
+    {
+      "id": "P",
+      "title": {
+        "en": "Paused",
+        "nl": "Gepauzeerd",
+        "de": "Pausiert",
+        "fr": "En pause",
+        "it": "In pausa",
+        "sv": "Pausad",
+        "no": "Pauset",
+        "es": "En pausa",
+        "da": "Sat på pause",
+        "ru": "Приостановлено",
+        "pl": "Wstrzymane",
+        "ko": "일시 정지"
+      }
+    },
+    {
+      "id": "RDY",
+      "title": {
+        "en": "Idle",
+        "nl": "Inactief",
+        "de": "Leerlauf",
+        "fr": "Inactif",
+        "it": "Inattivo",
+        "sv": "Vilande",
+        "no": "Inaktiv",
+        "es": "Inactivo",
+        "da": "Inaktiv",
+        "ru": "Простой",
+        "pl": "Bezczynny",
+        "ko": "대기"
+      }
+    },
+    {
+      "id": "ROBOT_CAT_DETECT_DELAY",
+      "title": {
+        "en": "Waiting to start",
+        "nl": "Wachten om te starten",
+        "de": "Wartet auf Start",
+        "fr": "En attente de démarrage",
+        "it": "In attesa di avvio",
+        "sv": "Väntar på start",
+        "no": "Venter på start",
+        "es": "Esperando para iniciar",
+        "da": "Venter på start",
+        "ru": "Ожидание запуска",
+        "pl": "Oczekiwanie na start",
+        "ko": "시작 대기 중"
+      }
+    },
+    {
+      "id": "UNKNOWN",
+      "title": {
+        "en": "Unknown status",
+        "nl": "Onbekende status",
+        "de": "Unbekannter Status",
+        "fr": "Statut inconnu",
+        "it": "Stato sconosciuto",
+        "sv": "Okänd status",
+        "no": "Ukjent status",
+        "es": "Estado desconocido",
+        "da": "Ukendt status",
+        "ru": "Неизвестный статус",
+        "pl": "Nieznany status",
+        "ko": "알 수 없는 상태"
+      }
+    }
+  ]
 }

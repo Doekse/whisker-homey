@@ -1,0 +1,41 @@
+{
+  "errors": {
+    "session_unavailable": "Keine API-Sitzung verfügbar. Bitte repariere das Gerät.",
+    "invalid_device_data_missing_serial": "Ungültige Gerätedaten. Roboter-Seriennummer fehlt.",
+    "invalid_device_data_missing_pet_id": "Ungültige Gerätedaten. Haustier-ID fehlt.",
+    "invalid_device_data_missing_robot_id": "Ungültige Gerätedaten. Roboter-ID fehlt.",
+    "invalid_wait_time": "Ungültiger Wartezeitwert",
+    "invalid_panel_brightness": "Ungültiger Wert für Bedienfeldhelligkeit",
+    "invalid_night_light_brightness": "Ungültiger Wert für Nachtlichthelligkeit",
+    "invalid_night_light_mode": "Ungültiger Nachtlichtmodus",
+    "robot_not_found": "Roboter mit Seriennummer __serial__ nicht gefunden"
+  },
+  "pairing": {
+    "credentials_required": "Benutzername und Passwort sind für die Kopplung erforderlich",
+    "credentials_required_repair": "Benutzername und Passwort sind für die Reparatur erforderlich",
+    "no_devices_found": "Kein __product__ für dieses Konto gefunden",
+    "robot_not_found": "__product__ mit Seriennummer __serial__ nicht gefunden",
+    "no_pets_found": "Keine Haustiere für dieses Konto gefunden",
+    "pet_not_found": "Haustier mit ID __id__ nicht gefunden"
+  },
+  "state": {
+    "loading": "Wird geladen...",
+    "unknown": "Unbekannt",
+    "not_set": "Nicht festgelegt",
+    "currently_connected": "Derzeit verbunden"
+  },
+  "age": {
+    "month": "__count__ Monat",
+    "months": "__count__ Monate",
+    "year": "__count__ Jahr",
+    "years": "__count__ Jahre",
+    "invalid_date": "Ungültiges Datum"
+  },
+  "notifications": {
+    "cat_visit_generic": "Eine Katze hat __robot__ besucht 🐱",
+    "cat_visit": "__name__ hat __robot__ besucht und __grams__ g gewogen 🐱",
+    "waste_drawer_full": "Die Abfallschublade von __robot__ ist voll 🗑️",
+    "robot_fault": "__robot__ meldete ein Problem: __fault__ ⚠️",
+    "robot_fault_generic": "__robot__ meldete ein Problem ⚠️"
+  }
+}

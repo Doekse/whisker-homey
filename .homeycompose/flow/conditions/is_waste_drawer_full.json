@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "The waste drawer !{{is|is not}} full",
+    "nl": "De afvallade !{{is|is niet}} vol",
+    "de": "Die Abfallschublade !{{ist|ist nicht}} voll",
+    "fr": "Le tiroir à déchets !{{est|n'est pas}} plein",
+    "it": "La vaschetta dei rifiuti !{{è|non è}} pieno",
+    "sv": "Avfallslådan !{{är|är inte}} full",
+    "no": "Avfallsskuffen !{{er|er ikke}} full",
+    "es": "El cajón de residuos !{{está|no está}} lleno",
+    "da": "Affaldsskuffen !{{er|er ikke}} fuld",
+    "ru": "Контейнер для отходов !{{заполнен|не заполнен}}",
+    "pl": "Szuflada na odpady !{{jest|nie jest}} pełny",
+    "ko": "폐기물 서랍이 !{{가득 찼습니다|가득 차지 않았습니다}}"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ],
+  "hint": {
+    "en": "Returns true when the waste drawer is currently full.",
+    "nl": "Geeft true terug wanneer de afvallade momenteel vol is.",
+    "de": "Gibt wahr zurück, wenn die Abfallschublade derzeit voll ist.",
+    "fr": "Retourne vrai lorsque le tiroir à déchets est plein.",
+    "it": "Restituisce vero quando il cassetto dei rifiuti è pieno.",
+    "sv": "Returnerar sant när avfallslådan är full.",
+    "no": "Returnerer sann når avfallsbeholderen er full.",
+    "es": "Devuelve verdadero cuando el cajón de desechos está lleno.",
+    "da": "Returnerer sand, når affaldsskuffen er fuld.",
+    "ru": "Возвращает истину, когда мусорный контейнер заполнен.",
+    "pl": "Zwraca prawdę, gdy szuflada na odpady jest pełny.",
+    "ko": "폐기물 서랍이 가득 찼을 때 true를 반환합니다."
+  }
+}

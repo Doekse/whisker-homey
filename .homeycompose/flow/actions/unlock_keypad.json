@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Unlock the keypad",
+    "nl": "Ontgrendel het bedieningspaneel",
+    "de": "Tastatur entsperren",
+    "fr": "Déverrouiller le clavier",
+    "it": "Sblocca la tastiera",
+    "sv": "Lås upp knappsatsen",
+    "no": "Lås opp tastaturet",
+    "es": "Desbloquear el teclado",
+    "da": "Lås op tastaturet",
+    "ru": "Разблокировать клавиатуру",
+    "pl": "Odblokuj klawiaturę",
+    "ko": "키패드 잠금 해제"
+  },
+  "hint": {
+    "en": "Unlocks the keypad so the buttons can be used again.",
+    "nl": "Ontgrendelt het bedieningspaneel zodat de knoppen weer gebruikt kunnen worden.",
+    "de": "Entsperrt die Tastatur, damit die Tasten wieder verwendet werden können.",
+    "fr": "Déverrouille le clavier pour que les boutons puissent être utilisés à nouveau.",
+    "it": "Sblocca la tastiera in modo che i pulsanti possano essere utilizzati di nuovo.",
+    "sv": "Låser upp knappsatsen så att knapparna kan användas igen.",
+    "no": "Låser opp tastaturet slik at knappene kan brukes igjen.",
+    "es": "Desbloquea el teclado para que los botones se puedan usar nuevamente.",
+    "da": "Låser tastaturet op, så knapperne kan bruges igen.",
+    "ru": "Разблокирует клавиатуру, чтобы кнопки снова могли использоваться.",
+    "pl": "Odblokowuje klawiaturę, aby przyciski mogły być ponownie używane.",
+    "ko": "버튼을 다시 사용할 수 있도록 키패드 잠금을 해제합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

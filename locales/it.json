@@ -1,0 +1,41 @@
+{
+  "errors": {
+    "session_unavailable": "Nessuna sessione API disponibile. Ripara il dispositivo.",
+    "invalid_device_data_missing_serial": "Dati del dispositivo non validi. Numero di serie del robot mancante.",
+    "invalid_device_data_missing_pet_id": "Dati del dispositivo non validi. ID animale mancante.",
+    "invalid_device_data_missing_robot_id": "Dati del dispositivo non validi. ID robot mancante.",
+    "invalid_wait_time": "Valore del tempo di attesa non valido",
+    "invalid_panel_brightness": "Valore luminosità pannello di controllo non valido",
+    "invalid_night_light_brightness": "Valore luminosità luce notturna non valido",
+    "invalid_night_light_mode": "Modalità luce notturna non valida",
+    "robot_not_found": "Robot con numero di serie __serial__ non trovato"
+  },
+  "pairing": {
+    "credentials_required": "Nome utente e password sono obbligatori per l'associazione",
+    "credentials_required_repair": "Nome utente e password sono obbligatori per la riparazione",
+    "no_devices_found": "Nessun __product__ trovato per questo account",
+    "robot_not_found": "__product__ con numero di serie __serial__ non trovato",
+    "no_pets_found": "Nessun animale trovato per questo account",
+    "pet_not_found": "Animale con ID __id__ non trovato"
+  },
+  "state": {
+    "loading": "Caricamento...",
+    "unknown": "Sconosciuto",
+    "not_set": "Non impostato",
+    "currently_connected": "Attualmente connesso"
+  },
+  "age": {
+    "month": "__count__ mese",
+    "months": "__count__ mesi",
+    "year": "__count__ anno",
+    "years": "__count__ anni",
+    "invalid_date": "Data non valida"
+  },
+  "notifications": {
+    "cat_visit_generic": "Un gatto ha visitato __robot__ 🐱",
+    "cat_visit": "__name__ ha visitato __robot__ e ha pesato __grams__ g 🐱",
+    "waste_drawer_full": "La vaschetta dei rifiuti di __robot__ è piena 🗑️",
+    "robot_fault": "__robot__ ha segnalato un problema: __fault__ ⚠️",
+    "robot_fault_generic": "__robot__ ha segnalato un problema ⚠️"
+  }
+}

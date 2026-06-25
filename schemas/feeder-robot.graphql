@@ -1,69 +1,22 @@
-"""whether this query should be included"""
-directive @include(
-  if: Boolean!
-) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
-
-"""whether this query should be skipped"""
-directive @skip(
-  if: Boolean!
-) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+schema {
+  query: query_root
+  mutation: mutation_root
+  subscription: subscription_root
+}
 
 """whether this query should be cached (Hasura Cloud only)"""
 directive @cached(
-  ttl: Int!
-  refresh: Boolean!
+  """measured in seconds"""
+  ttl: Int! = 60
+
+  """refresh the cache entry"""
+  refresh: Boolean! = false
 ) on QUERY
 
-"""  Queries"""
-type Query {
-  feeder_action(distinct_on: [feeder_action_select_column!], limit: Int, offset: Int, order_by: [feeder_action_order_by!], where: feeder_action_bool_exp): [feeder_action!]! # fetch data from the table: "feeder.action"
-  feeder_command(distinct_on: [feeder_command_select_column!], limit: Int, offset: Int, order_by: [feeder_command_order_by!], where: feeder_command_bool_exp): [feeder_command!]! # fetch data from the table: "feeder.command"
-  feeder_command_by_pk(id: uuid!): feeder_command # fetch data from the table: "feeder.command" using primary key columns
-  feeder_fault(distinct_on: [feeder_fault_select_column!], limit: Int, offset: Int, order_by: [feeder_fault_order_by!], where: feeder_fault_bool_exp): [feeder_fault!]! # fetch data from the table: "feeder.fault"
-  feeder_feeding_meal(distinct_on: [feeder_feeding_meal_select_column!], limit: Int, offset: Int, order_by: [feeder_feeding_meal_order_by!], where: feeder_feeding_meal_bool_exp): [feeder_feeding_meal!]! # fetch data from the table: "feeder.feeding_meal"
-  feeder_feeding_snack(distinct_on: [feeder_feeding_snack_select_column!], limit: Int, offset: Int, order_by: [feeder_feeding_snack_order_by!], where: feeder_feeding_snack_bool_exp): [feeder_feeding_snack!]! # fetch data from the table: "feeder.feeding_snack"
-  feeder_meal_event(distinct_on: [feeder_meal_event_select_column!], limit: Int, offset: Int, order_by: [feeder_meal_event_order_by!], where: feeder_meal_event_bool_exp): [feeder_meal_event!]! # fetch data from the table: "feeder.meal_event"
-  feeder_schedule(distinct_on: [feeder_schedule_select_column!], limit: Int, offset: Int, order_by: [feeder_schedule_order_by!], where: feeder_schedule_bool_exp): [feeder_schedule!]! # fetch data from the table: "feeder.schedule"
-  feeder_schedule_by_pk(id: uuid!): feeder_schedule # fetch data from the table: "feeder.schedule" using primary key columns
-  feeder_unit(distinct_on: [feeder_unit_select_column!], limit: Int, offset: Int, order_by: [feeder_unit_order_by!], where: feeder_unit_bool_exp): [feeder_unit!]! # fetch data from the table: "feeder.unit"
-  feeder_unit_by_pk(id: Int!): feeder_unit # fetch data from the table: "feeder.unit" using primary key columns
-  feeder_unit_ping(distinct_on: [feeder_unit_ping_select_column!], limit: Int, offset: Int, order_by: [feeder_unit_ping_order_by!], where: feeder_unit_ping_bool_exp): [feeder_unit_ping!]! # fetch data from the table: "feeder.unit_ping"
-  feeder_unit_ping_by_pk(id: Int!): feeder_unit_ping # fetch data from the table: "feeder.unit_ping" using primary key columns
-  feeder_unit_state(distinct_on: [feeder_unit_state_select_column!], limit: Int, offset: Int, order_by: [feeder_unit_state_order_by!], where: feeder_unit_state_bool_exp): [feeder_unit_state!]! # fetch data from the table: "feeder.unit_state"
-  feeder_unit_state_by_pk(id: Int!): feeder_unit_state # fetch data from the table: "feeder.unit_state" using primary key columns
-  feeder_unit_time(distinct_on: [feeder_unit_time_select_column!], limit: Int, offset: Int, order_by: [feeder_unit_time_order_by!], where: feeder_unit_time_bool_exp): [feeder_unit_time!]! # fetch data from the table: "feeder.unit_time"
-  feeder_unit_time_by_pk(id: Int!): feeder_unit_time # fetch data from the table: "feeder.unit_time" using primary key columns
-  user_device(distinct_on: [user_device_select_column!], limit: Int, offset: Int, order_by: [user_device_order_by!], where: user_device_bool_exp): [user_device!]! # fetch data from the table: "user.device"
-  user_device_by_pk(device_id: String!): user_device # fetch data from the table: "user.device" using primary key columns
-  user_notification_settings(distinct_on: [user_notification_settings_select_column!], limit: Int, offset: Int, order_by: [user_notification_settings_order_by!], where: user_notification_settings_bool_exp): [user_notification_settings!]! # fetch data from the table: "user.notification_settings"
-  user_notification_settings_by_pk(id: Int!): user_notification_settings # fetch data from the table: "user.notification_settings" using primary key columns
-}
-
-"""  Mutations"""
-type Mutation {
-  delete_feeder_unit(where: feeder_unit_bool_exp!): feeder_unit_mutation_response # delete data from the table: "feeder.unit"
-  delete_feeder_unit_by_pk(id: Int!): feeder_unit # delete single row from the table: "feeder.unit"
-  delete_user_device(where: user_device_bool_exp!): user_device_mutation_response # delete data from the table: "user.device"
-  delete_user_device_by_pk(device_id: String!): user_device # delete single row from the table: "user.device"
-  insert_feeder_unit(objects: [feeder_unit_insert_input!]!, on_conflict: feeder_unit_on_conflict): feeder_unit_mutation_response # insert data into the table: "feeder.unit"
-  insert_feeder_unit_one(object: feeder_unit_insert_input!, on_conflict: feeder_unit_on_conflict): feeder_unit # insert a single row into the table: "feeder.unit"
-  insert_feeder_unit_state(objects: [feeder_unit_state_insert_input!]!, on_conflict: feeder_unit_state_on_conflict): feeder_unit_state_mutation_response # insert data into the table: "feeder.unit_state"
-  insert_feeder_unit_state_one(object: feeder_unit_state_insert_input!, on_conflict: feeder_unit_state_on_conflict): feeder_unit_state # insert a single row into the table: "feeder.unit_state"
-  insert_user_device(objects: [user_device_insert_input!]!, on_conflict: user_device_on_conflict): user_device_mutation_response # insert data into the table: "user.device"
-  insert_user_device_one(object: user_device_insert_input!, on_conflict: user_device_on_conflict): user_device # insert a single row into the table: "user.device"
-  insert_user_notification_settings(objects: [user_notification_settings_insert_input!]!, on_conflict: user_notification_settings_on_conflict): user_notification_settings_mutation_response # insert data into the table: "user.notification_settings"
-  insert_user_notification_settings_one(object: user_notification_settings_insert_input!, on_conflict: user_notification_settings_on_conflict): user_notification_settings # insert a single row into the table: "user.notification_settings"
-  update_feeder_unit(_set: feeder_unit_set_input, where: feeder_unit_bool_exp!): feeder_unit_mutation_response # update data of the table: "feeder.unit"
-  update_feeder_unit_by_pk(_set: feeder_unit_set_input, pk_columns: feeder_unit_pk_columns_input!): feeder_unit # update single row of the table: "feeder.unit"
-  update_feeder_unit_state(_append: feeder_unit_state_append_input, _delete_at_path: feeder_unit_state_delete_at_path_input, _delete_elem: feeder_unit_state_delete_elem_input, _delete_key: feeder_unit_state_delete_key_input, _prepend: feeder_unit_state_prepend_input, _set: feeder_unit_state_set_input, where: feeder_unit_state_bool_exp!): feeder_unit_state_mutation_response # update data of the table: "feeder.unit_state"
-  update_feeder_unit_state_by_pk(_append: feeder_unit_state_append_input, _delete_at_path: feeder_unit_state_delete_at_path_input, _delete_elem: feeder_unit_state_delete_elem_input, _delete_key: feeder_unit_state_delete_key_input, _prepend: feeder_unit_state_prepend_input, _set: feeder_unit_state_set_input, pk_columns: feeder_unit_state_pk_columns_input!): feeder_unit_state # update single row of the table: "feeder.unit_state"
-  update_user_device(_set: user_device_set_input, where: user_device_bool_exp!): user_device_mutation_response # update data of the table: "user.device"
-  update_user_device_by_pk(_set: user_device_set_input, pk_columns: user_device_pk_columns_input!): user_device # update single row of the table: "user.device"
-  update_user_notification_settings(_append: user_notification_settings_append_input, _delete_at_path: user_notification_settings_delete_at_path_input, _delete_elem: user_notification_settings_delete_elem_input, _delete_key: user_notification_settings_delete_key_input, _prepend: user_notification_settings_prepend_input, _set: user_notification_settings_set_input, where: user_notification_settings_bool_exp!): user_notification_settings_mutation_response # update data of the table: "user.notification_settings"
-  update_user_notification_settings_by_pk(_append: user_notification_settings_append_input, _delete_at_path: user_notification_settings_delete_at_path_input, _delete_elem: user_notification_settings_delete_elem_input, _delete_key: user_notification_settings_delete_key_input, _prepend: user_notification_settings_prepend_input, _set: user_notification_settings_set_input, pk_columns: user_notification_settings_pk_columns_input!): user_notification_settings # update single row of the table: "user.notification_settings"
-}
-
-input Boolean_comparison_exp # Boolean expression to compare columns of type "Boolean". All fields are combined with logical 'AND'. {
+"""
+Boolean expression to compare columns of type "Boolean". All fields are combined with logical 'AND'.
+"""
+input Boolean_comparison_exp {
   _eq: Boolean
   _gt: Boolean
   _gte: Boolean
@@ -75,7 +28,10 @@ input Boolean_comparison_exp # Boolean expression to compare columns of type "Bo
   _nin: [Boolean!]
 }
 
-input Float_comparison_exp # Boolean expression to compare columns of type "Float". All fields are combined with logical 'AND'. {
+"""
+Boolean expression to compare columns of type "Float". All fields are combined with logical 'AND'.
+"""
+input Float_comparison_exp {
   _eq: Float
   _gt: Float
   _gte: Float
@@ -87,7 +43,10 @@ input Float_comparison_exp # Boolean expression to compare columns of type "Floa
   _nin: [Float!]
 }
 
-input Int_comparison_exp # Boolean expression to compare columns of type "Int". All fields are combined with logical 'AND'. {
+"""
+Boolean expression to compare columns of type "Int". All fields are combined with logical 'AND'.
+"""
+input Int_comparison_exp {
   _eq: Int
   _gt: Int
   _gte: Int
@@ -99,35 +58,72 @@ input Int_comparison_exp # Boolean expression to compare columns of type "Int". 
   _nin: [Int!]
 }
 
-input String_comparison_exp # Boolean expression to compare columns of type "String". All fields are combined with logical 'AND'. {
+"""
+Boolean expression to compare columns of type "String". All fields are combined with logical 'AND'.
+"""
+input String_comparison_exp {
   _eq: String
   _gt: String
   _gte: String
-  _ilike: String # does the column match the given case-insensitive pattern
+
+  """does the column match the given case-insensitive pattern"""
+  _ilike: String
   _in: [String!]
-  _iregex: String # does the column match the given POSIX regular expression, case insensitive
+
+  """
+  does the column match the given POSIX regular expression, case insensitive
+  """
+  _iregex: String
   _is_null: Boolean
-  _like: String # does the column match the given pattern
+
+  """does the column match the given pattern"""
+  _like: String
   _lt: String
   _lte: String
   _neq: String
-  _nilike: String # does the column NOT match the given case-insensitive pattern
+
+  """does the column NOT match the given case-insensitive pattern"""
+  _nilike: String
   _nin: [String!]
-  _niregex: String # does the column NOT match the given POSIX regular expression, case insensitive
-  _nlike: String # does the column NOT match the given pattern
-  _nregex: String # does the column NOT match the given POSIX regular expression, case sensitive
-  _nsimilar: String # does the column NOT match the given SQL regular expression
-  _regex: String # does the column match the given POSIX regular expression, case sensitive
-  _similar: String # does the column match the given SQL regular expression
+
+  """
+  does the column NOT match the given POSIX regular expression, case insensitive
+  """
+  _niregex: String
+
+  """does the column NOT match the given pattern"""
+  _nlike: String
+
+  """
+  does the column NOT match the given POSIX regular expression, case sensitive
+  """
+  _nregex: String
+
+  """does the column NOT match the given SQL regular expression"""
+  _nsimilar: String
+
+  """
+  does the column match the given POSIX regular expression, case sensitive
+  """
+  _regex: String
+
+  """does the column match the given SQL regular expression"""
+  _similar: String
 }
 
-type feeder_action # columns and relationships of "feeder.action" {
+"""
+columns and relationships of "feeder.action"
+"""
+type feeder_action {
   register: Int!
   timestamp: timestamptz!
   value: Int!
 }
 
-input feeder_action_aggregate_order_by # order by aggregate values of table "feeder.action" {
+"""
+order by aggregate values of table "feeder.action"
+"""
+input feeder_action_aggregate_order_by {
   avg: feeder_action_avg_order_by
   count: order_by
   max: feeder_action_max_order_by
@@ -141,12 +137,18 @@ input feeder_action_aggregate_order_by # order by aggregate values of table "fee
   variance: feeder_action_variance_order_by
 }
 
-input feeder_action_avg_order_by # order by avg() on columns of table "feeder.action" {
+"""
+order by avg() on columns of table "feeder.action"
+"""
+input feeder_action_avg_order_by {
   register: order_by
   value: order_by
 }
 
-input feeder_action_bool_exp # Boolean expression to filter rows from the table "feeder.action". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.action". All fields are combined with a logical 'AND'.
+"""
+input feeder_action_bool_exp {
   _and: [feeder_action_bool_exp!]
   _not: feeder_action_bool_exp
   _or: [feeder_action_bool_exp!]
@@ -155,82 +157,132 @@ input feeder_action_bool_exp # Boolean expression to filter rows from the table 
   value: Int_comparison_exp
 }
 
-input feeder_action_max_order_by # order by max() on columns of table "feeder.action" {
+"""
+order by max() on columns of table "feeder.action"
+"""
+input feeder_action_max_order_by {
   register: order_by
   timestamp: order_by
   value: order_by
 }
 
-input feeder_action_min_order_by # order by min() on columns of table "feeder.action" {
+"""
+order by min() on columns of table "feeder.action"
+"""
+input feeder_action_min_order_by {
   register: order_by
   timestamp: order_by
   value: order_by
 }
 
-input feeder_action_order_by # Ordering options when selecting data from "feeder.action". {
+"""Ordering options when selecting data from "feeder.action"."""
+input feeder_action_order_by {
   register: order_by
   timestamp: order_by
   value: order_by
 }
 
-enum feeder_action_select_column # select columns of table "feeder.action" {
-  register # column name
-  timestamp # column name
-  value # column name
+"""
+select columns of table "feeder.action"
+"""
+enum feeder_action_select_column {
+  """column name"""
+  register
+
+  """column name"""
+  timestamp
+
+  """column name"""
+  value
 }
 
-input feeder_action_stddev_order_by # order by stddev() on columns of table "feeder.action" {
+"""
+order by stddev() on columns of table "feeder.action"
+"""
+input feeder_action_stddev_order_by {
   register: order_by
   value: order_by
 }
 
-input feeder_action_stddev_pop_order_by # order by stddev_pop() on columns of table "feeder.action" {
+"""
+order by stddev_pop() on columns of table "feeder.action"
+"""
+input feeder_action_stddev_pop_order_by {
   register: order_by
   value: order_by
 }
 
-input feeder_action_stddev_samp_order_by # order by stddev_samp() on columns of table "feeder.action" {
+"""
+order by stddev_samp() on columns of table "feeder.action"
+"""
+input feeder_action_stddev_samp_order_by {
   register: order_by
   value: order_by
 }
 
-input feeder_action_sum_order_by # order by sum() on columns of table "feeder.action" {
+"""
+order by sum() on columns of table "feeder.action"
+"""
+input feeder_action_sum_order_by {
   register: order_by
   value: order_by
 }
 
-input feeder_action_var_pop_order_by # order by var_pop() on columns of table "feeder.action" {
+"""
+order by var_pop() on columns of table "feeder.action"
+"""
+input feeder_action_var_pop_order_by {
   register: order_by
   value: order_by
 }
 
-input feeder_action_var_samp_order_by # order by var_samp() on columns of table "feeder.action" {
+"""
+order by var_samp() on columns of table "feeder.action"
+"""
+input feeder_action_var_samp_order_by {
   register: order_by
   value: order_by
 }
 
-input feeder_action_variance_order_by # order by variance() on columns of table "feeder.action" {
+"""
+order by variance() on columns of table "feeder.action"
+"""
+input feeder_action_variance_order_by {
   register: order_by
   value: order_by
 }
 
-type feeder_command # columns and relationships of "feeder.command" {
+"""
+columns and relationships of "feeder.command"
+"""
+type feeder_command {
   id: uuid!
-  payload(path: String): jsonb
+  payload(
+    """JSON select path"""
+    path: String
+  ): jsonb
   processed: Boolean!
   serial: String!
   timestamp: timestamptz
   type: String!
-  unit: feeder_unit! # An object relationship
+
+  """An object relationship"""
+  unit: feeder_unit!
 }
 
-input feeder_command_aggregate_order_by # order by aggregate values of table "feeder.command" {
+"""
+order by aggregate values of table "feeder.command"
+"""
+input feeder_command_aggregate_order_by {
   count: order_by
   max: feeder_command_max_order_by
   min: feeder_command_min_order_by
 }
 
-input feeder_command_bool_exp # Boolean expression to filter rows from the table "feeder.command". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.command". All fields are combined with a logical 'AND'.
+"""
+input feeder_command_bool_exp {
   _and: [feeder_command_bool_exp!]
   _not: feeder_command_bool_exp
   _or: [feeder_command_bool_exp!]
@@ -243,21 +295,28 @@ input feeder_command_bool_exp # Boolean expression to filter rows from the table
   unit: feeder_unit_bool_exp
 }
 
-input feeder_command_max_order_by # order by max() on columns of table "feeder.command" {
+"""
+order by max() on columns of table "feeder.command"
+"""
+input feeder_command_max_order_by {
   id: order_by
   serial: order_by
   timestamp: order_by
   type: order_by
 }
 
-input feeder_command_min_order_by # order by min() on columns of table "feeder.command" {
+"""
+order by min() on columns of table "feeder.command"
+"""
+input feeder_command_min_order_by {
   id: order_by
   serial: order_by
   timestamp: order_by
   type: order_by
 }
 
-input feeder_command_order_by # Ordering options when selecting data from "feeder.command". {
+"""Ordering options when selecting data from "feeder.command"."""
+input feeder_command_order_by {
   id: order_by
   payload: order_by
   processed: order_by
@@ -267,25 +326,47 @@ input feeder_command_order_by # Ordering options when selecting data from "feede
   unit: feeder_unit_order_by
 }
 
-enum feeder_command_select_column # select columns of table "feeder.command" {
-  id # column name
-  payload # column name
-  processed # column name
-  serial # column name
-  timestamp # column name
-  type # column name
+"""
+select columns of table "feeder.command"
+"""
+enum feeder_command_select_column {
+  """column name"""
+  id
+
+  """column name"""
+  payload
+
+  """column name"""
+  processed
+
+  """column name"""
+  serial
+
+  """column name"""
+  timestamp
+
+  """column name"""
+  type
 }
 
-type feeder_fault # columns and relationships of "feeder.fault" {
+"""
+columns and relationships of "feeder.fault"
+"""
+type feeder_fault {
   household_id: Int
   serial: String
   timestamp: timestamptz
   type: String
-  unit: feeder_unit # An object relationship
+
+  """An object relationship"""
+  unit: feeder_unit
   value: Int
 }
 
-input feeder_fault_bool_exp # Boolean expression to filter rows from the table "feeder.fault". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.fault". All fields are combined with a logical 'AND'.
+"""
+input feeder_fault_bool_exp {
   _and: [feeder_fault_bool_exp!]
   _not: feeder_fault_bool_exp
   _or: [feeder_fault_bool_exp!]
@@ -297,7 +378,8 @@ input feeder_fault_bool_exp # Boolean expression to filter rows from the table "
   value: Int_comparison_exp
 }
 
-input feeder_fault_order_by # Ordering options when selecting data from "feeder.fault". {
+"""Ordering options when selecting data from "feeder.fault"."""
+input feeder_fault_order_by {
   household_id: order_by
   serial: order_by
   timestamp: order_by
@@ -306,15 +388,30 @@ input feeder_fault_order_by # Ordering options when selecting data from "feeder.
   value: order_by
 }
 
-enum feeder_fault_select_column # select columns of table "feeder.fault" {
-  household_id # column name
-  serial # column name
-  timestamp # column name
-  type # column name
-  value # column name
+"""
+select columns of table "feeder.fault"
+"""
+enum feeder_fault_select_column {
+  """column name"""
+  household_id
+
+  """column name"""
+  serial
+
+  """column name"""
+  timestamp
+
+  """column name"""
+  type
+
+  """column name"""
+  value
 }
 
-type feeder_feeding_meal # columns and relationships of "feeder.feeding_meal" {
+"""
+columns and relationships of "feeder.feeding_meal"
+"""
+type feeder_feeding_meal {
   amount: Float!
   meal_name: String
   meal_number: Int!
@@ -322,10 +419,15 @@ type feeder_feeding_meal # columns and relationships of "feeder.feeding_meal" {
   serial: String!
   status: feeder_feeding_status_enum!
   timestamp: timestamptz!
-  unit: feeder_unit # An object relationship
+
+  """An object relationship"""
+  unit: feeder_unit
 }
 
-input feeder_feeding_meal_aggregate_order_by # order by aggregate values of table "feeder.feeding_meal" {
+"""
+order by aggregate values of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_aggregate_order_by {
   avg: feeder_feeding_meal_avg_order_by
   count: order_by
   max: feeder_feeding_meal_max_order_by
@@ -339,13 +441,19 @@ input feeder_feeding_meal_aggregate_order_by # order by aggregate values of tabl
   variance: feeder_feeding_meal_variance_order_by
 }
 
-input feeder_feeding_meal_avg_order_by # order by avg() on columns of table "feeder.feeding_meal" {
+"""
+order by avg() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_avg_order_by {
   amount: order_by
   meal_number: order_by
   meal_total_portions: order_by
 }
 
-input feeder_feeding_meal_bool_exp # Boolean expression to filter rows from the table "feeder.feeding_meal". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.feeding_meal". All fields are combined with a logical 'AND'.
+"""
+input feeder_feeding_meal_bool_exp {
   _and: [feeder_feeding_meal_bool_exp!]
   _not: feeder_feeding_meal_bool_exp
   _or: [feeder_feeding_meal_bool_exp!]
@@ -359,7 +467,10 @@ input feeder_feeding_meal_bool_exp # Boolean expression to filter rows from the 
   unit: feeder_unit_bool_exp
 }
 
-input feeder_feeding_meal_max_order_by # order by max() on columns of table "feeder.feeding_meal" {
+"""
+order by max() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_max_order_by {
   amount: order_by
   meal_name: order_by
   meal_number: order_by
@@ -368,7 +479,10 @@ input feeder_feeding_meal_max_order_by # order by max() on columns of table "fee
   timestamp: order_by
 }
 
-input feeder_feeding_meal_min_order_by # order by min() on columns of table "feeder.feeding_meal" {
+"""
+order by min() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_min_order_by {
   amount: order_by
   meal_name: order_by
   meal_number: order_by
@@ -377,7 +491,8 @@ input feeder_feeding_meal_min_order_by # order by min() on columns of table "fee
   timestamp: order_by
 }
 
-input feeder_feeding_meal_order_by # Ordering options when selecting data from "feeder.feeding_meal". {
+"""Ordering options when selecting data from "feeder.feeding_meal"."""
+input feeder_feeding_meal_order_by {
   amount: order_by
   meal_name: order_by
   meal_number: order_by
@@ -388,67 +503,112 @@ input feeder_feeding_meal_order_by # Ordering options when selecting data from "
   unit: feeder_unit_order_by
 }
 
-enum feeder_feeding_meal_select_column # select columns of table "feeder.feeding_meal" {
-  amount # column name
-  meal_name # column name
-  meal_number # column name
-  meal_total_portions # column name
-  serial # column name
-  status # column name
-  timestamp # column name
+"""
+select columns of table "feeder.feeding_meal"
+"""
+enum feeder_feeding_meal_select_column {
+  """column name"""
+  amount
+
+  """column name"""
+  meal_name
+
+  """column name"""
+  meal_number
+
+  """column name"""
+  meal_total_portions
+
+  """column name"""
+  serial
+
+  """column name"""
+  status
+
+  """column name"""
+  timestamp
 }
 
-input feeder_feeding_meal_stddev_order_by # order by stddev() on columns of table "feeder.feeding_meal" {
+"""
+order by stddev() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_stddev_order_by {
   amount: order_by
   meal_number: order_by
   meal_total_portions: order_by
 }
 
-input feeder_feeding_meal_stddev_pop_order_by # order by stddev_pop() on columns of table "feeder.feeding_meal" {
+"""
+order by stddev_pop() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_stddev_pop_order_by {
   amount: order_by
   meal_number: order_by
   meal_total_portions: order_by
 }
 
-input feeder_feeding_meal_stddev_samp_order_by # order by stddev_samp() on columns of table "feeder.feeding_meal" {
+"""
+order by stddev_samp() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_stddev_samp_order_by {
   amount: order_by
   meal_number: order_by
   meal_total_portions: order_by
 }
 
-input feeder_feeding_meal_sum_order_by # order by sum() on columns of table "feeder.feeding_meal" {
+"""
+order by sum() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_sum_order_by {
   amount: order_by
   meal_number: order_by
   meal_total_portions: order_by
 }
 
-input feeder_feeding_meal_var_pop_order_by # order by var_pop() on columns of table "feeder.feeding_meal" {
+"""
+order by var_pop() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_var_pop_order_by {
   amount: order_by
   meal_number: order_by
   meal_total_portions: order_by
 }
 
-input feeder_feeding_meal_var_samp_order_by # order by var_samp() on columns of table "feeder.feeding_meal" {
+"""
+order by var_samp() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_var_samp_order_by {
   amount: order_by
   meal_number: order_by
   meal_total_portions: order_by
 }
 
-input feeder_feeding_meal_variance_order_by # order by variance() on columns of table "feeder.feeding_meal" {
+"""
+order by variance() on columns of table "feeder.feeding_meal"
+"""
+input feeder_feeding_meal_variance_order_by {
   amount: order_by
   meal_number: order_by
   meal_total_portions: order_by
 }
 
-type feeder_feeding_snack # columns and relationships of "feeder.feeding_snack" {
+"""
+columns and relationships of "feeder.feeding_snack"
+"""
+type feeder_feeding_snack {
   amount: Float!
   serial: String!
   status: feeder_feeding_status_enum
   timestamp: timestamptz!
-  unit: feeder_unit # An object relationship
+
+  """An object relationship"""
+  unit: feeder_unit
 }
 
-input feeder_feeding_snack_aggregate_order_by # order by aggregate values of table "feeder.feeding_snack" {
+"""
+order by aggregate values of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_aggregate_order_by {
   avg: feeder_feeding_snack_avg_order_by
   count: order_by
   max: feeder_feeding_snack_max_order_by
@@ -462,11 +622,17 @@ input feeder_feeding_snack_aggregate_order_by # order by aggregate values of tab
   variance: feeder_feeding_snack_variance_order_by
 }
 
-input feeder_feeding_snack_avg_order_by # order by avg() on columns of table "feeder.feeding_snack" {
+"""
+order by avg() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_avg_order_by {
   amount: order_by
 }
 
-input feeder_feeding_snack_bool_exp # Boolean expression to filter rows from the table "feeder.feeding_snack". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.feeding_snack". All fields are combined with a logical 'AND'.
+"""
+input feeder_feeding_snack_bool_exp {
   _and: [feeder_feeding_snack_bool_exp!]
   _not: feeder_feeding_snack_bool_exp
   _or: [feeder_feeding_snack_bool_exp!]
@@ -477,19 +643,26 @@ input feeder_feeding_snack_bool_exp # Boolean expression to filter rows from the
   unit: feeder_unit_bool_exp
 }
 
-input feeder_feeding_snack_max_order_by # order by max() on columns of table "feeder.feeding_snack" {
+"""
+order by max() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_max_order_by {
   amount: order_by
   serial: order_by
   timestamp: order_by
 }
 
-input feeder_feeding_snack_min_order_by # order by min() on columns of table "feeder.feeding_snack" {
+"""
+order by min() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_min_order_by {
   amount: order_by
   serial: order_by
   timestamp: order_by
 }
 
-input feeder_feeding_snack_order_by # Ordering options when selecting data from "feeder.feeding_snack". {
+"""Ordering options when selecting data from "feeder.feeding_snack"."""
+input feeder_feeding_snack_order_by {
   amount: order_by
   serial: order_by
   status: order_by
@@ -497,38 +670,69 @@ input feeder_feeding_snack_order_by # Ordering options when selecting data from 
   unit: feeder_unit_order_by
 }
 
-enum feeder_feeding_snack_select_column # select columns of table "feeder.feeding_snack" {
-  amount # column name
-  serial # column name
-  status # column name
-  timestamp # column name
+"""
+select columns of table "feeder.feeding_snack"
+"""
+enum feeder_feeding_snack_select_column {
+  """column name"""
+  amount
+
+  """column name"""
+  serial
+
+  """column name"""
+  status
+
+  """column name"""
+  timestamp
 }
 
-input feeder_feeding_snack_stddev_order_by # order by stddev() on columns of table "feeder.feeding_snack" {
+"""
+order by stddev() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_stddev_order_by {
   amount: order_by
 }
 
-input feeder_feeding_snack_stddev_pop_order_by # order by stddev_pop() on columns of table "feeder.feeding_snack" {
+"""
+order by stddev_pop() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_stddev_pop_order_by {
   amount: order_by
 }
 
-input feeder_feeding_snack_stddev_samp_order_by # order by stddev_samp() on columns of table "feeder.feeding_snack" {
+"""
+order by stddev_samp() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_stddev_samp_order_by {
   amount: order_by
 }
 
-input feeder_feeding_snack_sum_order_by # order by sum() on columns of table "feeder.feeding_snack" {
+"""
+order by sum() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_sum_order_by {
   amount: order_by
 }
 
-input feeder_feeding_snack_var_pop_order_by # order by var_pop() on columns of table "feeder.feeding_snack" {
+"""
+order by var_pop() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_var_pop_order_by {
   amount: order_by
 }
 
-input feeder_feeding_snack_var_samp_order_by # order by var_samp() on columns of table "feeder.feeding_snack" {
+"""
+order by var_samp() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_var_samp_order_by {
   amount: order_by
 }
 
-input feeder_feeding_snack_variance_order_by # order by variance() on columns of table "feeder.feeding_snack" {
+"""
+order by variance() on columns of table "feeder.feeding_snack"
+"""
+input feeder_feeding_snack_variance_order_by {
   amount: order_by
 }
 
@@ -538,7 +742,10 @@ enum feeder_feeding_status_enum {
   pending
 }
 
-input feeder_feeding_status_enum_comparison_exp # Boolean expression to compare columns of type "feeder_feeding_status_enum". All fields are combined with logical 'AND'. {
+"""
+Boolean expression to compare columns of type "feeder_feeding_status_enum". All fields are combined with logical 'AND'.
+"""
+input feeder_feeding_status_enum_comparison_exp {
   _eq: feeder_feeding_status_enum
   _in: [feeder_feeding_status_enum!]
   _is_null: Boolean
@@ -546,16 +753,24 @@ input feeder_feeding_status_enum_comparison_exp # Boolean expression to compare 
   _nin: [feeder_feeding_status_enum!]
 }
 
-type feeder_meal_event # columns and relationships of "feeder.meal_event" {
+"""
+columns and relationships of "feeder.meal_event"
+"""
+type feeder_meal_event {
   household_id: Int
   meal_number: Int
   serial: String
   timestamp: timestamptz
   type: String
-  unit: feeder_unit # An object relationship
+
+  """An object relationship"""
+  unit: feeder_unit
 }
 
-input feeder_meal_event_bool_exp # Boolean expression to filter rows from the table "feeder.meal_event". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.meal_event". All fields are combined with a logical 'AND'.
+"""
+input feeder_meal_event_bool_exp {
   _and: [feeder_meal_event_bool_exp!]
   _not: feeder_meal_event_bool_exp
   _or: [feeder_meal_event_bool_exp!]
@@ -567,7 +782,8 @@ input feeder_meal_event_bool_exp # Boolean expression to filter rows from the ta
   unit: feeder_unit_bool_exp
 }
 
-input feeder_meal_event_order_by # Ordering options when selecting data from "feeder.meal_event". {
+"""Ordering options when selecting data from "feeder.meal_event"."""
+input feeder_meal_event_order_by {
   household_id: order_by
   meal_number: order_by
   serial: order_by
@@ -576,31 +792,74 @@ input feeder_meal_event_order_by # Ordering options when selecting data from "fe
   unit: feeder_unit_order_by
 }
 
-enum feeder_meal_event_select_column # select columns of table "feeder.meal_event" {
-  household_id # column name
-  meal_number # column name
-  serial # column name
-  timestamp # column name
-  type # column name
+"""
+select columns of table "feeder.meal_event"
+"""
+enum feeder_meal_event_select_column {
+  """column name"""
+  household_id
+
+  """column name"""
+  meal_number
+
+  """column name"""
+  serial
+
+  """column name"""
+  timestamp
+
+  """column name"""
+  type
 }
 
-type feeder_schedule # columns and relationships of "feeder.schedule" {
+"""
+columns and relationships of "feeder.schedule"
+"""
+type feeder_schedule {
   created_at: timestamptz!
   id: uuid!
-  meals(path: String): jsonb
+  meals(
+    """JSON select path"""
+    path: String
+  ): jsonb
   name: String!
   serial: String!
-  unit: feeder_unit! # An object relationship
-  unit_states(distinct_on: [feeder_unit_state_select_column!], limit: Int, offset: Int, order_by: [feeder_unit_state_order_by!], where: feeder_unit_state_bool_exp): [feeder_unit_state!]! # An array relationship
+
+  """An object relationship"""
+  unit: feeder_unit!
+
+  """An array relationship"""
+  unit_states(
+    """distinct select on columns"""
+    distinct_on: [feeder_unit_state_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_unit_state_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_unit_state_bool_exp
+  ): [feeder_unit_state!]!
 }
 
-input feeder_schedule_aggregate_order_by # order by aggregate values of table "feeder.schedule" {
+"""
+order by aggregate values of table "feeder.schedule"
+"""
+input feeder_schedule_aggregate_order_by {
   count: order_by
   max: feeder_schedule_max_order_by
   min: feeder_schedule_min_order_by
 }
 
-input feeder_schedule_bool_exp # Boolean expression to filter rows from the table "feeder.schedule". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.schedule". All fields are combined with a logical 'AND'.
+"""
+input feeder_schedule_bool_exp {
   _and: [feeder_schedule_bool_exp!]
   _not: feeder_schedule_bool_exp
   _or: [feeder_schedule_bool_exp!]
@@ -613,21 +872,28 @@ input feeder_schedule_bool_exp # Boolean expression to filter rows from the tabl
   unit_states: feeder_unit_state_bool_exp
 }
 
-input feeder_schedule_max_order_by # order by max() on columns of table "feeder.schedule" {
+"""
+order by max() on columns of table "feeder.schedule"
+"""
+input feeder_schedule_max_order_by {
   created_at: order_by
   id: order_by
   name: order_by
   serial: order_by
 }
 
-input feeder_schedule_min_order_by # order by min() on columns of table "feeder.schedule" {
+"""
+order by min() on columns of table "feeder.schedule"
+"""
+input feeder_schedule_min_order_by {
   created_at: order_by
   id: order_by
   name: order_by
   serial: order_by
 }
 
-input feeder_schedule_order_by # Ordering options when selecting data from "feeder.schedule". {
+"""Ordering options when selecting data from "feeder.schedule"."""
+input feeder_schedule_order_by {
   created_at: order_by
   id: order_by
   meals: order_by
@@ -637,31 +903,135 @@ input feeder_schedule_order_by # Ordering options when selecting data from "feed
   unit_states_aggregate: feeder_unit_state_aggregate_order_by
 }
 
-enum feeder_schedule_select_column # select columns of table "feeder.schedule" {
-  created_at # column name
-  id # column name
-  meals # column name
-  name # column name
-  serial # column name
+"""
+select columns of table "feeder.schedule"
+"""
+enum feeder_schedule_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  id
+
+  """column name"""
+  meals
+
+  """column name"""
+  name
+
+  """column name"""
+  serial
 }
 
-type feeder_unit # columns and relationships of "feeder.unit" {
-  actions(distinct_on: [feeder_action_select_column!], limit: Int, offset: Int, order_by: [feeder_action_order_by!], where: feeder_action_bool_exp): [feeder_action!]! # An array relationship
-  commands(distinct_on: [feeder_command_select_column!], limit: Int, offset: Int, order_by: [feeder_command_order_by!], where: feeder_command_bool_exp): [feeder_command!]! # An array relationship
+"""
+columns and relationships of "feeder.unit"
+"""
+type feeder_unit {
+  """An array relationship"""
+  actions(
+    """distinct select on columns"""
+    distinct_on: [feeder_action_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_action_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_action_bool_exp
+  ): [feeder_action!]!
+
+  """An array relationship"""
+  commands(
+    """distinct select on columns"""
+    distinct_on: [feeder_command_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_command_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_command_bool_exp
+  ): [feeder_command!]!
   created_at: timestamptz!
-  feeding_meal(distinct_on: [feeder_feeding_meal_select_column!], limit: Int, offset: Int, order_by: [feeder_feeding_meal_order_by!], where: feeder_feeding_meal_bool_exp): [feeder_feeding_meal!]! # An array relationship
-  feeding_snack(distinct_on: [feeder_feeding_snack_select_column!], limit: Int, offset: Int, order_by: [feeder_feeding_snack_order_by!], where: feeder_feeding_snack_bool_exp): [feeder_feeding_snack!]! # An array relationship
+
+  """An array relationship"""
+  feeding_meal(
+    """distinct select on columns"""
+    distinct_on: [feeder_feeding_meal_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_feeding_meal_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_feeding_meal_bool_exp
+  ): [feeder_feeding_meal!]!
+
+  """An array relationship"""
+  feeding_snack(
+    """distinct select on columns"""
+    distinct_on: [feeder_feeding_snack_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_feeding_snack_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_feeding_snack_bool_exp
+  ): [feeder_feeding_snack!]!
   household_id: Int
   id: Int!
   isEighthCupEnabled: Boolean
   name: String!
-  schedules(distinct_on: [feeder_schedule_select_column!], limit: Int, offset: Int, order_by: [feeder_schedule_order_by!], where: feeder_schedule_bool_exp): [feeder_schedule!]! # An array relationship
+
+  """An array relationship"""
+  schedules(
+    """distinct select on columns"""
+    distinct_on: [feeder_schedule_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_schedule_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_schedule_bool_exp
+  ): [feeder_schedule!]!
   serial: String!
-  state: feeder_unit_state # An object relationship
+
+  """An object relationship"""
+  state: feeder_unit_state
   timezone: String
 }
 
-input feeder_unit_bool_exp # Boolean expression to filter rows from the table "feeder.unit". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.unit". All fields are combined with a logical 'AND'.
+"""
+input feeder_unit_bool_exp {
   _and: [feeder_unit_bool_exp!]
   _not: feeder_unit_bool_exp
   _or: [feeder_unit_bool_exp!]
@@ -680,35 +1050,59 @@ input feeder_unit_bool_exp # Boolean expression to filter rows from the table "f
   timezone: String_comparison_exp
 }
 
-enum feeder_unit_constraint # unique or primary key constraints on table "feeder.unit" {
-  unit_pkey # unique or primary key constraint
-  unit_serial_key # unique or primary key constraint
+"""
+unique or primary key constraints on table "feeder.unit"
+"""
+enum feeder_unit_constraint {
+  """unique or primary key constraint"""
+  unit_pkey
+
+  """unique or primary key constraint"""
+  unit_serial_key
 }
 
-input feeder_unit_insert_input # input type for inserting data into table "feeder.unit" {
+"""
+input type for inserting data into table "feeder.unit"
+"""
+input feeder_unit_insert_input {
   isEighthCupEnabled: Boolean
   name: String
   serial: String
   state: feeder_unit_state_obj_rel_insert_input
 }
 
-type feeder_unit_mutation_response # response of any mutation on the table "feeder.unit" {
-  affected_rows: Int! # number of rows affected by the mutation
-  returning: [feeder_unit!]! # data from the rows affected by the mutation
+"""
+response of any mutation on the table "feeder.unit"
+"""
+type feeder_unit_mutation_response {
+  """number of rows affected by the mutation"""
+  affected_rows: Int!
+
+  """data from the rows affected by the mutation"""
+  returning: [feeder_unit!]!
 }
 
-input feeder_unit_obj_rel_insert_input # input type for inserting object relation for remote table "feeder.unit" {
+"""
+input type for inserting object relation for remote table "feeder.unit"
+"""
+input feeder_unit_obj_rel_insert_input {
   data: feeder_unit_insert_input!
-  on_conflict: feeder_unit_on_conflict # upsert condition
+
+  """upsert condition"""
+  on_conflict: feeder_unit_on_conflict
 }
 
-input feeder_unit_on_conflict # on_conflict condition type for table "feeder.unit" {
+"""
+on_conflict condition type for table "feeder.unit"
+"""
+input feeder_unit_on_conflict {
   constraint: feeder_unit_constraint!
   update_columns: [feeder_unit_update_column!]! = []
   where: feeder_unit_bool_exp
 }
 
-input feeder_unit_order_by # Ordering options when selecting data from "feeder.unit". {
+"""Ordering options when selecting data from "feeder.unit"."""
+input feeder_unit_order_by {
   actions_aggregate: feeder_action_aggregate_order_by
   commands_aggregate: feeder_command_aggregate_order_by
   created_at: order_by
@@ -724,15 +1118,23 @@ input feeder_unit_order_by # Ordering options when selecting data from "feeder.u
   timezone: order_by
 }
 
-type feeder_unit_ping # columns and relationships of "feeder.unit_ping" {
+"""
+columns and relationships of "feeder.unit_ping"
+"""
+type feeder_unit_ping {
   id: Int!
   rssi: Int
   serial: String!
-  unit: feeder_unit! # An object relationship
+
+  """An object relationship"""
+  unit: feeder_unit!
   updated_at: timestamptz
 }
 
-input feeder_unit_ping_bool_exp # Boolean expression to filter rows from the table "feeder.unit_ping". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.unit_ping". All fields are combined with a logical 'AND'.
+"""
+input feeder_unit_ping_bool_exp {
   _and: [feeder_unit_ping_bool_exp!]
   _not: feeder_unit_ping_bool_exp
   _or: [feeder_unit_ping_bool_exp!]
@@ -743,7 +1145,8 @@ input feeder_unit_ping_bool_exp # Boolean expression to filter rows from the tab
   updated_at: timestamptz_comparison_exp
 }
 
-input feeder_unit_ping_order_by # Ordering options when selecting data from "feeder.unit_ping". {
+"""Ordering options when selecting data from "feeder.unit_ping"."""
+input feeder_unit_ping_order_by {
   id: order_by
   rssi: order_by
   serial: order_by
@@ -751,44 +1154,86 @@ input feeder_unit_ping_order_by # Ordering options when selecting data from "fee
   updated_at: order_by
 }
 
-enum feeder_unit_ping_select_column # select columns of table "feeder.unit_ping" {
-  id # column name
-  rssi # column name
-  serial # column name
-  updated_at # column name
+"""
+select columns of table "feeder.unit_ping"
+"""
+enum feeder_unit_ping_select_column {
+  """column name"""
+  id
+
+  """column name"""
+  rssi
+
+  """column name"""
+  serial
+
+  """column name"""
+  updated_at
 }
 
-input feeder_unit_pk_columns_input # primary key columns input for table: feeder_unit {
+"""primary key columns input for table: feeder_unit"""
+input feeder_unit_pk_columns_input {
   id: Int!
 }
 
-enum feeder_unit_select_column # select columns of table "feeder.unit" {
-  created_at # column name
-  household_id # column name
-  id # column name
-  isEighthCupEnabled # column name
-  name # column name
-  serial # column name
-  timezone # column name
+"""
+select columns of table "feeder.unit"
+"""
+enum feeder_unit_select_column {
+  """column name"""
+  created_at
+
+  """column name"""
+  household_id
+
+  """column name"""
+  id
+
+  """column name"""
+  isEighthCupEnabled
+
+  """column name"""
+  name
+
+  """column name"""
+  serial
+
+  """column name"""
+  timezone
 }
 
-input feeder_unit_set_input # input type for updating data in table "feeder.unit" {
+"""
+input type for updating data in table "feeder.unit"
+"""
+input feeder_unit_set_input {
   isEighthCupEnabled: Boolean
   name: String
   serial: String
 }
 
-type feeder_unit_state # columns and relationships of "feeder.unit_state" {
-  active_schedule: feeder_schedule # An object relationship
+"""
+columns and relationships of "feeder.unit_state"
+"""
+type feeder_unit_state {
+  """An object relationship"""
+  active_schedule: feeder_schedule
   active_schedule_id: uuid
   id: Int!
-  info(path: String): jsonb!
+  info(
+    """JSON select path"""
+    path: String
+  ): jsonb!
   serial: String!
-  unit: feeder_unit! # An object relationship
+
+  """An object relationship"""
+  unit: feeder_unit!
   updated_at: timestamptz!
 }
 
-input feeder_unit_state_aggregate_order_by # order by aggregate values of table "feeder.unit_state" {
+"""
+order by aggregate values of table "feeder.unit_state"
+"""
+input feeder_unit_state_aggregate_order_by {
   avg: feeder_unit_state_avg_order_by
   count: order_by
   max: feeder_unit_state_max_order_by
@@ -802,15 +1247,22 @@ input feeder_unit_state_aggregate_order_by # order by aggregate values of table 
   variance: feeder_unit_state_variance_order_by
 }
 
-input feeder_unit_state_append_input # append existing jsonb value of filtered columns with new jsonb value {
+"""append existing jsonb value of filtered columns with new jsonb value"""
+input feeder_unit_state_append_input {
   info: jsonb
 }
 
-input feeder_unit_state_avg_order_by # order by avg() on columns of table "feeder.unit_state" {
+"""
+order by avg() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_avg_order_by {
   id: order_by
 }
 
-input feeder_unit_state_bool_exp # Boolean expression to filter rows from the table "feeder.unit_state". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.unit_state". All fields are combined with a logical 'AND'.
+"""
+input feeder_unit_state_bool_exp {
   _and: [feeder_unit_state_bool_exp!]
   _not: feeder_unit_state_bool_exp
   _or: [feeder_unit_state_bool_exp!]
@@ -823,59 +1275,98 @@ input feeder_unit_state_bool_exp # Boolean expression to filter rows from the ta
   updated_at: timestamptz_comparison_exp
 }
 
-enum feeder_unit_state_constraint # unique or primary key constraints on table "feeder.unit_state" {
-  unit_state_pkey # unique or primary key constraint
-  unit_state_serial_key # unique or primary key constraint
+"""
+unique or primary key constraints on table "feeder.unit_state"
+"""
+enum feeder_unit_state_constraint {
+  """unique or primary key constraint"""
+  unit_state_pkey
+
+  """unique or primary key constraint"""
+  unit_state_serial_key
 }
 
-input feeder_unit_state_delete_at_path_input # delete the field or element with specified path (for JSON arrays, negative integers count from the end) {
+"""
+delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+"""
+input feeder_unit_state_delete_at_path_input {
   info: [String!]
 }
 
-input feeder_unit_state_delete_elem_input # delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array {
+"""
+delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+"""
+input feeder_unit_state_delete_elem_input {
   info: Int
 }
 
-input feeder_unit_state_delete_key_input # delete key/value pair or string element. key/value pairs are matched based on their key value {
+"""
+delete key/value pair or string element. key/value pairs are matched based on their key value
+"""
+input feeder_unit_state_delete_key_input {
   info: String
 }
 
-input feeder_unit_state_insert_input # input type for inserting data into table "feeder.unit_state" {
+"""
+input type for inserting data into table "feeder.unit_state"
+"""
+input feeder_unit_state_insert_input {
   info: jsonb
   unit: feeder_unit_obj_rel_insert_input
 }
 
-input feeder_unit_state_max_order_by # order by max() on columns of table "feeder.unit_state" {
+"""
+order by max() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_max_order_by {
   active_schedule_id: order_by
   id: order_by
   serial: order_by
   updated_at: order_by
 }
 
-input feeder_unit_state_min_order_by # order by min() on columns of table "feeder.unit_state" {
+"""
+order by min() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_min_order_by {
   active_schedule_id: order_by
   id: order_by
   serial: order_by
   updated_at: order_by
 }
 
-type feeder_unit_state_mutation_response # response of any mutation on the table "feeder.unit_state" {
-  affected_rows: Int! # number of rows affected by the mutation
-  returning: [feeder_unit_state!]! # data from the rows affected by the mutation
+"""
+response of any mutation on the table "feeder.unit_state"
+"""
+type feeder_unit_state_mutation_response {
+  """number of rows affected by the mutation"""
+  affected_rows: Int!
+
+  """data from the rows affected by the mutation"""
+  returning: [feeder_unit_state!]!
 }
 
-input feeder_unit_state_obj_rel_insert_input # input type for inserting object relation for remote table "feeder.unit_state" {
+"""
+input type for inserting object relation for remote table "feeder.unit_state"
+"""
+input feeder_unit_state_obj_rel_insert_input {
   data: feeder_unit_state_insert_input!
-  on_conflict: feeder_unit_state_on_conflict # upsert condition
+
+  """upsert condition"""
+  on_conflict: feeder_unit_state_on_conflict
 }
 
-input feeder_unit_state_on_conflict # on_conflict condition type for table "feeder.unit_state" {
+"""
+on_conflict condition type for table "feeder.unit_state"
+"""
+input feeder_unit_state_on_conflict {
   constraint: feeder_unit_state_constraint!
   update_columns: [feeder_unit_state_update_column!]! = []
   where: feeder_unit_state_bool_exp
 }
 
-input feeder_unit_state_order_by # Ordering options when selecting data from "feeder.unit_state". {
+"""Ordering options when selecting data from "feeder.unit_state"."""
+input feeder_unit_state_order_by {
   active_schedule: feeder_schedule_order_by
   active_schedule_id: order_by
   id: order_by
@@ -885,67 +1376,120 @@ input feeder_unit_state_order_by # Ordering options when selecting data from "fe
   updated_at: order_by
 }
 
-input feeder_unit_state_pk_columns_input # primary key columns input for table: feeder_unit_state {
+"""primary key columns input for table: feeder_unit_state"""
+input feeder_unit_state_pk_columns_input {
   id: Int!
 }
 
-input feeder_unit_state_prepend_input # prepend existing jsonb value of filtered columns with new jsonb value {
+"""prepend existing jsonb value of filtered columns with new jsonb value"""
+input feeder_unit_state_prepend_input {
   info: jsonb
 }
 
-enum feeder_unit_state_select_column # select columns of table "feeder.unit_state" {
-  active_schedule_id # column name
-  id # column name
-  info # column name
-  serial # column name
-  updated_at # column name
+"""
+select columns of table "feeder.unit_state"
+"""
+enum feeder_unit_state_select_column {
+  """column name"""
+  active_schedule_id
+
+  """column name"""
+  id
+
+  """column name"""
+  info
+
+  """column name"""
+  serial
+
+  """column name"""
+  updated_at
 }
 
-input feeder_unit_state_set_input # input type for updating data in table "feeder.unit_state" {
+"""
+input type for updating data in table "feeder.unit_state"
+"""
+input feeder_unit_state_set_input {
   info: jsonb
 }
 
-input feeder_unit_state_stddev_order_by # order by stddev() on columns of table "feeder.unit_state" {
+"""
+order by stddev() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_stddev_order_by {
   id: order_by
 }
 
-input feeder_unit_state_stddev_pop_order_by # order by stddev_pop() on columns of table "feeder.unit_state" {
+"""
+order by stddev_pop() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_stddev_pop_order_by {
   id: order_by
 }
 
-input feeder_unit_state_stddev_samp_order_by # order by stddev_samp() on columns of table "feeder.unit_state" {
+"""
+order by stddev_samp() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_stddev_samp_order_by {
   id: order_by
 }
 
-input feeder_unit_state_sum_order_by # order by sum() on columns of table "feeder.unit_state" {
+"""
+order by sum() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_sum_order_by {
   id: order_by
 }
 
-enum feeder_unit_state_update_column # update columns of table "feeder.unit_state" {
-  info # column name
+"""
+update columns of table "feeder.unit_state"
+"""
+enum feeder_unit_state_update_column {
+  """column name"""
+  info
 }
 
-input feeder_unit_state_var_pop_order_by # order by var_pop() on columns of table "feeder.unit_state" {
+"""
+order by var_pop() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_var_pop_order_by {
   id: order_by
 }
 
-input feeder_unit_state_var_samp_order_by # order by var_samp() on columns of table "feeder.unit_state" {
+"""
+order by var_samp() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_var_samp_order_by {
   id: order_by
 }
 
-input feeder_unit_state_variance_order_by # order by variance() on columns of table "feeder.unit_state" {
+"""
+order by variance() on columns of table "feeder.unit_state"
+"""
+input feeder_unit_state_variance_order_by {
   id: order_by
 }
 
-type feeder_unit_time # columns and relationships of "feeder.unit_time" {
+"""
+columns and relationships of "feeder.unit_time"
+"""
+type feeder_unit_time {
   id: Int!
-  info(path: String): jsonb
+  info(
+    """JSON select path"""
+    path: String
+  ): jsonb
   serial: String!
-  unit: feeder_unit! # An object relationship
+
+  """An object relationship"""
+  unit: feeder_unit!
   updated_at: timestamptz!
 }
 
-input feeder_unit_time_bool_exp # Boolean expression to filter rows from the table "feeder.unit_time". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "feeder.unit_time". All fields are combined with a logical 'AND'.
+"""
+input feeder_unit_time_bool_exp {
   _and: [feeder_unit_time_bool_exp!]
   _not: feeder_unit_time_bool_exp
   _or: [feeder_unit_time_bool_exp!]
@@ -956,7 +1500,8 @@ input feeder_unit_time_bool_exp # Boolean expression to filter rows from the tab
   updated_at: timestamptz_comparison_exp
 }
 
-input feeder_unit_time_order_by # Ordering options when selecting data from "feeder.unit_time". {
+"""Ordering options when selecting data from "feeder.unit_time"."""
+input feeder_unit_time_order_by {
   id: order_by
   info: order_by
   serial: order_by
@@ -964,36 +1509,66 @@ input feeder_unit_time_order_by # Ordering options when selecting data from "fee
   updated_at: order_by
 }
 
-enum feeder_unit_time_select_column # select columns of table "feeder.unit_time" {
-  id # column name
-  info # column name
-  serial # column name
-  updated_at # column name
+"""
+select columns of table "feeder.unit_time"
+"""
+enum feeder_unit_time_select_column {
+  """column name"""
+  id
+
+  """column name"""
+  info
+
+  """column name"""
+  serial
+
+  """column name"""
+  updated_at
 }
 
-enum feeder_unit_update_column # update columns of table "feeder.unit" {
-  isEighthCupEnabled # column name
-  name # column name
-  serial # column name
+"""
+update columns of table "feeder.unit"
+"""
+enum feeder_unit_update_column {
+  """column name"""
+  isEighthCupEnabled
+
+  """column name"""
+  name
+
+  """column name"""
+  serial
 }
 
-""""""
 scalar jsonb
 
 input jsonb_cast_exp {
   String: String_comparison_exp
 }
 
-input jsonb_comparison_exp # Boolean expression to compare columns of type "jsonb". All fields are combined with logical 'AND'. {
+"""
+Boolean expression to compare columns of type "jsonb". All fields are combined with logical 'AND'.
+"""
+input jsonb_comparison_exp {
   _cast: jsonb_cast_exp
-  _contained_in: jsonb # is the column contained in the given json value
-  _contains: jsonb # does the column contain the given json value at the top level
+
+  """is the column contained in the given json value"""
+  _contained_in: jsonb
+
+  """does the column contain the given json value at the top level"""
+  _contains: jsonb
   _eq: jsonb
   _gt: jsonb
   _gte: jsonb
-  _has_key: String # does the string exist as a top-level key in the column
-  _has_keys_all: [String!] # do all of these strings exist as top-level keys in the column
-  _has_keys_any: [String!] # do any of these strings exist as top-level keys in the column
+
+  """does the string exist as a top-level key in the column"""
+  _has_key: String
+
+  """do all of these strings exist as top-level keys in the column"""
+  _has_keys_all: [String!]
+
+  """do any of these strings exist as top-level keys in the column"""
+  _has_keys_any: [String!]
   _in: [jsonb!]
   _is_null: Boolean
   _lt: jsonb
@@ -1002,19 +1577,902 @@ input jsonb_comparison_exp # Boolean expression to compare columns of type "json
   _nin: [jsonb!]
 }
 
-enum order_by # column ordering options {
-  asc # in ascending order, nulls last
-  asc_nulls_first # in ascending order, nulls first
-  asc_nulls_last # in ascending order, nulls last
-  desc # in descending order, nulls first
-  desc_nulls_first # in descending order, nulls first
-  desc_nulls_last # in descending order, nulls last
+"""mutation root"""
+type mutation_root {
+  """
+  delete data from the table: "feeder.unit"
+  """
+  delete_feeder_unit(
+    """filter the rows which have to be deleted"""
+    where: feeder_unit_bool_exp!
+  ): feeder_unit_mutation_response
+
+  """
+  delete single row from the table: "feeder.unit"
+  """
+  delete_feeder_unit_by_pk(id: Int!): feeder_unit
+
+  """
+  delete data from the table: "user.device"
+  """
+  delete_user_device(
+    """filter the rows which have to be deleted"""
+    where: user_device_bool_exp!
+  ): user_device_mutation_response
+
+  """
+  delete single row from the table: "user.device"
+  """
+  delete_user_device_by_pk(device_id: String!): user_device
+
+  """
+  insert data into the table: "feeder.unit"
+  """
+  insert_feeder_unit(
+    """the rows to be inserted"""
+    objects: [feeder_unit_insert_input!]!
+
+    """upsert condition"""
+    on_conflict: feeder_unit_on_conflict
+  ): feeder_unit_mutation_response
+
+  """
+  insert a single row into the table: "feeder.unit"
+  """
+  insert_feeder_unit_one(
+    """the row to be inserted"""
+    object: feeder_unit_insert_input!
+
+    """upsert condition"""
+    on_conflict: feeder_unit_on_conflict
+  ): feeder_unit
+
+  """
+  insert data into the table: "feeder.unit_state"
+  """
+  insert_feeder_unit_state(
+    """the rows to be inserted"""
+    objects: [feeder_unit_state_insert_input!]!
+
+    """upsert condition"""
+    on_conflict: feeder_unit_state_on_conflict
+  ): feeder_unit_state_mutation_response
+
+  """
+  insert a single row into the table: "feeder.unit_state"
+  """
+  insert_feeder_unit_state_one(
+    """the row to be inserted"""
+    object: feeder_unit_state_insert_input!
+
+    """upsert condition"""
+    on_conflict: feeder_unit_state_on_conflict
+  ): feeder_unit_state
+
+  """
+  insert data into the table: "user.device"
+  """
+  insert_user_device(
+    """the rows to be inserted"""
+    objects: [user_device_insert_input!]!
+
+    """upsert condition"""
+    on_conflict: user_device_on_conflict
+  ): user_device_mutation_response
+
+  """
+  insert a single row into the table: "user.device"
+  """
+  insert_user_device_one(
+    """the row to be inserted"""
+    object: user_device_insert_input!
+
+    """upsert condition"""
+    on_conflict: user_device_on_conflict
+  ): user_device
+
+  """
+  insert data into the table: "user.notification_settings"
+  """
+  insert_user_notification_settings(
+    """the rows to be inserted"""
+    objects: [user_notification_settings_insert_input!]!
+
+    """upsert condition"""
+    on_conflict: user_notification_settings_on_conflict
+  ): user_notification_settings_mutation_response
+
+  """
+  insert a single row into the table: "user.notification_settings"
+  """
+  insert_user_notification_settings_one(
+    """the row to be inserted"""
+    object: user_notification_settings_insert_input!
+
+    """upsert condition"""
+    on_conflict: user_notification_settings_on_conflict
+  ): user_notification_settings
+
+  """
+  update data of the table: "feeder.unit"
+  """
+  update_feeder_unit(
+    """sets the columns of the filtered rows to the given values"""
+    _set: feeder_unit_set_input
+
+    """filter the rows which have to be updated"""
+    where: feeder_unit_bool_exp!
+  ): feeder_unit_mutation_response
+
+  """
+  update single row of the table: "feeder.unit"
+  """
+  update_feeder_unit_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: feeder_unit_set_input
+    pk_columns: feeder_unit_pk_columns_input!
+  ): feeder_unit
+
+  """
+  update data of the table: "feeder.unit_state"
+  """
+  update_feeder_unit_state(
+    """append existing jsonb value of filtered columns with new jsonb value"""
+    _append: feeder_unit_state_append_input
+
+    """
+    delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+    """
+    _delete_at_path: feeder_unit_state_delete_at_path_input
+
+    """
+    delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+    """
+    _delete_elem: feeder_unit_state_delete_elem_input
+
+    """
+    delete key/value pair or string element. key/value pairs are matched based on their key value
+    """
+    _delete_key: feeder_unit_state_delete_key_input
+
+    """prepend existing jsonb value of filtered columns with new jsonb value"""
+    _prepend: feeder_unit_state_prepend_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: feeder_unit_state_set_input
+
+    """filter the rows which have to be updated"""
+    where: feeder_unit_state_bool_exp!
+  ): feeder_unit_state_mutation_response
+
+  """
+  update single row of the table: "feeder.unit_state"
+  """
+  update_feeder_unit_state_by_pk(
+    """append existing jsonb value of filtered columns with new jsonb value"""
+    _append: feeder_unit_state_append_input
+
+    """
+    delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+    """
+    _delete_at_path: feeder_unit_state_delete_at_path_input
+
+    """
+    delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+    """
+    _delete_elem: feeder_unit_state_delete_elem_input
+
+    """
+    delete key/value pair or string element. key/value pairs are matched based on their key value
+    """
+    _delete_key: feeder_unit_state_delete_key_input
+
+    """prepend existing jsonb value of filtered columns with new jsonb value"""
+    _prepend: feeder_unit_state_prepend_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: feeder_unit_state_set_input
+    pk_columns: feeder_unit_state_pk_columns_input!
+  ): feeder_unit_state
+
+  """
+  update data of the table: "user.device"
+  """
+  update_user_device(
+    """sets the columns of the filtered rows to the given values"""
+    _set: user_device_set_input
+
+    """filter the rows which have to be updated"""
+    where: user_device_bool_exp!
+  ): user_device_mutation_response
+
+  """
+  update single row of the table: "user.device"
+  """
+  update_user_device_by_pk(
+    """sets the columns of the filtered rows to the given values"""
+    _set: user_device_set_input
+    pk_columns: user_device_pk_columns_input!
+  ): user_device
+
+  """
+  update data of the table: "user.notification_settings"
+  """
+  update_user_notification_settings(
+    """append existing jsonb value of filtered columns with new jsonb value"""
+    _append: user_notification_settings_append_input
+
+    """
+    delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+    """
+    _delete_at_path: user_notification_settings_delete_at_path_input
+
+    """
+    delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+    """
+    _delete_elem: user_notification_settings_delete_elem_input
+
+    """
+    delete key/value pair or string element. key/value pairs are matched based on their key value
+    """
+    _delete_key: user_notification_settings_delete_key_input
+
+    """prepend existing jsonb value of filtered columns with new jsonb value"""
+    _prepend: user_notification_settings_prepend_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: user_notification_settings_set_input
+
+    """filter the rows which have to be updated"""
+    where: user_notification_settings_bool_exp!
+  ): user_notification_settings_mutation_response
+
+  """
+  update single row of the table: "user.notification_settings"
+  """
+  update_user_notification_settings_by_pk(
+    """append existing jsonb value of filtered columns with new jsonb value"""
+    _append: user_notification_settings_append_input
+
+    """
+    delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+    """
+    _delete_at_path: user_notification_settings_delete_at_path_input
+
+    """
+    delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+    """
+    _delete_elem: user_notification_settings_delete_elem_input
+
+    """
+    delete key/value pair or string element. key/value pairs are matched based on their key value
+    """
+    _delete_key: user_notification_settings_delete_key_input
+
+    """prepend existing jsonb value of filtered columns with new jsonb value"""
+    _prepend: user_notification_settings_prepend_input
+
+    """sets the columns of the filtered rows to the given values"""
+    _set: user_notification_settings_set_input
+    pk_columns: user_notification_settings_pk_columns_input!
+  ): user_notification_settings
 }
 
-""""""
+"""column ordering options"""
+enum order_by {
+  """in ascending order, nulls last"""
+  asc
+
+  """in ascending order, nulls first"""
+  asc_nulls_first
+
+  """in ascending order, nulls last"""
+  asc_nulls_last
+
+  """in descending order, nulls first"""
+  desc
+
+  """in descending order, nulls first"""
+  desc_nulls_first
+
+  """in descending order, nulls last"""
+  desc_nulls_last
+}
+
+type query_root {
+  """
+  fetch data from the table: "feeder.action"
+  """
+  feeder_action(
+    """distinct select on columns"""
+    distinct_on: [feeder_action_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_action_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_action_bool_exp
+  ): [feeder_action!]!
+
+  """
+  fetch data from the table: "feeder.command"
+  """
+  feeder_command(
+    """distinct select on columns"""
+    distinct_on: [feeder_command_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_command_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_command_bool_exp
+  ): [feeder_command!]!
+
+  """fetch data from the table: "feeder.command" using primary key columns"""
+  feeder_command_by_pk(id: uuid!): feeder_command
+
+  """
+  fetch data from the table: "feeder.fault"
+  """
+  feeder_fault(
+    """distinct select on columns"""
+    distinct_on: [feeder_fault_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_fault_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_fault_bool_exp
+  ): [feeder_fault!]!
+
+  """
+  fetch data from the table: "feeder.feeding_meal"
+  """
+  feeder_feeding_meal(
+    """distinct select on columns"""
+    distinct_on: [feeder_feeding_meal_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_feeding_meal_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_feeding_meal_bool_exp
+  ): [feeder_feeding_meal!]!
+
+  """
+  fetch data from the table: "feeder.feeding_snack"
+  """
+  feeder_feeding_snack(
+    """distinct select on columns"""
+    distinct_on: [feeder_feeding_snack_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_feeding_snack_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_feeding_snack_bool_exp
+  ): [feeder_feeding_snack!]!
+
+  """
+  fetch data from the table: "feeder.meal_event"
+  """
+  feeder_meal_event(
+    """distinct select on columns"""
+    distinct_on: [feeder_meal_event_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_meal_event_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_meal_event_bool_exp
+  ): [feeder_meal_event!]!
+
+  """
+  fetch data from the table: "feeder.schedule"
+  """
+  feeder_schedule(
+    """distinct select on columns"""
+    distinct_on: [feeder_schedule_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_schedule_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_schedule_bool_exp
+  ): [feeder_schedule!]!
+
+  """fetch data from the table: "feeder.schedule" using primary key columns"""
+  feeder_schedule_by_pk(id: uuid!): feeder_schedule
+
+  """
+  fetch data from the table: "feeder.unit"
+  """
+  feeder_unit(
+    """distinct select on columns"""
+    distinct_on: [feeder_unit_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_unit_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_unit_bool_exp
+  ): [feeder_unit!]!
+
+  """fetch data from the table: "feeder.unit" using primary key columns"""
+  feeder_unit_by_pk(id: Int!): feeder_unit
+
+  """
+  fetch data from the table: "feeder.unit_ping"
+  """
+  feeder_unit_ping(
+    """distinct select on columns"""
+    distinct_on: [feeder_unit_ping_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_unit_ping_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_unit_ping_bool_exp
+  ): [feeder_unit_ping!]!
+
+  """
+  fetch data from the table: "feeder.unit_ping" using primary key columns
+  """
+  feeder_unit_ping_by_pk(id: Int!): feeder_unit_ping
+
+  """
+  fetch data from the table: "feeder.unit_state"
+  """
+  feeder_unit_state(
+    """distinct select on columns"""
+    distinct_on: [feeder_unit_state_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_unit_state_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_unit_state_bool_exp
+  ): [feeder_unit_state!]!
+
+  """
+  fetch data from the table: "feeder.unit_state" using primary key columns
+  """
+  feeder_unit_state_by_pk(id: Int!): feeder_unit_state
+
+  """
+  fetch data from the table: "feeder.unit_time"
+  """
+  feeder_unit_time(
+    """distinct select on columns"""
+    distinct_on: [feeder_unit_time_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_unit_time_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_unit_time_bool_exp
+  ): [feeder_unit_time!]!
+
+  """
+  fetch data from the table: "feeder.unit_time" using primary key columns
+  """
+  feeder_unit_time_by_pk(id: Int!): feeder_unit_time
+
+  """
+  fetch data from the table: "user.device"
+  """
+  user_device(
+    """distinct select on columns"""
+    distinct_on: [user_device_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_device_order_by!]
+
+    """filter the rows returned"""
+    where: user_device_bool_exp
+  ): [user_device!]!
+
+  """fetch data from the table: "user.device" using primary key columns"""
+  user_device_by_pk(device_id: String!): user_device
+
+  """
+  fetch data from the table: "user.notification_settings"
+  """
+  user_notification_settings(
+    """distinct select on columns"""
+    distinct_on: [user_notification_settings_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_notification_settings_order_by!]
+
+    """filter the rows returned"""
+    where: user_notification_settings_bool_exp
+  ): [user_notification_settings!]!
+
+  """
+  fetch data from the table: "user.notification_settings" using primary key columns
+  """
+  user_notification_settings_by_pk(id: Int!): user_notification_settings
+}
+
+type subscription_root {
+  """
+  fetch data from the table: "feeder.action"
+  """
+  feeder_action(
+    """distinct select on columns"""
+    distinct_on: [feeder_action_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_action_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_action_bool_exp
+  ): [feeder_action!]!
+
+  """
+  fetch data from the table: "feeder.command"
+  """
+  feeder_command(
+    """distinct select on columns"""
+    distinct_on: [feeder_command_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_command_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_command_bool_exp
+  ): [feeder_command!]!
+
+  """fetch data from the table: "feeder.command" using primary key columns"""
+  feeder_command_by_pk(id: uuid!): feeder_command
+
+  """
+  fetch data from the table: "feeder.fault"
+  """
+  feeder_fault(
+    """distinct select on columns"""
+    distinct_on: [feeder_fault_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_fault_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_fault_bool_exp
+  ): [feeder_fault!]!
+
+  """
+  fetch data from the table: "feeder.feeding_meal"
+  """
+  feeder_feeding_meal(
+    """distinct select on columns"""
+    distinct_on: [feeder_feeding_meal_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_feeding_meal_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_feeding_meal_bool_exp
+  ): [feeder_feeding_meal!]!
+
+  """
+  fetch data from the table: "feeder.feeding_snack"
+  """
+  feeder_feeding_snack(
+    """distinct select on columns"""
+    distinct_on: [feeder_feeding_snack_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_feeding_snack_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_feeding_snack_bool_exp
+  ): [feeder_feeding_snack!]!
+
+  """
+  fetch data from the table: "feeder.meal_event"
+  """
+  feeder_meal_event(
+    """distinct select on columns"""
+    distinct_on: [feeder_meal_event_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_meal_event_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_meal_event_bool_exp
+  ): [feeder_meal_event!]!
+
+  """
+  fetch data from the table: "feeder.schedule"
+  """
+  feeder_schedule(
+    """distinct select on columns"""
+    distinct_on: [feeder_schedule_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_schedule_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_schedule_bool_exp
+  ): [feeder_schedule!]!
+
+  """fetch data from the table: "feeder.schedule" using primary key columns"""
+  feeder_schedule_by_pk(id: uuid!): feeder_schedule
+
+  """
+  fetch data from the table: "feeder.unit"
+  """
+  feeder_unit(
+    """distinct select on columns"""
+    distinct_on: [feeder_unit_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_unit_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_unit_bool_exp
+  ): [feeder_unit!]!
+
+  """fetch data from the table: "feeder.unit" using primary key columns"""
+  feeder_unit_by_pk(id: Int!): feeder_unit
+
+  """
+  fetch data from the table: "feeder.unit_ping"
+  """
+  feeder_unit_ping(
+    """distinct select on columns"""
+    distinct_on: [feeder_unit_ping_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_unit_ping_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_unit_ping_bool_exp
+  ): [feeder_unit_ping!]!
+
+  """
+  fetch data from the table: "feeder.unit_ping" using primary key columns
+  """
+  feeder_unit_ping_by_pk(id: Int!): feeder_unit_ping
+
+  """
+  fetch data from the table: "feeder.unit_state"
+  """
+  feeder_unit_state(
+    """distinct select on columns"""
+    distinct_on: [feeder_unit_state_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_unit_state_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_unit_state_bool_exp
+  ): [feeder_unit_state!]!
+
+  """
+  fetch data from the table: "feeder.unit_state" using primary key columns
+  """
+  feeder_unit_state_by_pk(id: Int!): feeder_unit_state
+
+  """
+  fetch data from the table: "feeder.unit_time"
+  """
+  feeder_unit_time(
+    """distinct select on columns"""
+    distinct_on: [feeder_unit_time_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [feeder_unit_time_order_by!]
+
+    """filter the rows returned"""
+    where: feeder_unit_time_bool_exp
+  ): [feeder_unit_time!]!
+
+  """
+  fetch data from the table: "feeder.unit_time" using primary key columns
+  """
+  feeder_unit_time_by_pk(id: Int!): feeder_unit_time
+
+  """
+  fetch data from the table: "user.device"
+  """
+  user_device(
+    """distinct select on columns"""
+    distinct_on: [user_device_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_device_order_by!]
+
+    """filter the rows returned"""
+    where: user_device_bool_exp
+  ): [user_device!]!
+
+  """fetch data from the table: "user.device" using primary key columns"""
+  user_device_by_pk(device_id: String!): user_device
+
+  """
+  fetch data from the table: "user.notification_settings"
+  """
+  user_notification_settings(
+    """distinct select on columns"""
+    distinct_on: [user_notification_settings_select_column!]
+
+    """limit the number of rows returned"""
+    limit: Int
+
+    """skip the first n rows. Use only with order_by"""
+    offset: Int
+
+    """sort the rows by one or more columns"""
+    order_by: [user_notification_settings_order_by!]
+
+    """filter the rows returned"""
+    where: user_notification_settings_bool_exp
+  ): [user_notification_settings!]!
+
+  """
+  fetch data from the table: "user.notification_settings" using primary key columns
+  """
+  user_notification_settings_by_pk(id: Int!): user_notification_settings
+}
+
 scalar timestamptz
 
-input timestamptz_comparison_exp # Boolean expression to compare columns of type "timestamptz". All fields are combined with logical 'AND'. {
+"""
+Boolean expression to compare columns of type "timestamptz". All fields are combined with logical 'AND'.
+"""
+input timestamptz_comparison_exp {
   _eq: timestamptz
   _gt: timestamptz
   _gte: timestamptz
@@ -1026,22 +2484,35 @@ input timestamptz_comparison_exp # Boolean expression to compare columns of type
   _nin: [timestamptz!]
 }
 
-type user_device # columns and relationships of "user.device" {
+"""
+columns and relationships of "user.device"
+"""
+type user_device {
   device_id: String!
 }
 
-input user_device_bool_exp # Boolean expression to filter rows from the table "user.device". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "user.device". All fields are combined with a logical 'AND'.
+"""
+input user_device_bool_exp {
   _and: [user_device_bool_exp!]
   _not: user_device_bool_exp
   _or: [user_device_bool_exp!]
   device_id: String_comparison_exp
 }
 
-enum user_device_constraint # unique or primary key constraints on table "user.device" {
-  device_pkey # unique or primary key constraint
+"""
+unique or primary key constraints on table "user.device"
+"""
+enum user_device_constraint {
+  """unique or primary key constraint"""
+  device_pkey
 }
 
-input user_device_insert_input # input type for inserting data into table "user.device" {
+"""
+input type for inserting data into table "user.device"
+"""
+input user_device_insert_input {
   description: String
   device_id: String
   id: String
@@ -1049,30 +2520,48 @@ input user_device_insert_input # input type for inserting data into table "user.
   os_version: String
 }
 
-type user_device_mutation_response # response of any mutation on the table "user.device" {
-  affected_rows: Int! # number of rows affected by the mutation
-  returning: [user_device!]! # data from the rows affected by the mutation
+"""
+response of any mutation on the table "user.device"
+"""
+type user_device_mutation_response {
+  """number of rows affected by the mutation"""
+  affected_rows: Int!
+
+  """data from the rows affected by the mutation"""
+  returning: [user_device!]!
 }
 
-input user_device_on_conflict # on_conflict condition type for table "user.device" {
+"""
+on_conflict condition type for table "user.device"
+"""
+input user_device_on_conflict {
   constraint: user_device_constraint!
   update_columns: [user_device_update_column!]! = []
   where: user_device_bool_exp
 }
 
-input user_device_order_by # Ordering options when selecting data from "user.device". {
+"""Ordering options when selecting data from "user.device"."""
+input user_device_order_by {
   device_id: order_by
 }
 
-input user_device_pk_columns_input # primary key columns input for table: user_device {
+"""primary key columns input for table: user_device"""
+input user_device_pk_columns_input {
   device_id: String!
 }
 
-enum user_device_select_column # select columns of table "user.device" {
-  device_id # column name
+"""
+select columns of table "user.device"
+"""
+enum user_device_select_column {
+  """column name"""
+  device_id
 }
 
-input user_device_set_input # input type for updating data in table "user.device" {
+"""
+input type for updating data in table "user.device"
+"""
+input user_device_set_input {
   description: String
   device_id: String
   id: String
@@ -1080,25 +2569,47 @@ input user_device_set_input # input type for updating data in table "user.device
   os_version: String
 }
 
-enum user_device_update_column # update columns of table "user.device" {
-  description # column name
-  device_id # column name
-  id # column name
-  os # column name
-  os_version # column name
+"""
+update columns of table "user.device"
+"""
+enum user_device_update_column {
+  """column name"""
+  description
+
+  """column name"""
+  device_id
+
+  """column name"""
+  id
+
+  """column name"""
+  os
+
+  """column name"""
+  os_version
 }
 
-type user_notification_settings # columns and relationships of "user.notification_settings" {
+"""
+columns and relationships of "user.notification_settings"
+"""
+type user_notification_settings {
   account_uid: uuid!
   id: Int!
-  settings(path: String): jsonb
+  settings(
+    """JSON select path"""
+    path: String
+  ): jsonb
 }
 
-input user_notification_settings_append_input # append existing jsonb value of filtered columns with new jsonb value {
+"""append existing jsonb value of filtered columns with new jsonb value"""
+input user_notification_settings_append_input {
   settings: jsonb
 }
 
-input user_notification_settings_bool_exp # Boolean expression to filter rows from the table "user.notification_settings". All fields are combined with a logical 'AND'. {
+"""
+Boolean expression to filter rows from the table "user.notification_settings". All fields are combined with a logical 'AND'.
+"""
+input user_notification_settings_bool_exp {
   _and: [user_notification_settings_bool_exp!]
   _not: user_notification_settings_bool_exp
   _or: [user_notification_settings_bool_exp!]
@@ -1107,70 +2618,119 @@ input user_notification_settings_bool_exp # Boolean expression to filter rows fr
   settings: jsonb_comparison_exp
 }
 
-enum user_notification_settings_constraint # unique or primary key constraints on table "user.notification_settings" {
-  notification_settings_account_uid_key # unique or primary key constraint
-  notification_settings_pkey # unique or primary key constraint
+"""
+unique or primary key constraints on table "user.notification_settings"
+"""
+enum user_notification_settings_constraint {
+  """unique or primary key constraint"""
+  notification_settings_account_uid_key
+
+  """unique or primary key constraint"""
+  notification_settings_pkey
 }
 
-input user_notification_settings_delete_at_path_input # delete the field or element with specified path (for JSON arrays, negative integers count from the end) {
+"""
+delete the field or element with specified path (for JSON arrays, negative integers count from the end)
+"""
+input user_notification_settings_delete_at_path_input {
   settings: [String!]
 }
 
-input user_notification_settings_delete_elem_input # delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array {
+"""
+delete the array element with specified index (negative integers count from the end). throws an error if top level container is not an array
+"""
+input user_notification_settings_delete_elem_input {
   settings: Int
 }
 
-input user_notification_settings_delete_key_input # delete key/value pair or string element. key/value pairs are matched based on their key value {
+"""
+delete key/value pair or string element. key/value pairs are matched based on their key value
+"""
+input user_notification_settings_delete_key_input {
   settings: String
 }
 
-input user_notification_settings_insert_input # input type for inserting data into table "user.notification_settings" {
+"""
+input type for inserting data into table "user.notification_settings"
+"""
+input user_notification_settings_insert_input {
   settings: jsonb
 }
 
-type user_notification_settings_mutation_response # response of any mutation on the table "user.notification_settings" {
-  affected_rows: Int! # number of rows affected by the mutation
-  returning: [user_notification_settings!]! # data from the rows affected by the mutation
+"""
+response of any mutation on the table "user.notification_settings"
+"""
+type user_notification_settings_mutation_response {
+  """number of rows affected by the mutation"""
+  affected_rows: Int!
+
+  """data from the rows affected by the mutation"""
+  returning: [user_notification_settings!]!
 }
 
-input user_notification_settings_on_conflict # on_conflict condition type for table "user.notification_settings" {
+"""
+on_conflict condition type for table "user.notification_settings"
+"""
+input user_notification_settings_on_conflict {
   constraint: user_notification_settings_constraint!
   update_columns: [user_notification_settings_update_column!]! = []
   where: user_notification_settings_bool_exp
 }
 
-input user_notification_settings_order_by # Ordering options when selecting data from "user.notification_settings". {
+"""
+Ordering options when selecting data from "user.notification_settings".
+"""
+input user_notification_settings_order_by {
   account_uid: order_by
   id: order_by
   settings: order_by
 }
 
-input user_notification_settings_pk_columns_input # primary key columns input for table: user_notification_settings {
+"""primary key columns input for table: user_notification_settings"""
+input user_notification_settings_pk_columns_input {
   id: Int!
 }
 
-input user_notification_settings_prepend_input # prepend existing jsonb value of filtered columns with new jsonb value {
+"""prepend existing jsonb value of filtered columns with new jsonb value"""
+input user_notification_settings_prepend_input {
   settings: jsonb
 }
 
-enum user_notification_settings_select_column # select columns of table "user.notification_settings" {
-  account_uid # column name
-  id # column name
-  settings # column name
+"""
+select columns of table "user.notification_settings"
+"""
+enum user_notification_settings_select_column {
+  """column name"""
+  account_uid
+
+  """column name"""
+  id
+
+  """column name"""
+  settings
 }
 
-input user_notification_settings_set_input # input type for updating data in table "user.notification_settings" {
+"""
+input type for updating data in table "user.notification_settings"
+"""
+input user_notification_settings_set_input {
   settings: jsonb
 }
 
-enum user_notification_settings_update_column # update columns of table "user.notification_settings" {
-  settings # column name
+"""
+update columns of table "user.notification_settings"
+"""
+enum user_notification_settings_update_column {
+  """column name"""
+  settings
 }
 
-""""""
 scalar uuid
 
-input uuid_comparison_exp # Boolean expression to compare columns of type "uuid". All fields are combined with logical 'AND'. {
+"""
+Boolean expression to compare columns of type "uuid". All fields are combined with logical 'AND'.
+"""
+input uuid_comparison_exp {
   _eq: uuid
   _gt: uuid
   _gte: uuid
@@ -1181,4 +2741,3 @@ input uuid_comparison_exp # Boolean expression to compare columns of type "uuid"
   _neq: uuid
   _nin: [uuid!]
 }
-

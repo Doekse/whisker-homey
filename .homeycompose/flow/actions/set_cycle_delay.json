@@ -1,0 +1,103 @@
+{
+  "title": {
+    "en": "Set cycle delay",
+    "nl": "Stel cyclusvertraging in",
+    "de": "Zyklusverzögerung einstellen",
+    "fr": "Définir le délai du cycle",
+    "it": "Imposta ritardo ciclo",
+    "sv": "Ställ in cykelfördröjning",
+    "no": "Sett syklusforsinkelse",
+    "es": "Establecer retraso del ciclo",
+    "da": "Indstil cyklusforsinkelse",
+    "ru": "Установить задержку цикла",
+    "pl": "Ustaw opóźnienie cyklu",
+    "ko": "사이클 지연 설정"
+  },
+  "titleFormatted": {
+    "en": "Set cycle delay to [[minutes]] minutes",
+    "nl": "Stel cyclusvertraging in op [[minutes]] minuten",
+    "de": "Zyklusverzögerung auf [[minutes]] Minuten einstellen",
+    "fr": "Définir le délai du cycle à [[minutes]] minutes",
+    "it": "Imposta il ritardo del ciclo a [[minutes]] minuti",
+    "sv": "Ställ in cykelfördröjning till [[minutes]] minuter",
+    "no": "Sett syklusforsinkelse til [[minutes]] minutter",
+    "es": "Establecer retraso del ciclo en [[minutes]] minutos",
+    "da": "Indstil cyklusforsinkelse til [[minutes]] minutter",
+    "ru": "Установить задержку цикла на [[minutes]] мин",
+    "pl": "Ustaw opóźnienie cyklu na [[minutes]] min",
+    "ko": "사이클 지연을 [[minutes]]분으로 설정"
+  },
+  "hint": {
+    "en": "Adjust the LR3 clean cycle wait time.",
+    "nl": "Pas de wachttijd voor de reinigingscyclus van de LR3 aan.",
+    "de": "Passen Sie die Wartezeit des LR3-Reinigungszyklus an.",
+    "fr": "Ajustez le temps d'attente du cycle de nettoyage LR3.",
+    "it": "Regola il tempo di attesa del ciclo di pulizia LR3.",
+    "sv": "Justera LR3:s väntetid för rengöringscykel.",
+    "no": "Juster ventetiden for LR3s rengjøringssyklus.",
+    "es": "Ajusta el tiempo de espera del ciclo de limpieza LR3.",
+    "da": "Juster LR3's ventetid for rengøringscyklus.",
+    "ru": "Настройте время ожидания цикла очистки LR3.",
+    "pl": "Dostosuj czas oczekiwania cyklu czyszczenia LR3.",
+    "ko": "LR3 청소 사이클 대기 시간을 조정합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3"
+    },
+    {
+      "name": "minutes",
+      "type": "dropdown",
+      "title": {
+        "en": "amount",
+        "nl": "hoeveelheid",
+        "de": "menge",
+        "fr": "montant",
+        "it": "quantità",
+        "sv": "belopp",
+        "no": "beløp",
+        "es": "cantidad",
+        "da": "beløb",
+        "ru": "количество",
+        "pl": "ilość",
+        "ko": "수량"
+      },
+      "values": [
+        {
+          "id": "3",
+          "title": {
+            "en": "3"
+          }
+        },
+        {
+          "id": "7",
+          "title": {
+            "en": "7"
+          }
+        },
+        {
+          "id": "15",
+          "title": {
+            "en": "15"
+          }
+        }
+      ]
+    }
+  ]
+}

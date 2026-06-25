@@ -1,0 +1,41 @@
+{
+  "errors": {
+    "session_unavailable": "Нет доступной сессии API. Отремонтируйте устройство.",
+    "invalid_device_data_missing_serial": "Неверные данные устройства. Отсутствует серийный номер робота.",
+    "invalid_device_data_missing_pet_id": "Неверные данные устройства. Отсутствует ID питомца.",
+    "invalid_device_data_missing_robot_id": "Неверные данные устройства. Отсутствует ID робота.",
+    "invalid_wait_time": "Неверное значение времени ожидания",
+    "invalid_panel_brightness": "Неверное значение яркости панели",
+    "invalid_night_light_brightness": "Неверное значение яркости ночного света",
+    "invalid_night_light_mode": "Неверный режим ночного света",
+    "robot_not_found": "Робот с серийным номером __serial__ не найден"
+  },
+  "pairing": {
+    "credentials_required": "Для сопряжения требуются имя пользователя и пароль",
+    "credentials_required_repair": "Для ремонта требуются имя пользователя и пароль",
+    "no_devices_found": "__product__ не найден для этой учётной записи",
+    "robot_not_found": "__product__ с серийным номером __serial__ не найден",
+    "no_pets_found": "Питомцы не найдены для этой учётной записи",
+    "pet_not_found": "Питомец с ID __id__ не найден"
+  },
+  "state": {
+    "loading": "Загрузка...",
+    "unknown": "Неизвестно",
+    "not_set": "Не задано",
+    "currently_connected": "Сейчас подключено"
+  },
+  "age": {
+    "month": "__count__ месяц",
+    "months": "__count__ месяцев",
+    "year": "__count__ год",
+    "years": "__count__ лет",
+    "invalid_date": "Неверная дата"
+  },
+  "notifications": {
+    "cat_visit_generic": "Кошка посетила __robot__ 🐱",
+    "cat_visit": "__name__ посетил(а) __robot__ с весом __grams__ г 🐱",
+    "waste_drawer_full": "Ящик для отходов __robot__ заполнен 🗑️",
+    "robot_fault": "__robot__ сообщил о проблеме: __fault__ ⚠️",
+    "robot_fault_generic": "__robot__ сообщил о проблеме ⚠️"
+  }
+}

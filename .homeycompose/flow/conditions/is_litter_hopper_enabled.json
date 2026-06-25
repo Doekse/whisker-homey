@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "The LitterHopper !{{is|is not}} enabled",
+    "nl": "De LitterHopper !{{is|is niet}} ingeschakeld",
+    "de": "Der LitterHopper !{{ist|ist nicht}} aktiviert",
+    "fr": "Le LitterHopper !{{est|n'est pas}} activé",
+    "it": "Il LitterHopper !{{è|non è}} abilitato",
+    "sv": "LitterHopper !{{är|är inte}} aktiverad",
+    "no": "LitterHopper !{{er|er ikke}} aktivert",
+    "es": "El LitterHopper !{{está|no está}} habilitado",
+    "da": "LitterHopper !{{er|er ikke}} aktiveret",
+    "ru": "LitterHopper !{{включен|не включен}}",
+    "pl": "LitterHopper !{{jest|nie jest}} włączony",
+    "ko": "LitterHopper가 !{{활성화됨|비활성화됨}}"
+  },
+  "hint": {
+    "en": "Returns true when the LitterHopper is enabled. Only works when LitterHopper functionality is enabled in device settings.",
+    "nl": "Geeft true terug wanneer de LitterHopper is ingeschakeld. Werkt alleen wanneer LitterHopper-functionaliteit is ingeschakeld in apparaatinstellingen.",
+    "de": "Gibt true zurück, wenn der LitterHopper aktiviert ist. Funktioniert nur, wenn die LitterHopper-Funktionalität in den Geräteeinstellungen aktiviert ist.",
+    "fr": "Renvoie vrai lorsque le LitterHopper est activé. Ne fonctionne que lorsque la fonctionnalité LitterHopper est activée dans les paramètres de l'appareil.",
+    "it": "Restituisce vero quando il LitterHopper è abilitato. Funziona solo quando la funzionalità LitterHopper è abilitata nelle impostazioni del dispositivo.",
+    "sv": "Returnerar sant när LitterHopper är aktiverad. Fungerar endast när LitterHopper-funktionalitet är aktiverad i enhetsinställningar.",
+    "no": "Returnerer true når LitterHopper er aktivert. Fungerer kun når LitterHopper-funksjonalitet er aktivert i enhetsinnstillinger.",
+    "es": "Devuelve verdadero cuando el LitterHopper está habilitado. Solo funciona cuando la funcionalidad LitterHopper está habilitada en la configuración del dispositivo.",
+    "da": "Returnerer sandt, når LitterHopper er aktiveret. Virker kun, når LitterHopper-funktionalitet er aktiveret i enhedsindstillinger.",
+    "ru": "Возвращает true, когда LitterHopper включен. Работает только при включенной функциональности LitterHopper в настройках устройства.",
+    "pl": "Zwraca true, gdy LitterHopper jest włączony. Działa tylko wtedy, gdy funkcjonalność LitterHopper jest włączona w ustawieniach urządzenia.",
+    "ko": "LitterHopper가 활성화되었을 때 true를 반환합니다. 장치 설정에서 LitterHopper 기능이 활성화된 경우에만 작동합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot4&capabilities=litter_hopper_enabled"
+    }
+  ]
+}

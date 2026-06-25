@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Sleep mode !{{is|is not}} currently active",
+    "nl": "De slaapstand !{{is|is niet}} momenteel actief",
+    "de": "Der Schlafmodus !{{ist|ist nicht}} derzeit aktiv",
+    "fr": "Le mode veille !{{est|n'est pas}} actuellement actif",
+    "it": "La modalità sleep !{{è|non è}} attiva",
+    "sv": "Viloläget !{{är|är inte}} aktivt",
+    "no": "Søvnmodus !{{er|er ikke}} aktiv",
+    "es": "El modo de suspensión !{{está|no está}} activo",
+    "da": "Dvaletilstand !{{er|er ikke}} aktiv",
+    "ru": "Режим сна !{{активен|не активен}}",
+    "pl": "Tryb uśpienia !{{jest|nie jest}} aktywny",
+    "ko": "수면 모드가 !{{활성화됨|비활성화됨}}"
+  },
+  "hint": {
+    "en": "Returns true when the Litter-Robot is currently sleeping.",
+    "nl": "Geeft true terug wanneer de Litter-Robot momenteel slaapt.",
+    "de": "Gibt true zurück, wenn der Litter-Robot schläft.",
+    "fr": "Renvoie vrai lorsque le Litter-Robot dort.",
+    "it": "Restituisce vero quando il Litter-Robot è in modalità sonno.",
+    "sv": "Returnerar sant när Litter-Robot sover.",
+    "no": "Returnerer true når Litter-Robot sover.",
+    "es": "Devuelve verdadero cuando el Litter-Robot está durmiendo.",
+    "da": "Returnerer sandt, når Litter-Robot sover.",
+    "ru": "Возвращает true, когда Litter-Robot спит.",
+    "pl": "Zwraca true, gdy Litter-Robot śpi.",
+    "ko": "Litter-Robot가 수면 모드일 때 true를 반환합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

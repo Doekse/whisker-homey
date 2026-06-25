@@ -1,0 +1,52 @@
+{
+  "highlight": true,
+  "title": {
+    "en": "The waste drawer is full",
+    "nl": "De afvallade is vol",
+    "de": "Die Abfallschublade ist voll",
+    "fr": "Le tiroir à déchets est plein",
+    "it": "La vaschetta dei rifiuti è pieno",
+    "sv": "Avfallslådan är full",
+    "no": "Avfallsskuffen er full",
+    "es": "El cajón de residuos está lleno",
+    "da": "Affaldsskuffen er fuld",
+    "ru": "Контейнер для отходов заполнен",
+    "pl": "Szuflada na odpady jest pełny",
+    "ko": "폐기물 서랍이 가득 찼습니다"
+  },
+  "hint": {
+    "en": "Triggers when the Litter-Robot detects a full waste drawer.",
+    "nl": "Wordt geactiveerd wanneer de Litter-Robot een volle afvallade detecteert.",
+    "de": "Wird ausgelöst, wenn der Litter-Robot einen vollen Abfallschublade erkennt.",
+    "fr": "Déclenché lorsque le Litter-Robot détecte un tiroir à déchets plein.",
+    "it": "Si attiva quando il Litter-Robot rileva un cassetto dei rifiuti pieno.",
+    "sv": "Utlöses när Litter-Robot upptäcker att avfallsbehållaren är full.",
+    "no": "Utøses når Litter-Robot oppdager at avfallsbeholderen er full.",
+    "es": "Se activa cuando el Litter-Robot detecta que el cajón de residuos está lleno.",
+    "da": "Udløses, når Litter-Robot registrerer, at affaldsskuffen er fuld.",
+    "ru": "Срабатывает, когда Litter-Robot обнаруживает полный контейнер для отходов.",
+    "pl": "Uruchamia się, gdy Litter-Robot wykryje pełną szufladę na odpady.",
+    "ko": "Litter-Robot가 폐기물 서랍이 가득 찼음을 감지하면 트리거됩니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

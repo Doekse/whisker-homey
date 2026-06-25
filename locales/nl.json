@@ -1,0 +1,41 @@
+{
+  "errors": {
+    "session_unavailable": "Geen API-sessie beschikbaar. Repareer het apparaat.",
+    "invalid_device_data_missing_serial": "Ongeldige apparaatgegevens. Serienummer van robot ontbreekt.",
+    "invalid_device_data_missing_pet_id": "Ongeldige apparaatgegevens. Huisdier-ID ontbreekt.",
+    "invalid_device_data_missing_robot_id": "Ongeldige apparaatgegevens. Robot-ID ontbreekt.",
+    "invalid_wait_time": "Ongeldige wachttijd",
+    "invalid_panel_brightness": "Ongeldige helderheid van het bedieningspaneel",
+    "invalid_night_light_brightness": "Ongeldige helderheid van het nachtlampje",
+    "invalid_night_light_mode": "Ongeldige modus van het nachtlampje",
+    "robot_not_found": "Robot met serienummer __serial__ niet gevonden"
+  },
+  "pairing": {
+    "credentials_required": "Gebruikersnaam en wachtwoord zijn verplicht voor koppelen",
+    "credentials_required_repair": "Gebruikersnaam en wachtwoord zijn verplicht voor reparatie",
+    "no_devices_found": "Geen __product__ gevonden voor dit account",
+    "robot_not_found": "__product__ met serienummer __serial__ niet gevonden",
+    "no_pets_found": "Geen huisdieren gevonden voor dit account",
+    "pet_not_found": "Huisdier met ID __id__ niet gevonden"
+  },
+  "state": {
+    "loading": "Laden...",
+    "unknown": "Onbekend",
+    "not_set": "Niet ingesteld",
+    "currently_connected": "Momenteel verbonden"
+  },
+  "age": {
+    "month": "__count__ maand",
+    "months": "__count__ maanden",
+    "year": "__count__ jaar",
+    "years": "__count__ jaren",
+    "invalid_date": "Ongeldige datum"
+  },
+  "notifications": {
+    "cat_visit_generic": "Een kat heeft __robot__ bezocht 🐱",
+    "cat_visit": "__name__ heeft __robot__ bezocht en woog __grams__ g 🐱",
+    "waste_drawer_full": "De afvallade van __robot__ is vol 🗑️",
+    "robot_fault": "__robot__ meldde een probleem: __fault__ ⚠️",
+    "robot_fault_generic": "__robot__ meldde een probleem ⚠️"
+  }
+}

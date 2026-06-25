@@ -1,14 +1,14 @@
 {
   "title": {
     "en": "Keypad lock",
-    "nl": "Toetsenbord vergrendeling",
-    "de": "Tastatursperre",
-    "fr": "Verrouillage du clavier",
-    "it": "Blocco tastierino",
+    "nl": "Bedieningspaneel vergrendeling",
+    "de": "Bedienfeldsperre",
+    "fr": "Verrouillage du panneau de contrôle",
+    "it": "Blocco pannello di controllo",
     "sv": "Knappsatslås",
-    "no": "Tastatursperre",
-    "es": "Bloqueo de teclado",
-    "da": "Tastatursperre",
+    "no": "Kontrollpanelsperre",
+    "es": "Bloqueo del panel de control",
+    "da": "Kontrolpanelslås",
     "ru": "Блокировка клавиатуры",
     "pl": "Blokada klawiatury",
     "ko": "키패드 잠금"

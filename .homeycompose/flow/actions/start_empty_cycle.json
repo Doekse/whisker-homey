@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Start empty cycle",
+    "nl": "Start leegmaakcyclus",
+    "de": "Leerungszyklus starten",
+    "fr": "Démarrer le cycle de vidage",
+    "it": "Avvia ciclo di svuotamento",
+    "sv": "Starta tömningscykel",
+    "no": "Start tømmesyklus",
+    "es": "Iniciar ciclo de vaciado",
+    "da": "Start tømningscyklus",
+    "ru": "Запустить цикл опорожнения",
+    "pl": "Rozpocznij cykl opróżniania",
+    "ko": "비우기 사이클 시작"
+  },
+  "hint": {
+    "en": "Starts an emptying cycle for the Litter-Robot.",
+    "nl": "Start een leegmaakcyclus voor de Litter-Robot.",
+    "de": "Startet einen Leerungszyklus für den Litter-Robot.",
+    "fr": "Démarre un cycle de vidage pour le Litter-Robot.",
+    "it": "Avvia un ciclo di svuotamento per il Litter-Robot.",
+    "sv": "Startar en tömningscykel för Litter-Robot.",
+    "no": "Starter en tømmesyklus for Litter-Robot.",
+    "es": "Inicia un ciclo de vaciado para el Litter-Robot.",
+    "da": "Starter en tømningscyklus for Litter-Robot.",
+    "ru": "Запускает цикл опорожнения для Litter-Robot.",
+    "pl": "Rozpoczyna cykl opróżniania dla Litter-Robot.",
+    "ko": "Litter-Robot의 비우기 사이클을 시작합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot4"
+    }
+  ]
+}

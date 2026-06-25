@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Reset waste drawer",
+    "nl": "Reset afvallade",
+    "de": "Abfallschublade zurücksetzen",
+    "fr": "Réinitialiser le tiroir à déchets",
+    "it": "Reimposta vaschetta dei rifiuti",
+    "sv": "Återställ avfallslådan",
+    "no": "Tilbakestill avfallsskuffen",
+    "es": "Restablecer cajón de residuos",
+    "da": "Nulstil affaldsskuffen",
+    "ru": "Сбросить ящик для отходов",
+    "pl": "Zresetuj szufladę na odpady",
+    "ko": "폐기물 서랍 재설정"
+  },
+  "hint": {
+    "en": "Resets the waste drawer status and counters.",
+    "nl": "Reset de status en tellers van de afvallade.",
+    "de": "Setzt Status und Zähler des Abfallschublades zurück.",
+    "fr": "Réinitialise l'état et les compteurs du tiroir à déchets.",
+    "it": "Reimposta lo stato e i contatori del vaschetta dei rifiuti.",
+    "sv": "Återställer status och räknare för avfallslådan.",
+    "no": "Tilbakestiller status og tellere for avfallsskuffen.",
+    "es": "Restablece el estado y los contadores del cajón de residuos.",
+    "da": "Nulstiller status og tællere for affaldsskuffen.",
+    "ru": "Сбрасывает состояние и счетчики ящика для отходов.",
+    "pl": "Resetuje stan i liczniki szuflady na odpady.",
+    "ko": "폐기물 서랍 상태와 카운터를 재설정합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3"
+    }
+  ]
+}

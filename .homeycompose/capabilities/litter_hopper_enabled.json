@@ -1,17 +1,17 @@
 {
   "title": {
     "en": "LitterHopper enabled",
-    "nl": "Kattenbakvuller ingeschakeld",
-    "de": "Streuschacht aktiviert",
-    "fr": "Trémie à litière activée",
-    "it": "Tramoggia lettiera attivata",
-    "sv": "Kattlåda fyllare aktiverad",
-    "no": "Kattesandfyller aktivert",
-    "es": "Tolva de arena activada",
-    "da": "Kattebakke fylder aktiveret",
-    "ru": "Бункер наполнителя включен",
-    "pl": "Zasobnik żwirku włączony",
-    "ko": "모래 호퍼 활성화됨"
+    "nl": "LitterHopper ingeschakeld",
+    "de": "LitterHopper aktiviert",
+    "fr": "LitterHopper activé",
+    "it": "LitterHopper abilitato",
+    "sv": "LitterHopper aktiverad",
+    "no": "LitterHopper aktivert",
+    "es": "LitterHopper habilitado",
+    "da": "LitterHopper aktiveret",
+    "ru": "LitterHopper включен",
+    "pl": "LitterHopper włączony",
+    "ko": "LitterHopper 활성화됨"
   },
   "type": "boolean",
   "getable": true,

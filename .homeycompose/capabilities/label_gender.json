@@ -1,7 +1,5 @@
-
-
 {
-  "type": "string",
+  "type": "enum",
   "title": {
     "en": "Gender",
     "nl": "Geslacht",
@@ -19,5 +17,58 @@
   "getable": true,
   "setable": false,
   "uiComponent": "sensor",
-  "icon": "/assets/capabilities/label_gender.svg"
+  "icon": "/assets/capabilities/label_gender.svg",
+  "values": [
+    {
+      "id": "MALE",
+      "title": {
+        "en": "Male",
+        "nl": "Mannelijk",
+        "de": "Männlich",
+        "fr": "Mâle",
+        "it": "Maschio",
+        "sv": "Hane",
+        "no": "Hann",
+        "es": "Macho",
+        "da": "Han",
+        "ru": "Самец",
+        "pl": "Samiec",
+        "ko": "수컷"
+      }
+    },
+    {
+      "id": "FEMALE",
+      "title": {
+        "en": "Female",
+        "nl": "Vrouwelijk",
+        "de": "Weiblich",
+        "fr": "Femelle",
+        "it": "Femmina",
+        "sv": "Hona",
+        "no": "Hunn",
+        "es": "Hembra",
+        "da": "Hun",
+        "ru": "Самка",
+        "pl": "Samica",
+        "ko": "암컷"
+      }
+    },
+    {
+      "id": "UNKNOWN",
+      "title": {
+        "en": "Unknown",
+        "nl": "Onbekend",
+        "de": "Unbekannt",
+        "fr": "Inconnu",
+        "it": "Sconosciuto",
+        "sv": "Okänt",
+        "no": "Ukjent",
+        "es": "Desconocido",
+        "da": "Ukendt",
+        "ru": "Неизвестно",
+        "pl": "Nieznane",
+        "ko": "알 수 없음"
+      }
+    }
+  ]
 }

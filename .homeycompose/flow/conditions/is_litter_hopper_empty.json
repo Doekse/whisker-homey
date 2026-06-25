@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "The LitterHopper !{{is|is not}} empty",
+    "nl": "De LitterHopper !{{is|is niet}} leeg",
+    "de": "Der LitterHopper !{{ist|ist nicht}} leer",
+    "fr": "Le LitterHopper !{{est|n'est pas}} vide",
+    "it": "Il LitterHopper !{{è|non è}} vuoto",
+    "sv": "LitterHopper !{{är|är inte}} tom",
+    "no": "LitterHopper !{{er|er ikke}} tom",
+    "es": "El LitterHopper !{{está|no está}} vacío",
+    "da": "LitterHopper !{{er|er ikke}} tom",
+    "ru": "LitterHopper !{{пуст|не пуст}}",
+    "pl": "LitterHopper !{{jest|nie jest}} pusty",
+    "ko": "LitterHopper가 !{{비어있습니다|비어있지 않습니다}}"
+  },
+  "hint": {
+    "en": "Returns true when the LitterHopper is empty. Only works when LitterHopper functionality is enabled in device settings.",
+    "nl": "Geeft true terug wanneer de LitterHopper leeg is. Werkt alleen wanneer LitterHopper-functionaliteit is ingeschakeld in apparaatinstellingen.",
+    "de": "Gibt true zurück, wenn der LitterHopper leer ist. Funktioniert nur, wenn die LitterHopper-Funktionalität in den Geräteeinstellungen aktiviert ist.",
+    "fr": "Renvoie vrai lorsque le LitterHopper est vide. Ne fonctionne que lorsque la fonctionnalité LitterHopper est activée dans les paramètres de l'appareil.",
+    "it": "Restituisce vero quando il LitterHopper è vuoto. Funziona solo quando la funzionalità LitterHopper è abilitata nelle impostazioni del dispositivo.",
+    "sv": "Returnerar sant när LitterHopper är tom. Fungerar endast när LitterHopper-funktionalitet är aktiverad i enhetsinställningar.",
+    "no": "Returnerer true når LitterHopper er tom. Fungerer kun når LitterHopper-funksjonalitet er aktivert i enhetsinnstillinger.",
+    "es": "Devuelve verdadero cuando el LitterHopper está vacío. Solo funciona cuando la funcionalidad LitterHopper está habilitada en la configuración del dispositivo.",
+    "da": "Returnerer sandt, når LitterHopper er tom. Virker kun, når LitterHopper-funktionalitet er aktiveret i enhedsindstillinger.",
+    "ru": "Возвращает true, когда LitterHopper пуст. Работает только при включенной функциональности LitterHopper в настройках устройства.",
+    "pl": "Zwraca true, gdy LitterHopper jest pusty. Działa tylko wtedy, gdy funkcjonalność LitterHopper jest włączona w ustawieniach urządzenia.",
+    "ko": "LitterHopper가 비어있을 때 true를 반환합니다. 장치 설정에서 LitterHopper 기능이 활성화된 경우에만 작동합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot4&capabilities=alarm_litter_hopper_empty"
+    }
+  ]
+}

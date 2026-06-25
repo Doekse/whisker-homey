@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "The LitterHopper is empty",
+    "nl": "De LitterHopper is leeg",
+    "de": "Der LitterHopper ist leer",
+    "fr": "Le LitterHopper est vide",
+    "it": "Il LitterHopper è vuoto",
+    "sv": "LitterHopper är tom",
+    "no": "LitterHopper er tom",
+    "es": "El LitterHopper está vacío",
+    "da": "LitterHopper er tom",
+    "ru": "LitterHopper пуст",
+    "pl": "LitterHopper jest pusty",
+    "ko": "LitterHopper가 비어있습니다"
+  },
+  "hint": {
+    "en": "Triggers when the LitterHopper runs out of litter. Only works when LitterHopper functionality is enabled in device settings.",
+    "nl": "Wordt geactiveerd wanneer de LitterHopper geen strooisel meer heeft. Werkt alleen wanneer LitterHopper-functionaliteit is ingeschakeld in apparaatinstellingen.",
+    "de": "Wird ausgelöst, wenn der LitterHopper keine Streu mehr hat. Funktioniert nur, wenn die LitterHopper-Funktionalität in den Geräteeinstellungen aktiviert ist.",
+    "fr": "Se déclenche lorsque le LitterHopper n'a plus de litière. Ne fonctionne que lorsque la fonctionnalité LitterHopper est activée dans les paramètres de l'appareil.",
+    "it": "Si attiva quando il LitterHopper rimane senza lettiera. Funziona solo quando la funzionalità LitterHopper è abilitata nelle impostazioni del dispositivo.",
+    "sv": "Utlöses när LitterHopper tar slut på kattlitter. Fungerar endast när LitterHopper-funktionalitet är aktiverad i enhetsinställningar.",
+    "no": "Utøses når LitterHopper går tom for kattesand. Fungerer kun når LitterHopper-funksjonalitet er aktivert i enhetsinnstillinger.",
+    "es": "Se activa cuando el LitterHopper se queda sin arena. Solo funciona cuando la funcionalidad LitterHopper está habilitada en la configuración del dispositivo.",
+    "da": "Udløses, når LitterHopper løber tør for kattegrus. Virker kun, når LitterHopper-funktionalitet er aktiveret i enhedsindstillinger.",
+    "ru": "Срабатывает, когда LitterHopper заканчивается наполнитель. Работает только при включенной функциональности LitterHopper в настройках устройства.",
+    "pl": "Uruchamia się, gdy LitterHopper skończy się żwirek. Działa tylko wtedy, gdy funkcjonalność LitterHopper jest włączona w ustawieniach urządzenia.",
+    "ko": "LitterHopper에 모래가 없을 때 트리거됩니다. 장치 설정에서 LitterHopper 기능이 활성화된 경우에만 작동합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot4&capabilities=alarm_litter_hopper_empty"
+    }
+  ]
+}

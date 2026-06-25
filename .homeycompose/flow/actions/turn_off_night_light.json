@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Turn off globe light",
+    "nl": "Zet nachtlamp uit",
+    "de": "Nachtlicht ausschalten",
+    "fr": "Éteindre la veilleuse",
+    "it": "Spegni luce notturna",
+    "sv": "Stäng av nattljus",
+    "no": "Slå av nattlys",
+    "es": "Apagar luz nocturna",
+    "da": "Sluk natlys",
+    "ru": "Выключить ночное освещение",
+    "pl": "Wyłącz nocne oświetlenie",
+    "ko": "야간등 끄기"
+  },
+  "hint": {
+    "en": "Turns off the globe light.",
+    "nl": "Zet de nachtlamp uit.",
+    "de": "Schaltet das Nachtlicht aus.",
+    "fr": "Éteint la veilleuse.",
+    "it": "Spegne la luce notturna.",
+    "sv": "Stänger av nattljuset.",
+    "no": "Slår av nattlyset.",
+    "es": "Apaga la luz nocturna.",
+    "da": "Slukker natlyset.",
+    "ru": "Выключает ночное освещение.",
+    "pl": "Wyłącza nocne oświetlenie.",
+    "ko": "야간등을 끕니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3"
+    }
+  ]
+}

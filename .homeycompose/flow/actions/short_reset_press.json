@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Reset Litter-Robot",
+    "nl": "Reset Litter-Robot",
+    "de": "Litter-Robot zurücksetzen",
+    "fr": "Réinitialiser le Litter-Robot",
+    "it": "Reimposta Litter-Robot",
+    "sv": "Återställ Litter-Robot",
+    "no": "Tilbakestill Litter-Robot",
+    "es": "Restablecer Litter-Robot",
+    "da": "Nulstil Litter-Robot",
+    "ru": "Сбросить Litter-Robot",
+    "pl": "Zresetuj Litter-Robot",
+    "ko": "Litter-Robot 재설정"
+  },
+  "hint": {
+    "en": "Resets the Litter-Robot to its idle state. This is equivalent to a short press of the reset button on the device.",
+    "nl": "Reset de Litter-Robot naar de idle-stand. Dit is gelijk aan een korte druk op de resetknop van het apparaat.",
+    "de": "Setzt den Litter-Robot in den Leerlaufzustand zurück. Entspricht einem kurzen Druck auf die Reset-Taste am Gerät.",
+    "fr": "Réinitialise le Litter-Robot à son état d'inactivité. Équivalent à une courte pression sur le bouton de réinitialisation de l'appareil.",
+    "it": "Reimposta il Litter-Robot allo stato inattivo. Equivale a una breve pressione del pulsante di reset sul dispositivo.",
+    "sv": "Återställer Litter-Robot till viloläge. Motsvarar en kort tryckning på återställningsknappen på enheten.",
+    "no": "Tilbakestiller Litter-Robot til hvilemodus. Tilsvarer et kort trykk på tilbakestillingsknappen på enheten.",
+    "es": "Restablece el Litter-Robot a su estado inactivo. Equivale a una pulsación corta del botón de reinicio en el dispositivo.",
+    "da": "Nulstiller Litter-Robot til tomgangstilstand. Svarer til et kort tryk på nulstillingsknappen på enheden.",
+    "ru": "Сбрасывает Litter-Robot в режим ожидания. Аналогично короткому нажатию кнопки сброса на устройстве.",
+    "pl": "Resetuje Litter-Robot do trybu bezczynności. Odpowiada krótkim naciśnięciu przycisku reset na urządzeniu.",
+    "ko": "Litter-Robot를 대기 상태로 재설정합니다. 이는 기기의 리셋 버튼을 짧게 누르는 것과 동일합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot4"
+    }
+  ]
+}

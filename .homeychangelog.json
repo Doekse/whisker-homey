@@ -97,5 +97,8 @@
   },
   "2.0.7": {
     "en": "Fixed pet driver updates not coming in"
+  },
+  "3.0.0": {
+    "en": "Major rewrite for improved stability and maintainability, plus minor bug fixes"
   }
 }

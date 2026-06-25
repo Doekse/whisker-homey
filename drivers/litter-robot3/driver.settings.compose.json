@@ -4,9 +4,9 @@
     "type": "number",
     "label": {
       "en": "Waste drawer full threshold (%)",
-      "nl": "Drempel afvalbak (%)",
-      "de": "Füllstandsschwelle für Abfallbehälter (%)",
-      "fr": "Seuil de remplissage du bac à déchets (%)",
+      "nl": "Drempel afvallade (%)",
+      "de": "Füllstandsschwelle für Abfallschublade (%)",
+      "fr": "Seuil de remplissage du tiroir à déchets (%)",
       "it": "Soglia piena del cassetto dei rifiuti (%)",
       "sv": "Tröskelvärde för full avfallsbehållare (%)",
       "no": "Terskel for full avfallsbeholder (%)",
@@ -18,9 +18,9 @@
     },
     "hint": {
       "en": "Adjust this percentage to determine when the Waste Drawer Full alarm should trigger, the default is 80%",
-      "nl": "Pas dit percentage aan om te bepalen wanneer de afvalbak als vol wordt gemeld. Standaard is dit 80%.",
-      "de": "Passen Sie diesen Prozentsatz an, um festzulegen, wann die Meldung Abfallbehälter voll ausgelöst wird. Standard ist 80%.",
-      "fr": "Ajustez ce pourcentage pour déterminer quand l'alerte bac à déchets plein doit se déclencher. Par défaut : 80%.",
+      "nl": "Pas dit percentage aan om te bepalen wanneer de afvallade als vol wordt gemeld. Standaard is dit 80%.",
+      "de": "Passen Sie diesen Prozentsatz an, um festzulegen, wann die Meldung Abfallschublade voll ausgelöst wird. Standard ist 80%.",
+      "fr": "Ajustez ce pourcentage pour déterminer quand l'alerte tiroir à déchets plein doit se déclencher. Par défaut : 80%.",
       "it": "Modifica questa percentuale per decidere quando attivare l'allarme del cassetto pieno. Predefinito: 80%.",
       "sv": "Justera denna procentsats för att avgöra när larmet för full avfallsbehållare ska utlösas. Standard är 80%.",
       "no": "Juster denne prosenten for å angi når varsel om full avfallsbeholder skal utløses. Standard er 80%.",
@@ -105,6 +105,59 @@
       }
     ],
     "required": true
+  },
+  {
+    "id": "notifications",
+    "type": "group",
+    "label": {
+      "en": "Notifications",
+      "nl": "Meldingen",
+      "de": "Benachrichtigungen",
+      "fr": "Notifications",
+      "it": "Notifiche",
+      "sv": "Aviseringar",
+      "no": "Varsler",
+      "es": "Notificaciones",
+      "da": "Notifikationer",
+      "ru": "Уведомления",
+      "pl": "Powiadomienia",
+      "ko": "알림"
+    },
+    "children": [
+      {
+        "id": "robot_fault_timeline_notifications",
+        "type": "checkbox",
+        "value": true,
+        "label": {
+          "en": "Robot faults",
+          "nl": "Robotstoringen",
+          "de": "Roboterfehler",
+          "fr": "Défauts du robot",
+          "it": "Guasti del robot",
+          "sv": "Robotfel",
+          "no": "Robotfeil",
+          "es": "Fallos del robot",
+          "da": "Robotfejl",
+          "ru": "Неисправности робота",
+          "pl": "Usterki robota",
+          "ko": "로봇 오류"
+        },
+        "hint": {
+          "en": "When enabled, a timeline notification is created when a hardware fault is detected, such as a pinch or motor error.",
+          "nl": "Wanneer ingeschakeld, wordt er een tijdlijnmelding gemaakt wanneer een hardwarestoring wordt gedetecteerd, zoals een klem of motorfout.",
+          "de": "Wenn aktiviert, wird eine Zeitachsen-Benachrichtigung erstellt, wenn ein Hardwarefehler erkannt wird, z. B. Quetschung oder Motorfehler.",
+          "fr": "Lorsque cette option est activée, une notification de la timeline est créée lorsqu'un défaut matériel est détecté, par exemple un pincement ou une erreur moteur.",
+          "it": "Quando abilitato, viene creata una notifica timeline quando viene rilevato un guasto hardware, ad esempio un pizzicamento o un errore del motore.",
+          "sv": "När aktiverat skapas en tidslinjeavisering när ett maskinvarufel upptäcks, till exempel klämning eller motorfel.",
+          "no": "Når aktivert opprettes et tidslinjevarsel når en maskinvarefeil oppdages, for eksempel klem eller motorfeil.",
+          "es": "Cuando está habilitado, se crea una notificación en la línea de tiempo cuando se detecta un fallo de hardware, como un pellizco o error del motor.",
+          "da": "Når aktiveret oprettes en tidslinjenotifikation, når en hardwarefejl registreres, f.eks. klem eller motorfejl.",
+          "ru": "При включении создаётся уведомление в ленте при обнаружении аппаратной неисправности, например защемления или ошибки двигателя.",
+          "pl": "Po włączeniu tworzone jest powiadomienie na osi czasu po wykryciu usterki sprzętowej, np. zaciśnięcia lub błędu silnika.",
+          "ko": "활성화하면 끼임 또는 모터 오류와 같은 하드웨어 오류가 감지될 때 타임라인 알림이 생성됩니다."
+        }
+      }
+    ]
   },
   {
     "id": "device_information",

@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "Sleep mode !{{is|is not}} scheduled for today",
+    "nl": "Slaapstand !{{is|is niet}} gepland voor vandaag",
+    "de": "Schlafmodus !{{ist|ist nicht}} für heute geplant",
+    "fr": "Le mode veille !{{est|n'est pas}} programmé pour aujourd'hui",
+    "it": "La modalità sleep !{{è|non è}} programmata per oggi",
+    "sv": "Viloläge !{{är|är inte}} schemalagt för idag",
+    "no": "Hvilemodus !{{er|er ikke}} planlagt for i dag",
+    "es": "El modo de suspensión !{{está|no está}} programado para hoy",
+    "da": "Dvaletilstand !{{er|er ikke}} planlagt for i dag",
+    "ru": "Режим сна !{{запланирован|не запланирован}} на сегодня",
+    "pl": "Tryb uśpienia !{{jest|nie jest}} zaplanowany na dzisiaj",
+    "ko": "수면 모드가 !{{오늘로 예약됨|오늘로 예약되지 않음}}"
+  },
+  "hint": {
+    "en": "Returns true when sleep mode is scheduled for today.",
+    "nl": "Geeft true terug wanneer slaapstand vandaag is ingepland.",
+    "de": "Gibt true zurück, wenn der Schlafmodus für heute geplant ist.",
+    "fr": "Renvoie true lorsque le mode veille est programmé pour aujourd'hui.",
+    "it": "Restituisce true quando la modalità sleep è programmata per oggi.",
+    "sv": "Returnerar true när viloläge är schemalagt för idag.",
+    "no": "Returnerer true når hvilemodus er planlagt for i dag.",
+    "es": "Devuelve true cuando el modo de suspensión está programado para hoy.",
+    "da": "Returnerer true, når dvaletilstand er planlagt for i dag.",
+    "ru": "Возвращает true, если режим сна запланирован на сегодня.",
+    "pl": "Zwraca true, gdy tryb uśpienia jest zaplanowany na dzisiaj.",
+    "ko": "수면 모드가 오늘로 예약되어 있으면 true를 반환합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "A cat !{{is|is not}} detected",
+    "nl": "Een kat !{{wordt|wordt niet}} gedetecteerd",
+    "de": "Eine Katze !{{wird|wird nicht}} erkannt",
+    "fr": "Un chat !{{est|n'est pas}} détecté",
+    "it": "Un gatto !{{è|non è}} rilevato",
+    "sv": "En katt !{{upptäcks|upptäcks inte}}",
+    "no": "En katt !{{oppdages|oppdages ikke}}",
+    "es": "Se !{{detecta|no detecta}} un gato",
+    "da": "En kat !{{registreres|registreres ikke}}",
+    "ru": "Кошка !{{обнаружена|не обнаружена}}",
+    "pl": "Kot !{{jest|nie jest}} wykryty",
+    "ko": "고양이가 !{{감지됨|감지되지 않음}}"
+  },
+  "hint": {
+    "en": "Returns true when a cat is currently detected.",
+    "nl": "Geeft true terug wanneer een kat momenteel wordt gedetecteerd.",
+    "de": "Gibt true zurück, wenn eine Katze erkannt wird.",
+    "fr": "Renvoie vrai lorsqu'un chat est détecté.",
+    "it": "Restituisce vero quando un gatto è rilevato.",
+    "sv": "Returnerar sant när en katt upptäcks.",
+    "no": "Returnerer true når en katt oppdages.",
+    "es": "Devuelve verdadero cuando se detecta un gato.",
+    "da": "Returnerer sandt, når en kat registreres.",
+    "ru": "Возвращает true, когда обнаружена кошка.",
+    "pl": "Zwraca true, gdy wykryto kota.",
+    "ko": "고양이가 감지되면 true를 반환합니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

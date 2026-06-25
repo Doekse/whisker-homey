@@ -1,7 +1,7 @@
 {
   "title": {
     "en": "Litter level percentage",
-    "nl": "Vulstof niveau percentage",
+    "nl": "Strooiselniveau in procent",
     "de": "Streu-Füllstand in Prozent",
     "fr": "Pourcentage du niveau de litière",
     "it": "Percentuale livello lettiera",
@@ -18,7 +18,18 @@
   "setable": false,
   "icon": "/assets/capabilities/measure_litter_level_percentage.svg",
   "units": {
-    "en": "%"
+    "en": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%"
   },
   "uiComponent": "sensor",
   "insights": true

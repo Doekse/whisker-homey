@@ -1,0 +1,122 @@
+{
+  "title": {
+    "en": "Set globe light mode to",
+    "nl": "Stel nachtlampmodus in op",
+    "de": "Stelle Nachtlichtmodus ein",
+    "fr": "Définir le mode veilleuse",
+    "it": "Imposta la modalità luce notturna",
+    "sv": "Ställ in nattljusläge",
+    "no": "Sett nattlysmodus",
+    "es": "Establecer modo de luz nocturna",
+    "da": "Indstil natlystilstand",
+    "ru": "Установить режим ночного освещения",
+    "pl": "Ustaw tryb nocnego oświetlenia",
+    "ko": "야간등 모드 설정"
+  },
+  "titleFormatted": {
+    "en": "Set globe light mode to [[mode]]",
+    "nl": "Stel nachtlampmodus in op [[mode]]",
+    "de": "Stelle Nachtlichtmodus ein auf [[mode]]",
+    "fr": "Définir le mode veilleuse sur [[mode]]",
+    "it": "Imposta la modalità luce notturna su [[mode]]",
+    "sv": "Ställ in nattljusläge på [[mode]]",
+    "no": "Sett nattlysmodus til [[mode]]",
+    "es": "Establecer modo de luz nocturna en [[mode]]",
+    "da": "Indstil natlystilstand til [[mode]]",
+    "ru": "Установить режим ночного освещения на [[mode]]",
+    "pl": "Ustaw tryb nocnego oświetlenia na [[mode]]",
+    "ko": "야간등 모드를 [[mode]]로 설정"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot4"
+    },
+    {
+      "name": "mode",
+      "type": "dropdown",
+      "title": {
+        "en": "Mode",
+        "nl": "Modus",
+        "de": "Modus",
+        "fr": "Mode",
+        "it": "Modalità",
+        "sv": "Läge",
+        "no": "Modus",
+        "es": "Modo",
+        "da": "Tilstand",
+        "ru": "Режим",
+        "pl": "Tryb",
+        "ko": "모드"
+      },
+      "values": [
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "nl": "Uit",
+            "de": "Aus",
+            "fr": "Désactivé",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Desactivado",
+            "da": "Fra",
+            "ru": "Выкл",
+            "pl": "Wyłączony",
+            "ko": "끔"
+          }
+        },
+        {
+          "id": "on",
+          "title": {
+            "en": "On",
+            "nl": "Aan",
+            "de": "An",
+            "fr": "Activé",
+            "it": "Acceso",
+            "sv": "PÅ",
+            "no": "På",
+            "es": "Activado",
+            "da": "Til",
+            "ru": "Вкл",
+            "pl": "Włączony",
+            "ko": "켬"
+          }
+        },
+        {
+          "id": "auto",
+          "title": {
+            "en": "Auto",
+            "nl": "Auto",
+            "de": "Auto",
+            "fr": "Auto",
+            "it": "Auto",
+            "sv": "Auto",
+            "no": "Auto",
+            "es": "Auto",
+            "da": "Auto",
+            "ru": "Авто",
+            "pl": "Auto",
+            "ko": "자동"
+          }
+        }
+      ]
+    }
+  ]
+}

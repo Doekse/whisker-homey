@@ -1,17 +1,17 @@
 {
   "title": {
     "en": "Waste drawer level percentage",
-    "nl": "Afvalbak niveau percentage",
-    "de": "Abfallbehälter-Füllstand in Prozent",
-    "fr": "Pourcentage du niveau du bac à déchets",
-    "it": "Percentuale livello cassetto rifiuti",
-    "sv": "Sopkorg nivå procent",
+    "nl": "Afvallade niveau percentage",
+    "de": "Abfallschublade-Füllstand in Prozent",
+    "fr": "Pourcentage du niveau du tiroir à déchets",
+    "it": "Percentuale livello vaschetta dei rifiuti",
+    "sv": "Avfallslåda nivå i procent",
     "no": "Avfallsskuffe nivå prosent",
     "es": "Porcentaje de nivel del cajón de residuos",
     "da": "Affaldsskuffe niveau procent",
     "ru": "Процент заполнения контейнера для отходов",
     "pl": "Procent poziomu pojemnika na odpady",
-    "ko": "쓰레기통 수준 백분율"
+    "ko": "폐기물 서랍 수준 백분율"
   },
   "type": "number",
   "getable": true,

@@ -1,21 +1,142 @@
 {
-  "type": "string",
+  "type": "enum",
   "title": {
     "en": "LitterHopper status",
-    "nl": "Kattenbakvuller status",
-    "de": "Streuschacht Status",
-    "fr": "Statut trémie à litière",
-    "it": "Stato tramoggia lettiera",
-    "sv": "Kattlåda fyllare status",
-    "no": "Kattesandfyller status",
-    "es": "Estado tolva de arena",
-    "da": "Kattebakke fylder status",
-    "ru": "Статус бункера наполнителя",
-    "pl": "Status zasobnika żwirku",
-    "ko": "모래 호퍼 상태"
+    "nl": "LitterHopper-status",
+    "de": "LitterHopper-Status",
+    "fr": "Statut LitterHopper",
+    "it": "Stato LitterHopper",
+    "sv": "LitterHopper-status",
+    "no": "LitterHopper-status",
+    "es": "Estado LitterHopper",
+    "da": "LitterHopper-status",
+    "ru": "Статус LitterHopper",
+    "pl": "Status LitterHopper",
+    "ko": "LitterHopper 상태"
   },
   "getable": true,
   "setable": false,
   "uiComponent": "sensor",
-  "icon": "/assets/capabilities/litter_hopper_status.svg"
-} 
+  "icon": "/assets/capabilities/litter_hopper_status.svg",
+  "values": [
+    {
+      "id": "HD",
+      "title": {
+        "en": "Disabled",
+        "nl": "Uitgeschakeld",
+        "de": "Deaktiviert",
+        "fr": "Désactivé",
+        "it": "Disabilitato",
+        "sv": "Inaktiverad",
+        "no": "Deaktivert",
+        "es": "Desactivado",
+        "da": "Deaktiveret",
+        "ru": "Отключено",
+        "pl": "Wyłączony",
+        "ko": "비활성화"
+      }
+    },
+    {
+      "id": "HE",
+      "title": {
+        "en": "Enabled",
+        "nl": "Ingeschakeld",
+        "de": "Aktiviert",
+        "fr": "Activé",
+        "it": "Abilitato",
+        "sv": "Aktiverad",
+        "no": "Aktivert",
+        "es": "Activado",
+        "da": "Aktiveret",
+        "ru": "Включено",
+        "pl": "Włączony",
+        "ko": "활성화"
+      }
+    },
+    {
+      "id": "HEM",
+      "title": {
+        "en": "Empty",
+        "nl": "Leeg",
+        "de": "Leer",
+        "fr": "Vide",
+        "it": "Vuoto",
+        "sv": "Tom",
+        "no": "Tom",
+        "es": "Vacío",
+        "da": "Tom",
+        "ru": "Пусто",
+        "pl": "Pusty",
+        "ko": "비어 있음"
+      }
+    },
+    {
+      "id": "HMD",
+      "title": {
+        "en": "Motor disconnected",
+        "nl": "Motor losgekoppeld",
+        "de": "Motor getrennt",
+        "fr": "Moteur déconnecté",
+        "it": "Motore disconnesso",
+        "sv": "Motor frånkopplad",
+        "no": "Motor frakoblet",
+        "es": "Motor desconectado",
+        "da": "Motor frakoblet",
+        "ru": "Двигатель отключён",
+        "pl": "Silnik odłączony",
+        "ko": "모터 연결 끊김"
+      }
+    },
+    {
+      "id": "HMO",
+      "title": {
+        "en": "Motor overload",
+        "nl": "Motor overbelast",
+        "de": "Motor überlastet",
+        "fr": "Surcharge moteur",
+        "it": "Motore sovraccarico",
+        "sv": "Motor överbelastad",
+        "no": "Motor overbelastet",
+        "es": "Motor sobrecargado",
+        "da": "Motor overbelastet",
+        "ru": "Перегрузка двигателя",
+        "pl": "Przeciążenie silnika",
+        "ko": "모터 과부하"
+      }
+    },
+    {
+      "id": "HMS",
+      "title": {
+        "en": "Motor fault (short circuit)",
+        "nl": "Motorfout (kortsluiting)",
+        "de": "Motorfehler (Kurzschluss)",
+        "fr": "Défaut moteur (court-circuit)",
+        "it": "Guasto motore (cortocircuito)",
+        "sv": "Motorfel (kortslutning)",
+        "no": "Motorfeil (kortslutning)",
+        "es": "Fallo del motor (cortocircuito)",
+        "da": "Motorfejl (kortslutning)",
+        "ru": "Неисправность двигателя (короткое замыкание)",
+        "pl": "Awaria silnika (zwarcie)",
+        "ko": "모터 오류 (단락)"
+      }
+    },
+    {
+      "id": "UNKNOWN",
+      "title": {
+        "en": "Unknown LitterHopper status",
+        "nl": "Onbekende LitterHopper-status",
+        "de": "Unbekannter LitterHopper-Status",
+        "fr": "Statut LitterHopper inconnu",
+        "it": "Stato LitterHopper sconosciuto",
+        "sv": "Okänd LitterHopper-status",
+        "no": "Ukjent LitterHopper-status",
+        "es": "Estado LitterHopper desconocido",
+        "da": "Ukendt LitterHopper-status",
+        "ru": "Неизвестный статус LitterHopper",
+        "pl": "Nieznany status LitterHopper",
+        "ko": "알 수 없는 LitterHopper 상태"
+      }
+    }
+  ]
+}

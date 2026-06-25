@@ -1126,6 +1126,18 @@
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
+            },
+            {
+              "name": "D_10535_2560",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "D_10500_3328",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
             }
           ],
           "possibleTypes": null
@@ -1169,6 +1181,12 @@
               "deprecationReason": null
             },
             {
+              "name": "H_2904_0D00",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "H_2910_0C00",
               "description": null,
               "isDeprecated": false,
@@ -1176,6 +1194,12 @@
             },
             {
               "name": "H_2927_0103",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "H_2927_0A00",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -2682,6 +2706,18 @@
             },
             {
               "name": "odometerCleanCycles",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "baselineCycleCount",
               "description": null,
               "args": [],
               "type": {
@@ -5909,7 +5945,61 @@
               "deprecationReason": null
             },
             {
+              "name": "litterRobot4StateUpdateV2",
+              "description": null,
+              "args": [
+                {
+                  "name": "input",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "LR4LitterRobot4StateUpdateInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "LitterRobot4Output",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "litterRobot4MultiStateUpdate",
+              "description": null,
+              "args": [
+                {
+                  "name": "input",
+                  "description": null,
+                  "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "LR4LitterRobot4StateUpdateInput",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "OBJECT",
+                "name": "LitterRobot4Array",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "litterRobot4MultiStateUpdateV2",
               "description": null,
               "args": [
                 {
@@ -8681,6 +8771,16 @@
                 "ofType": null
               },
               "defaultValue": null
+            },
+            {
+              "name": "scoopsSavedCount",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
             }
           ],
           "interfaces": null,
@@ -9330,35 +9430,6 @@
           "possibleTypes": null
         },
         {
-          "kind": "ENUM",
-          "name": "TOFBoardTypeHex",
-          "description": null,
-          "fields": null,
-          "inputFields": null,
-          "interfaces": null,
-          "enumValues": [
-            {
-              "name": "H_2909_0A00",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "H_2901_0A00",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "UNKNOWN",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            }
-          ],
-          "possibleTypes": null
-        },
-        {
           "kind": "OBJECT",
           "name": "DeleteUnitDiagnosticsBySerialReturn",
           "description": null,
@@ -9398,6 +9469,47 @@
           ],
           "inputFields": null,
           "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "ToFSensorSlopesInputType",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "ToFSensorSlopeLeft",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ToFSensorSlopeMiddle",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ToFSensorSlopeRight",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
           "enumValues": null,
           "possibleTypes": null
         },
@@ -9445,85 +9557,61 @@
           "possibleTypes": null
         },
         {
-          "kind": "INPUT_OBJECT",
-          "name": "ToFSensorDistancesInput",
+          "kind": "ENUM",
+          "name": "TOFBoardTypeDec",
           "description": null,
           "fields": null,
-          "inputFields": [
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
             {
-              "name": "ToFSensorDistanceLeft",
+              "name": "D_10505_2560",
               "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
+              "isDeprecated": false,
+              "deprecationReason": null
             },
             {
-              "name": "ToFSensorDistanceMiddle",
+              "name": "D_10497_2560",
               "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
+              "isDeprecated": false,
+              "deprecationReason": null
             },
             {
-              "name": "ToFSensorDistanceRight",
+              "name": "UNKNOWN",
               "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
+              "isDeprecated": false,
+              "deprecationReason": null
             }
           ],
-          "interfaces": null,
-          "enumValues": null,
           "possibleTypes": null
         },
         {
-          "kind": "INPUT_OBJECT",
-          "name": "ToFSensorSlopesInputType",
+          "kind": "ENUM",
+          "name": "TOFBoardTypeHex",
           "description": null,
           "fields": null,
-          "inputFields": [
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
             {
-              "name": "ToFSensorSlopeLeft",
+              "name": "H_2909_0A00",
               "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
+              "isDeprecated": false,
+              "deprecationReason": null
             },
             {
-              "name": "ToFSensorSlopeMiddle",
+              "name": "H_2901_0A00",
               "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
+              "isDeprecated": false,
+              "deprecationReason": null
             },
             {
-              "name": "ToFSensorSlopeRight",
+              "name": "UNKNOWN",
               "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "defaultValue": null
+              "isDeprecated": false,
+              "deprecationReason": null
             }
           ],
-          "interfaces": null,
-          "enumValues": null,
           "possibleTypes": null
         },
         {
@@ -10438,32 +10526,44 @@
           "possibleTypes": null
         },
         {
-          "kind": "ENUM",
-          "name": "TOFBoardTypeDec",
+          "kind": "INPUT_OBJECT",
+          "name": "ToFSensorDistancesInput",
           "description": null,
           "fields": null,
-          "inputFields": null,
-          "interfaces": null,
-          "enumValues": [
+          "inputFields": [
             {
-              "name": "D_10505_2560",
+              "name": "ToFSensorDistanceLeft",
               "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
             },
             {
-              "name": "D_10497_2560",
+              "name": "ToFSensorDistanceMiddle",
               "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
             },
             {
-              "name": "UNKNOWN",
+              "name": "ToFSensorDistanceRight",
               "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
             }
           ],
+          "interfaces": null,
+          "enumValues": null,
           "possibleTypes": null
         },
         {
@@ -11339,22 +11439,53 @@
           "args": []
         },
         {
-          "name": "deprecated",
-          "description": null,
+          "name": "aws_lambda",
+          "description": "Tells the service this field/object has access authorized by a Lambda Authorizer.",
           "locations": [
-            "FIELD_DEFINITION",
-            "ENUM_VALUE"
+            "OBJECT",
+            "FIELD_DEFINITION"
+          ],
+          "args": []
+        },
+        {
+          "name": "aws_oidc",
+          "description": "Tells the service this field/object has access authorized by an OIDC token.",
+          "locations": [
+            "OBJECT",
+            "FIELD_DEFINITION"
+          ],
+          "args": []
+        },
+        {
+          "name": "aws_api_key",
+          "description": "Tells the service this field/object has access authorized by an API key.",
+          "locations": [
+            "OBJECT",
+            "FIELD_DEFINITION"
+          ],
+          "args": []
+        },
+        {
+          "name": "aws_cognito_user_pools",
+          "description": "Tells the service this field/object has access authorized by a Cognito User Pools token.",
+          "locations": [
+            "OBJECT",
+            "FIELD_DEFINITION"
           ],
           "args": [
             {
-              "name": "reason",
-              "description": null,
+              "name": "cognito_groups",
+              "description": "List of cognito user pool groups which have access on this field",
               "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
               },
-              "defaultValue": "\"No longer supported\""
+              "defaultValue": null
             }
           ]
         },
@@ -11382,13 +11513,24 @@
           ]
         },
         {
-          "name": "aws_oidc",
-          "description": "Tells the service this field/object has access authorized by an OIDC token.",
+          "name": "deprecated",
+          "description": null,
           "locations": [
-            "OBJECT",
-            "FIELD_DEFINITION"
+            "FIELD_DEFINITION",
+            "ENUM_VALUE"
           ],
-          "args": []
+          "args": [
+            {
+              "name": "reason",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": "\"No longer supported\""
+            }
+          ]
         },
         {
           "name": "aws_subscribe",
@@ -11414,57 +11556,6 @@
           ]
         },
         {
-          "name": "aws_cognito_user_pools",
-          "description": "Tells the service this field/object has access authorized by a Cognito User Pools token.",
-          "locations": [
-            "OBJECT",
-            "FIELD_DEFINITION"
-          ],
-          "args": [
-            {
-              "name": "cognito_groups",
-              "description": "List of cognito user pool groups which have access on this field",
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            }
-          ]
-        },
-        {
-          "name": "aws_api_key",
-          "description": "Tells the service this field/object has access authorized by an API key.",
-          "locations": [
-            "OBJECT",
-            "FIELD_DEFINITION"
-          ],
-          "args": []
-        },
-        {
-          "name": "aws_iam",
-          "description": "Tells the service this field/object has access authorized by sigv4 signing.",
-          "locations": [
-            "OBJECT",
-            "FIELD_DEFINITION"
-          ],
-          "args": []
-        },
-        {
-          "name": "aws_lambda",
-          "description": "Tells the service this field/object has access authorized by a Lambda Authorizer.",
-          "locations": [
-            "OBJECT",
-            "FIELD_DEFINITION"
-          ],
-          "args": []
-        },
-        {
           "name": "aws_publish",
           "description": "Tells the service which subscriptions will be published to when this mutation is called. This directive is deprecated use @aws_susbscribe directive instead.",
           "locations": [
@@ -11486,6 +11577,15 @@
               "defaultValue": null
             }
           ]
+        },
+        {
+          "name": "aws_iam",
+          "description": "Tells the service this field/object has access authorized by sigv4 signing.",
+          "locations": [
+            "OBJECT",
+            "FIELD_DEFINITION"
+          ],
+          "args": []
         }
       ]
     }

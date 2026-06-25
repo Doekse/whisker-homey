@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "The waste drawer is no longer full",
+    "nl": "De afvallade is niet langer vol",
+    "de": "Die Abfallschublade ist nicht mehr voll",
+    "fr": "Le tiroir à déchets n'est plus plein",
+    "it": "La vaschetta dei rifiuti non è più pieno",
+    "sv": "Avfallslådan är inte längre full",
+    "no": "Avfallsskuffen er ikke lenger full",
+    "es": "El cajón de residuos ya no está lleno",
+    "da": "Affaldsskuffen er ikke længere fuld",
+    "ru": "Контейнер для отходов больше не полон",
+    "pl": "Szuflada na odpady nie jest już pełna",
+    "ko": "폐기물 서랍이 더 이상 가득 차지 않았습니다"
+  },
+  "hint": {
+    "en": "Triggers when the Litter-Robot's waste drawer has been emptied.",
+    "nl": "Wordt geactiveerd wanneer de afvallade van de Litter-Robot is geleegd.",
+    "de": "Wird ausgelöst, wenn die Abfallschublade des Litter-Robots geleert wurde.",
+    "fr": "Déclenché lorsque le tiroir à déchets du Litter-Robot a été vidé.",
+    "it": "Si attiva quando il cassetto dei rifiuti del Litter-Robot è stato svuotato.",
+    "sv": "Utlöses när Litter-Robots avfallsbehållare har tömts.",
+    "no": "Utøses når Litter-Robots avfallsbeholder er tømt.",
+    "es": "Se activa cuando el cajón de residuos del Litter-Robot ha sido vaciado.",
+    "da": "Udløses, når Litter-Robots affaldsbeholder er blevet tømt.",
+    "ru": "Срабатывает, когда контейнер для отходов Litter-Robot опустошен.",
+    "pl": "Uruchamia się, gdy szuflada na odpady Litter-Robota został opróżniony.",
+    "ko": "Litter-Robot의 폐기물 통이 비워졌을 때 트리거됩니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}

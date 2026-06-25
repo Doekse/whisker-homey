@@ -1,0 +1,51 @@
+{
+  "title": {
+    "en": "A cat is no longer detected",
+    "nl": "Er is geen kat meer gedetecteerd",
+    "de": "Keine Katze mehr erkannt",
+    "fr": "Aucun chat n'est plus détecté",
+    "it": "Non viene più rilevato alcun gatto",
+    "sv": "Ingen katt detekteras längre",
+    "no": "Ingen katt oppdages lenger",
+    "es": "Ya no se detecta un gato",
+    "da": "Der er ikke længere registreret en kat",
+    "ru": "Кошка больше не обнаруживается",
+    "pl": "Nie wykryto już kota",
+    "ko": "더 이상 고양이가 감지되지 않습니다"
+  },
+  "hint": {
+    "en": "Triggers when a cat that was previously detected is no longer detected in the Litter-Robot.",
+    "nl": "Wordt geactiveerd wanneer een eerder gedetecteerde kat niet langer wordt gedetecteerd in de Litter-Robot.",
+    "de": "Wird ausgelöst, wenn eine zuvor erkannte Katze nicht mehr im Litter-Robot erkannt wird.",
+    "fr": "Se déclenche lorsqu'un chat précédemment détecté n'est plus détecté dans le Litter-Robot.",
+    "it": "Si attiva quando un gatto precedentemente rilevato non viene più rilevato nel Litter-Robot.",
+    "sv": "Utlöses när en tidigare upptäckt katt inte längre upptäcks i Litter-Robot.",
+    "no": "Utøses når en tidligere oppdaget katt ikke lenger oppdages i Litter-Robot.",
+    "es": "Se activa cuando un gato detectado anteriormente ya no se detecta en el Litter-Robot.",
+    "da": "Udløses, når en tidligere registreret kat ikke længere registreres i Litter-Robot.",
+    "ru": "Срабатывает, когда ранее обнаруженная кошка больше не обнаруживается в Litter-Robot.",
+    "pl": "Uruchamia się, gdy wcześniej wykryty kot nie jest już wykrywany w Litter-Robot.",
+    "ko": "이전에 감지된 고양이가 더 이상 Litter-Robot에서 감지되지 않을 때 트리거됩니다."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "title": {
+        "en": "Device",
+        "nl": "Apparaat",
+        "de": "Gerät",
+        "fr": "Appareil",
+        "it": "Dispositivo",
+        "sv": "Enhet",
+        "no": "Enhet",
+        "es": "Dispositivo",
+        "da": "Enhed",
+        "ru": "Устройство",
+        "pl": "Urządzenie",
+        "ko": "기기"
+      },
+      "filter": "driver_id=litter-robot3|litter-robot4"
+    }
+  ]
+}
