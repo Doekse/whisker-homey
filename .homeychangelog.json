@@ -100,5 +100,8 @@
   },
   "3.0.0": {
     "en": "Major rewrite for improved stability and maintainability, plus minor bug fixes"
+  },
+  "3.0.1": {
+    "en": "Fixed a bug which prevented some Flow cards from triggering"
   }
 }
