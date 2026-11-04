@@ -9,7 +9,13 @@
     "invalid_night_light_brightness": "Invalid night light brightness value",
     "invalid_night_light_mode": "Invalid night light mode value",
     "robot_not_found": "Robot with serial __serial__ not found",
-    "network_unreachable": "Cannot reach Whisker cloud. Check your network or DNS settings."
+    "network_unreachable": "Cannot reach Whisker cloud. Check your network or DNS settings.",
+    "invalid_boolean_value": "Invalid on/off value",
+    "invalid_api_response": "Unexpected response from the Whisker API. Please try again.",
+    "authentication_refreshed_retry": "Your session has been refreshed. Please retry the command.",
+    "invalid_sleep_schedule": "Use a valid day and two different times in HH:mm.",
+    "sleep_schedule_required": "Set a valid sleep schedule with start and end times first.",
+    "activity_history_unavailable": "Visit history is not fully available. Please try again later."
   },
   "pairing": {
     "credentials_required": "Username and password are required for pairing",
@@ -38,5 +44,26 @@
     "waste_drawer_full": "The waste drawer on __robot__ is full 🗑️",
     "robot_fault": "__robot__ reported a problem: __fault__ ⚠️",
     "robot_fault_generic": "__robot__ reported a problem ⚠️"
+  },
+  "lr5": {
+    "no_faults": "No problems reported",
+    "unknown_pet": "Unknown pet",
+    "waste": {
+      "Urine": "Urine",
+      "Feces": "Feces",
+      "Unknown": "Unknown"
+    },
+    "faults": {
+      "bonnet_removed": "Bonnet removed",
+      "drawer_removed": "Waste drawer removed",
+      "laser_dirty": "Laser sensor needs cleaning",
+      "usb_fault": "USB fault",
+      "gas_sensor_fault": "Gas sensor fault",
+      "motor_fault": "Globe motor fault",
+      "retract_motor_fault": "Retract motor fault",
+      "pinch_fault": "Pinch sensor fault",
+      "cat_sensor_fault": "Cat sensor fault",
+      "hopper_fault": "LitterHopper fault"
+    }
   }
 }

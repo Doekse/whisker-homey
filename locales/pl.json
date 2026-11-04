@@ -9,7 +9,10 @@
     "invalid_night_light_brightness": "Nieprawidłowa wartość jasności światła nocnego",
     "invalid_night_light_mode": "Nieprawidłowy tryb światła nocnego",
     "robot_not_found": "Nie znaleziono robota o numerze seryjnym __serial__",
-    "network_unreachable": "Nie można połączyć się z chmurą Whisker. Sprawdź ustawienia sieci lub DNS."
+    "network_unreachable": "Nie można połączyć się z chmurą Whisker. Sprawdź ustawienia sieci lub DNS.",
+    "invalid_boolean_value": "Nieprawidłowa wartość włączenia/wyłączenia",
+    "invalid_api_response": "Nieoczekiwana odpowiedź interfejsu API Whisker. Spróbuj ponownie.",
+    "authentication_refreshed_retry": "Sesja została odnowiona. Wykonaj polecenie ponownie."
   },
   "pairing": {
     "credentials_required": "Nazwa użytkownika i hasło są wymagane do parowania",

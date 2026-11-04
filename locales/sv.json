@@ -9,7 +9,10 @@
     "invalid_night_light_brightness": "Ogiltigt värde för nattljusets ljusstyrka",
     "invalid_night_light_mode": "Ogiltigt nattljusläge",
     "robot_not_found": "Robot med serienummer __serial__ hittades inte",
-    "network_unreachable": "Kan inte nå Whisker-molnet. Kontrollera nätverket eller DNS-inställningarna."
+    "network_unreachable": "Kan inte nå Whisker-molnet. Kontrollera nätverket eller DNS-inställningarna.",
+    "invalid_boolean_value": "Ogiltigt på/av-värde",
+    "invalid_api_response": "Oväntat svar från Whisker-API. Försök igen.",
+    "authentication_refreshed_retry": "Din session har förnyats. Försök köra kommandot igen."
   },
   "pairing": {
     "credentials_required": "Användarnamn och lösenord krävs för parkoppling",

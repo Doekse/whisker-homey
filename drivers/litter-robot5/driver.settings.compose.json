@@ -1,0 +1,15 @@
+[
+  {
+    "id": "lr5_history_enabled",
+    "type": "checkbox",
+    "label": {
+      "en": "Retrieve visit history",
+      "nl": "Bezoekgeschiedenis ophalen"
+    },
+    "value": true,
+    "hint": {
+      "en": "Refresh every minute and retain up to 48 hours / 1000 visits locally. New visits can start Flows; initial history is not replayed.",
+      "nl": "Elke minuut vernieuwen; lokaal maximaal 48 uur / 1000 bezoeken bewaren. Nieuwe bezoeken kunnen Flows starten; de eerste geschiedenis wordt niet afgespeeld."
+    }
+  }
+]

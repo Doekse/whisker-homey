@@ -9,7 +9,13 @@
     "invalid_night_light_brightness": "Ongeldige helderheid van het nachtlampje",
     "invalid_night_light_mode": "Ongeldige modus van het nachtlampje",
     "robot_not_found": "Robot met serienummer __serial__ niet gevonden",
-    "network_unreachable": "Kan de Whisker Cloud niet bereiken. Controleer je netwerk of DNS-instellingen."
+    "network_unreachable": "Kan de Whisker Cloud niet bereiken. Controleer je netwerk of DNS-instellingen.",
+    "invalid_boolean_value": "Ongeldige aan/uit-waarde",
+    "invalid_api_response": "Onverwacht antwoord van de Whisker-API. Probeer het opnieuw.",
+    "authentication_refreshed_retry": "Je sessie is vernieuwd. Voer de opdracht opnieuw uit.",
+    "invalid_sleep_schedule": "Gebruik een geldige dag en twee verschillende tijden in HH:mm.",
+    "sleep_schedule_required": "Stel eerst een geldig slaapschema met begin- en eindtijd in.",
+    "activity_history_unavailable": "De bezoekgeschiedenis is niet volledig beschikbaar. Probeer het later opnieuw."
   },
   "pairing": {
     "credentials_required": "Gebruikersnaam en wachtwoord zijn verplicht voor koppelen",
@@ -38,5 +44,26 @@
     "waste_drawer_full": "De afvallade van __robot__ is vol 🗑️",
     "robot_fault": "__robot__ meldde een probleem: __fault__ ⚠️",
     "robot_fault_generic": "__robot__ meldde een probleem ⚠️"
+  },
+  "lr5": {
+    "no_faults": "Geen problemen gemeld",
+    "unknown_pet": "Onbekend huisdier",
+    "waste": {
+      "Urine": "Urine",
+      "Feces": "Ontlasting",
+      "Unknown": "Onbekend"
+    },
+    "faults": {
+      "bonnet_removed": "Kap verwijderd",
+      "drawer_removed": "Afvallade verwijderd",
+      "laser_dirty": "Lasersensor moet worden schoongemaakt",
+      "usb_fault": "USB-fout",
+      "gas_sensor_fault": "Gassensorfout",
+      "motor_fault": "Motorfout",
+      "retract_motor_fault": "Fout van terugtrekmotor",
+      "pinch_fault": "Fout van knelbeveiliging",
+      "cat_sensor_fault": "Fout van katsensor",
+      "hopper_fault": "LitterHopper-probleem"
+    }
   }
 }

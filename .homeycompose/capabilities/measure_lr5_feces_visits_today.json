@@ -1,0 +1,17 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Feces visits today",
+    "nl": "Ontlastingsbezoeken vandaag"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "min": 0,
+  "decimals": 0,
+  "insights": true,
+  "units": {
+    "en": "visits",
+    "nl": "bezoeken"
+  }
+}

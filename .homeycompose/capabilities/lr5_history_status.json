@@ -1,0 +1,40 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Visit history",
+    "nl": "Bezoekgeschiedenis"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "values": [
+    {
+      "id": "up_to_date",
+      "title": {
+        "en": "Up to date",
+        "nl": "Bijgewerkt"
+      }
+    },
+    {
+      "id": "partial",
+      "title": {
+        "en": "Incomplete history",
+        "nl": "Onvolledige geschiedenis"
+      }
+    },
+    {
+      "id": "unavailable",
+      "title": {
+        "en": "Temporarily unavailable",
+        "nl": "Tijdelijk niet beschikbaar"
+      }
+    },
+    {
+      "id": "disabled",
+      "title": {
+        "en": "Disabled",
+        "nl": "Uitgeschakeld"
+      }
+    }
+  ]
+}

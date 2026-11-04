@@ -45,7 +45,7 @@
         "pl": "Urządzenie",
         "ko": "기기"
       },
-      "filter": "driver_id=litter-robot4&capabilities=alarm_litter_hopper_empty"
+      "filter": "driver_id=litter-robot4|litter-robot5&capabilities=alarm_litter_hopper_empty"
     }
   ]
 }

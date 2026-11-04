@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Last visit weight",
+    "nl": "Gewicht bij laatste bezoek"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "min": 0,
+  "decimals": 0,
+  "units": {
+    "en": "g",
+    "nl": "g"
+  }
+}
