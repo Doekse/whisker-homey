@@ -9,7 +9,10 @@
     "invalid_night_light_brightness": "Ugyldig verdi for nattlysstyrke",
     "invalid_night_light_mode": "Ugyldig nattlysmodus",
     "robot_not_found": "Robot med serienummer __serial__ ikke funnet",
-    "network_unreachable": "Kan ikke nå Whisker-skyen. Sjekk nettverket eller DNS-innstillingene."
+    "network_unreachable": "Kan ikke nå Whisker-skyen. Sjekk nettverket eller DNS-innstillingene.",
+    "invalid_boolean_value": "Ugyldig av/på-verdi",
+    "invalid_api_response": "Uventet svar fra Whisker-API-et. Prøv igjen.",
+    "authentication_refreshed_retry": "Økten din er fornyet. Prøv kommandoen på nytt."
   },
   "pairing": {
     "credentials_required": "Brukernavn og passord kreves for sammenkobling",

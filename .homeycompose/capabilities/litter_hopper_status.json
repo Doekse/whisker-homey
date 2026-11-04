@@ -137,6 +137,41 @@
         "pl": "Nieznany status LitterHopper",
         "ko": "알 수 없는 LitterHopper 상태"
       }
+    },
+    {
+      "id": "READY",
+      "title": {
+        "en": "Ready",
+        "nl": "Gereed"
+      }
+    },
+    {
+      "id": "LITTER_LOW",
+      "title": {
+        "en": "Litter low",
+        "nl": "Weinig strooisel"
+      }
+    },
+    {
+      "id": "JAMMED",
+      "title": {
+        "en": "Jammed",
+        "nl": "Vastgelopen"
+      }
+    },
+    {
+      "id": "OFFLINE",
+      "title": {
+        "en": "Offline",
+        "nl": "Offline"
+      }
+    },
+    {
+      "id": "NOT_INSTALLED",
+      "title": {
+        "en": "Not attached",
+        "nl": "Niet aangesloten"
+      }
     }
   ]
 }

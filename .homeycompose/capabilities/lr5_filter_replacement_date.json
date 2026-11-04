@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Filter replacement date",
+    "nl": "Datum filtervervanging"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

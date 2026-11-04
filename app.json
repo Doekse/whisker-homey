@@ -135,7 +135,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "alarm_cat_detected_false"
@@ -188,7 +188,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "alarm_cat_detected_true"
@@ -240,7 +240,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "alarm_sleep_mode_active_false"
@@ -292,7 +292,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "alarm_sleep_mode_active_true"
@@ -344,7 +344,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "alarm_waste_drawer_full_false"
@@ -397,7 +397,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "alarm_waste_drawer_full_true"
@@ -469,7 +469,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "clean_cycle_finished"
@@ -536,7 +536,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           },
           {
             "name": "count",
@@ -646,7 +646,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "clean_cycle_status_changed"
@@ -698,7 +698,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot4&capabilities=alarm_litter_hopper_empty"
+            "filter": "driver_id=litter-robot4|litter-robot5&capabilities=alarm_litter_hopper_empty"
           }
         ],
         "id": "litter_hopper_empty"
@@ -854,7 +854,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot4&capabilities=alarm_litter_hopper_empty"
+            "filter": "driver_id=litter-robot4|litter-robot5&capabilities=alarm_litter_hopper_empty"
           }
         ],
         "id": "litter_hopper_not_empty"
@@ -926,10 +926,546 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "litter_robot_status_changed"
+      },
+      {
+        "id": "lr5_visit",
+        "title": {
+          "en": "A pet visit is recorded",
+          "nl": "Een huisdierbezoek is geregistreerd"
+        },
+        "tokens": [
+          {
+            "name": "pet_id",
+            "type": "string",
+            "title": {
+              "en": "Pet ID",
+              "nl": "Huisdier-ID"
+            }
+          },
+          {
+            "name": "pet_name",
+            "type": "string",
+            "title": {
+              "en": "Pet name",
+              "nl": "Naam van huisdier"
+            }
+          },
+          {
+            "name": "pet_identified",
+            "type": "boolean",
+            "title": {
+              "en": "Single pet identified",
+              "nl": "Eén huisdier herkend"
+            }
+          },
+          {
+            "name": "weight",
+            "type": "number",
+            "title": {
+              "en": "Weight (g)",
+              "nl": "Gewicht (g)"
+            }
+          },
+          {
+            "name": "has_weight",
+            "type": "boolean",
+            "title": {
+              "en": "Weight available",
+              "nl": "Gewicht beschikbaar"
+            }
+          },
+          {
+            "name": "duration",
+            "type": "number",
+            "title": {
+              "en": "Duration (seconds)",
+              "nl": "Duur (seconden)"
+            }
+          },
+          {
+            "name": "has_duration",
+            "type": "boolean",
+            "title": {
+              "en": "Duration available",
+              "nl": "Duur beschikbaar"
+            }
+          },
+          {
+            "name": "waste_type",
+            "type": "string",
+            "title": {
+              "en": "Waste type",
+              "nl": "Type ontlasting"
+            }
+          },
+          {
+            "name": "waste_weight",
+            "type": "number",
+            "title": {
+              "en": "Waste weight (g)",
+              "nl": "Gewicht van ontlasting (g)"
+            }
+          },
+          {
+            "name": "has_waste_weight",
+            "type": "boolean",
+            "title": {
+              "en": "Valid waste weight",
+              "nl": "Geldig ontlastingsgewicht"
+            }
+          },
+          {
+            "name": "visit_time",
+            "type": "string",
+            "title": {
+              "en": "Visit time (ISO)",
+              "nl": "Tijd van bezoek (ISO)"
+            }
+          },
+          {
+            "name": "delayed",
+            "type": "boolean",
+            "title": {
+              "en": "Recovered after a delay",
+              "nl": "Met vertraging opgehaald"
+            }
+          }
+        ],
+        "hint": {
+          "en": "Uses Whisker activity history. Events may arrive later; initial history is not replayed. Missing measurements are 0 with their availability flag false.",
+          "nl": "Gebruikt de Whisker-bezoekgeschiedenis. Gebeurtenissen kunnen later binnenkomen; de eerste geschiedenis wordt niet afgespeeld. Ontbrekende metingen zijn 0 en hun beschikbaarheidsvlag is onwaar."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          }
+        ]
+      },
+      {
+        "id": "lr5_pet_visit",
+        "title": {
+          "en": "A visit from a specific pet is recorded",
+          "nl": "Een bezoek van een gekozen huisdier is geregistreerd"
+        },
+        "tokens": [
+          {
+            "name": "pet_id",
+            "type": "string",
+            "title": {
+              "en": "Pet ID",
+              "nl": "Huisdier-ID"
+            }
+          },
+          {
+            "name": "pet_name",
+            "type": "string",
+            "title": {
+              "en": "Pet name",
+              "nl": "Naam van huisdier"
+            }
+          },
+          {
+            "name": "pet_identified",
+            "type": "boolean",
+            "title": {
+              "en": "Single pet identified",
+              "nl": "Eén huisdier herkend"
+            }
+          },
+          {
+            "name": "weight",
+            "type": "number",
+            "title": {
+              "en": "Weight (g)",
+              "nl": "Gewicht (g)"
+            }
+          },
+          {
+            "name": "has_weight",
+            "type": "boolean",
+            "title": {
+              "en": "Weight available",
+              "nl": "Gewicht beschikbaar"
+            }
+          },
+          {
+            "name": "duration",
+            "type": "number",
+            "title": {
+              "en": "Duration (seconds)",
+              "nl": "Duur (seconden)"
+            }
+          },
+          {
+            "name": "has_duration",
+            "type": "boolean",
+            "title": {
+              "en": "Duration available",
+              "nl": "Duur beschikbaar"
+            }
+          },
+          {
+            "name": "waste_type",
+            "type": "string",
+            "title": {
+              "en": "Waste type",
+              "nl": "Type ontlasting"
+            }
+          },
+          {
+            "name": "waste_weight",
+            "type": "number",
+            "title": {
+              "en": "Waste weight (g)",
+              "nl": "Gewicht van ontlasting (g)"
+            }
+          },
+          {
+            "name": "has_waste_weight",
+            "type": "boolean",
+            "title": {
+              "en": "Valid waste weight",
+              "nl": "Geldig ontlastingsgewicht"
+            }
+          },
+          {
+            "name": "visit_time",
+            "type": "string",
+            "title": {
+              "en": "Visit time (ISO)",
+              "nl": "Tijd van bezoek (ISO)"
+            }
+          },
+          {
+            "name": "delayed",
+            "type": "boolean",
+            "title": {
+              "en": "Recovered after a delay",
+              "nl": "Met vertraging opgehaald"
+            }
+          }
+        ],
+        "hint": {
+          "en": "Uses Whisker activity history. Events may arrive later; initial history is not replayed. Missing measurements are 0 with their availability flag false.",
+          "nl": "Gebruikt de Whisker-bezoekgeschiedenis. Gebeurtenissen kunnen later binnenkomen; de eerste geschiedenis wordt niet afgespeeld. Ontbrekende metingen zijn 0 en hun beschikbaarheidsvlag is onwaar."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          },
+          {
+            "name": "pet",
+            "type": "autocomplete",
+            "title": {
+              "en": "Pet",
+              "nl": "Huisdier"
+            }
+          }
+        ],
+        "titleFormatted": {
+          "en": "A visit from [[pet]] is recorded",
+          "nl": "Een bezoek van [[pet]] is geregistreerd"
+        }
+      },
+      {
+        "id": "lr5_urine_visit",
+        "title": {
+          "en": "A urine visit is recorded",
+          "nl": "Een urinebezoek is geregistreerd"
+        },
+        "tokens": [
+          {
+            "name": "pet_id",
+            "type": "string",
+            "title": {
+              "en": "Pet ID",
+              "nl": "Huisdier-ID"
+            }
+          },
+          {
+            "name": "pet_name",
+            "type": "string",
+            "title": {
+              "en": "Pet name",
+              "nl": "Naam van huisdier"
+            }
+          },
+          {
+            "name": "pet_identified",
+            "type": "boolean",
+            "title": {
+              "en": "Single pet identified",
+              "nl": "Eén huisdier herkend"
+            }
+          },
+          {
+            "name": "weight",
+            "type": "number",
+            "title": {
+              "en": "Weight (g)",
+              "nl": "Gewicht (g)"
+            }
+          },
+          {
+            "name": "has_weight",
+            "type": "boolean",
+            "title": {
+              "en": "Weight available",
+              "nl": "Gewicht beschikbaar"
+            }
+          },
+          {
+            "name": "duration",
+            "type": "number",
+            "title": {
+              "en": "Duration (seconds)",
+              "nl": "Duur (seconden)"
+            }
+          },
+          {
+            "name": "has_duration",
+            "type": "boolean",
+            "title": {
+              "en": "Duration available",
+              "nl": "Duur beschikbaar"
+            }
+          },
+          {
+            "name": "waste_type",
+            "type": "string",
+            "title": {
+              "en": "Waste type",
+              "nl": "Type ontlasting"
+            }
+          },
+          {
+            "name": "waste_weight",
+            "type": "number",
+            "title": {
+              "en": "Waste weight (g)",
+              "nl": "Gewicht van ontlasting (g)"
+            }
+          },
+          {
+            "name": "has_waste_weight",
+            "type": "boolean",
+            "title": {
+              "en": "Valid waste weight",
+              "nl": "Geldig ontlastingsgewicht"
+            }
+          },
+          {
+            "name": "visit_time",
+            "type": "string",
+            "title": {
+              "en": "Visit time (ISO)",
+              "nl": "Tijd van bezoek (ISO)"
+            }
+          },
+          {
+            "name": "delayed",
+            "type": "boolean",
+            "title": {
+              "en": "Recovered after a delay",
+              "nl": "Met vertraging opgehaald"
+            }
+          }
+        ],
+        "hint": {
+          "en": "Uses Whisker activity history. Events may arrive later; initial history is not replayed. Missing measurements are 0 with their availability flag false.",
+          "nl": "Gebruikt de Whisker-bezoekgeschiedenis. Gebeurtenissen kunnen later binnenkomen; de eerste geschiedenis wordt niet afgespeeld. Ontbrekende metingen zijn 0 en hun beschikbaarheidsvlag is onwaar."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          }
+        ]
+      },
+      {
+        "id": "lr5_feces_visit",
+        "title": {
+          "en": "A feces visit is recorded",
+          "nl": "Een ontlastingsbezoek is geregistreerd"
+        },
+        "tokens": [
+          {
+            "name": "pet_id",
+            "type": "string",
+            "title": {
+              "en": "Pet ID",
+              "nl": "Huisdier-ID"
+            }
+          },
+          {
+            "name": "pet_name",
+            "type": "string",
+            "title": {
+              "en": "Pet name",
+              "nl": "Naam van huisdier"
+            }
+          },
+          {
+            "name": "pet_identified",
+            "type": "boolean",
+            "title": {
+              "en": "Single pet identified",
+              "nl": "Eén huisdier herkend"
+            }
+          },
+          {
+            "name": "weight",
+            "type": "number",
+            "title": {
+              "en": "Weight (g)",
+              "nl": "Gewicht (g)"
+            }
+          },
+          {
+            "name": "has_weight",
+            "type": "boolean",
+            "title": {
+              "en": "Weight available",
+              "nl": "Gewicht beschikbaar"
+            }
+          },
+          {
+            "name": "duration",
+            "type": "number",
+            "title": {
+              "en": "Duration (seconds)",
+              "nl": "Duur (seconden)"
+            }
+          },
+          {
+            "name": "has_duration",
+            "type": "boolean",
+            "title": {
+              "en": "Duration available",
+              "nl": "Duur beschikbaar"
+            }
+          },
+          {
+            "name": "waste_type",
+            "type": "string",
+            "title": {
+              "en": "Waste type",
+              "nl": "Type ontlasting"
+            }
+          },
+          {
+            "name": "waste_weight",
+            "type": "number",
+            "title": {
+              "en": "Waste weight (g)",
+              "nl": "Gewicht van ontlasting (g)"
+            }
+          },
+          {
+            "name": "has_waste_weight",
+            "type": "boolean",
+            "title": {
+              "en": "Valid waste weight",
+              "nl": "Geldig ontlastingsgewicht"
+            }
+          },
+          {
+            "name": "visit_time",
+            "type": "string",
+            "title": {
+              "en": "Visit time (ISO)",
+              "nl": "Tijd van bezoek (ISO)"
+            }
+          },
+          {
+            "name": "delayed",
+            "type": "boolean",
+            "title": {
+              "en": "Recovered after a delay",
+              "nl": "Met vertraging opgehaald"
+            }
+          }
+        ],
+        "hint": {
+          "en": "Uses Whisker activity history. Events may arrive later; initial history is not replayed. Missing measurements are 0 with their availability flag false.",
+          "nl": "Gebruikt de Whisker-bezoekgeschiedenis. Gebeurtenissen kunnen later binnenkomen; de eerste geschiedenis wordt niet afgespeeld. Ontbrekende metingen zijn 0 en hun beschikbaarheidsvlag is onwaar."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          }
+        ]
+      },
+      {
+        "id": "lr5_fault_changed",
+        "title": {
+          "en": "Problem details change",
+          "nl": "De details van een probleem veranderen"
+        },
+        "tokens": [
+          {
+            "name": "faults",
+            "type": "string",
+            "title": {
+              "en": "Problem details",
+              "nl": "Probleemdetails"
+            }
+          },
+          {
+            "name": "codes",
+            "type": "string",
+            "title": {
+              "en": "Problem codes",
+              "nl": "Probleemcodes"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          }
+        ]
+      },
+      {
+        "id": "lr5_filter_due",
+        "title": {
+          "en": "Filter replacement becomes due",
+          "nl": "Het filter moet worden vervangen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          }
+        ]
+      },
+      {
+        "id": "lr5_hopper_low",
+        "title": {
+          "en": "The LitterHopper litter level becomes low",
+          "nl": "Het strooiselniveau van de LitterHopper wordt laag"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5&capabilities=alarm_lr5_hopper_low"
+          }
+        ]
       },
       {
         "id": "health_concern_detected",
@@ -1268,7 +1804,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "is_cat_detected"
@@ -1306,7 +1842,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           },
           {
             "name": "status",
@@ -1418,7 +1954,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot4&capabilities=alarm_litter_hopper_empty"
+            "filter": "driver_id=litter-robot4|litter-robot5&capabilities=alarm_litter_hopper_empty"
           }
         ],
         "id": "is_litter_hopper_empty"
@@ -1508,7 +2044,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           },
           {
             "name": "status",
@@ -1620,7 +2156,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "is_sleep_mode_active"
@@ -1672,7 +2208,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "is_sleep_mode_scheduled"
@@ -1710,7 +2246,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "hint": {
@@ -1728,6 +2264,78 @@
           "ko": "폐기물 서랍이 가득 찼을 때 true를 반환합니다."
         },
         "id": "is_waste_drawer_full"
+      },
+      {
+        "id": "lr5_pet_visited_today",
+        "title": {
+          "en": "A specific pet has visited today",
+          "nl": "Een gekozen huisdier is vandaag geweest"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          },
+          {
+            "name": "pet",
+            "type": "autocomplete",
+            "title": {
+              "en": "Pet",
+              "nl": "Huisdier"
+            }
+          }
+        ],
+        "hint": {
+          "en": "An incomplete history cannot prove that no visit occurred.",
+          "nl": "Een onvolledige geschiedenis kan niet aantonen dat er geen bezoek was."
+        },
+        "titleFormatted": {
+          "en": "[[pet]] has visited today",
+          "nl": "[[pet]] is vandaag geweest"
+        }
+      },
+      {
+        "id": "lr5_filter_due_condition",
+        "title": {
+          "en": "Filter replacement is due",
+          "nl": "Het filter moet worden vervangen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          }
+        ]
+      },
+      {
+        "id": "lr5_hopper_enabled_condition",
+        "title": {
+          "en": "The LitterHopper is enabled",
+          "nl": "De LitterHopper is ingeschakeld"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5&capabilities=lr5_hopper_enabled"
+          }
+        ]
+      },
+      {
+        "id": "lr5_hopper_low_condition",
+        "title": {
+          "en": "The LitterHopper litter level is low",
+          "nl": "Het strooiselniveau van de LitterHopper is laag"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5&capabilities=alarm_lr5_hopper_low"
+          }
+        ]
       },
       {
         "id": "birthday_today",
@@ -1900,7 +2508,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "lock_keypad"
@@ -1952,7 +2560,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3"
+            "filter": "driver_id=litter-robot3|litter-robot5"
           }
         ],
         "id": "reset_waste_drawer"
@@ -2018,7 +2626,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot4"
+            "filter": "driver_id=litter-robot4|litter-robot5"
           },
           {
             "name": "wait_time",
@@ -2293,7 +2901,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot4"
+            "filter": "driver_id=litter-robot4|litter-robot5"
           },
           {
             "name": "brightness",
@@ -2416,7 +3024,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot4"
+            "filter": "driver_id=litter-robot4|litter-robot5"
           },
           {
             "name": "mode",
@@ -2553,7 +3161,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot4"
+            "filter": "driver_id=litter-robot4|litter-robot5"
           },
           {
             "name": "brightness",
@@ -2676,7 +3284,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot4"
+            "filter": "driver_id=litter-robot4|litter-robot5"
           }
         ],
         "id": "short_reset_press"
@@ -2728,7 +3336,7 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "start_clean_cycle"
@@ -2988,10 +3596,224 @@
               "pl": "Urządzenie",
               "ko": "기기"
             },
-            "filter": "driver_id=litter-robot3|litter-robot4"
+            "filter": "driver_id=litter-robot3|litter-robot4|litter-robot5"
           }
         ],
         "id": "unlock_keypad"
+      },
+      {
+        "id": "lr5_set_sleep_schedule",
+        "title": {
+          "en": "Set sleep schedule",
+          "nl": "Slaapschema instellen"
+        },
+        "titleFormatted": {
+          "en": "Sleep on [[day]] from [[start]] until [[end]]",
+          "nl": "Slapen op [[day]] van [[start]] tot [[end]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          },
+          {
+            "name": "day",
+            "type": "dropdown",
+            "title": {
+              "en": "Day",
+              "nl": "Dag"
+            },
+            "values": [
+              {
+                "id": "all",
+                "label": {
+                  "en": "Every day",
+                  "nl": "Iedere dag"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Sunday",
+                  "nl": "Zondag"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Monday",
+                  "nl": "Maandag"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Tuesday",
+                  "nl": "Dinsdag"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Wednesday",
+                  "nl": "Woensdag"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Thursday",
+                  "nl": "Donderdag"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Friday",
+                  "nl": "Vrijdag"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Saturday",
+                  "nl": "Zaterdag"
+                }
+              }
+            ]
+          },
+          {
+            "name": "start",
+            "type": "text",
+            "title": {
+              "en": "Start (HH:mm)",
+              "nl": "Begin (HH:mm)"
+            },
+            "placeholder": {
+              "en": "23:00",
+              "nl": "23:00"
+            }
+          },
+          {
+            "name": "end",
+            "type": "text",
+            "title": {
+              "en": "End (HH:mm)",
+              "nl": "Einde (HH:mm)"
+            },
+            "placeholder": {
+              "en": "07:00",
+              "nl": "07:00"
+            }
+          }
+        ],
+        "hint": {
+          "en": "Uses the robot's timezone. For an overnight window, choose the wake-up day (Sunday=0 in the API). Other days are preserved.",
+          "nl": "Gebruikt de tijdzone van de robot. Kies bij een nachtelijk tijdvak de dag van wakker worden (zondag=0 in de API). Andere dagen blijven behouden."
+        }
+      },
+      {
+        "id": "lr5_disable_sleep_schedule",
+        "title": {
+          "en": "Disable sleep schedule",
+          "nl": "Slaapschema uitschakelen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          },
+          {
+            "name": "day",
+            "type": "dropdown",
+            "title": {
+              "en": "Day",
+              "nl": "Dag"
+            },
+            "values": [
+              {
+                "id": "all",
+                "label": {
+                  "en": "Every day",
+                  "nl": "Iedere dag"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Sunday",
+                  "nl": "Zondag"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Monday",
+                  "nl": "Maandag"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Tuesday",
+                  "nl": "Dinsdag"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Wednesday",
+                  "nl": "Woensdag"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Thursday",
+                  "nl": "Donderdag"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Friday",
+                  "nl": "Vrijdag"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Saturday",
+                  "nl": "Zaterdag"
+                }
+              }
+            ]
+          }
+        ],
+        "titleFormatted": {
+          "en": "Disable sleep schedule for [[day]]",
+          "nl": "Slaapschema uitschakelen voor [[day]]"
+        }
+      },
+      {
+        "id": "lr5_confirm_filter_replacement",
+        "title": {
+          "en": "Confirm that the filter was replaced",
+          "nl": "Bevestigen dat het filter is vervangen"
+        },
+        "hint": {
+          "en": "Resets the filter replacement counter. Only run after physically replacing the filter.",
+          "nl": "Reset de filtervervangingsteller. Alleen uitvoeren nadat het filter daadwerkelijk is vervangen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=litter-robot5"
+          }
+        ]
       }
     ]
   },
@@ -4286,6 +5108,316 @@
     },
     {
       "name": {
+        "en": "Litter-Robot 5 / 5 Pro",
+        "nl": "Litter-Robot 5 / 5 Pro",
+        "de": "Litter-Robot 5 / 5 Pro",
+        "fr": "Litter-Robot 5 / 5 Pro",
+        "it": "Litter-Robot 5 / 5 Pro",
+        "sv": "Litter-Robot 5 / 5 Pro",
+        "no": "Litter-Robot 5 / 5 Pro",
+        "es": "Litter-Robot 5 / 5 Pro",
+        "da": "Litter-Robot 5 / 5 Pro",
+        "ru": "Litter-Robot 5 / 5 Pro",
+        "pl": "Litter-Robot 5 / 5 Pro",
+        "ko": "Litter-Robot 5 / 5 Pro"
+      },
+      "icon": [
+        "/assets/icon.svg"
+      ],
+      "images": {
+        "small": "/drivers/litter-robot5/assets/images/small.png",
+        "large": "/drivers/litter-robot5/assets/images/large.png",
+        "xlarge": "/drivers/litter-robot5/assets/images/xlarge.png"
+      },
+      "class": "other",
+      "capabilities": [
+        "onoff",
+        "clean_cycle_status",
+        "litter_robot_status",
+        "alarm_cat_detected",
+        "alarm_waste_drawer_full",
+        "measure_litter_level_percentage",
+        "measure_waste_drawer_level_percentage",
+        "measure_odometer_clean_cycles",
+        "measure_scoops_saved_count",
+        "alarm_sleep_mode_active",
+        "measure_weight",
+        "clean_cycle_wait_time",
+        "panel_brightness",
+        "dim.night_light",
+        "key_pad_lock_out",
+        "start_clean_cycle",
+        "short_reset_press",
+        "night_light_mode",
+        "alarm_connectivity",
+        "reset_waste_drawer",
+        "alarm_problem",
+        "lr5_fault_details",
+        "sleep_mode_enabled",
+        "alarm_sleep_mode_scheduled",
+        "sleep_mode_start_time",
+        "sleep_mode_end_time",
+        "alarm_lr5_filter_due",
+        "measure_lr5_filter_days_remaining",
+        "lr5_filter_replacement_date",
+        "lr5_reset_filter",
+        "measure_lr5_visits_today",
+        "measure_lr5_urine_visits_today",
+        "measure_lr5_feces_visits_today",
+        "lr5_last_visit_time",
+        "lr5_last_pet_name",
+        "lr5_last_waste_type",
+        "lr5_history_status"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "insightsTitleTrue": {
+            "en": "Turned on",
+            "nl": "Aangezet",
+            "da": "Tændt",
+            "de": "Eingeschaltet",
+            "es": "Encendido",
+            "fr": "Activé",
+            "it": "Attivato",
+            "no": "Aktivert",
+            "sv": "Aktiverad",
+            "pl": "Włączone",
+            "ru": "Включено",
+            "ko": "전원 켜짐"
+          },
+          "insightsTitleFalse": {
+            "en": "Turned off",
+            "nl": "Uitgezet",
+            "da": "Slukket",
+            "de": "Ausgeschaltet",
+            "es": "Apagado",
+            "fr": "Désactivé",
+            "it": "Disattivato",
+            "no": "Deaktivert",
+            "sv": "Inaktiverad",
+            "pl": "Wyłączone",
+            "ru": "Выключено",
+            "ko": "전원 꺼짐"
+          }
+        },
+        "alarm_connectivity": {
+          "title": {
+            "en": "Connection issue",
+            "nl": "Verbindingsprobleem",
+            "da": "Forbindelsesproblem",
+            "de": "Verbindungsproblem",
+            "es": "Problema de conexión",
+            "fr": "Problème de connexion",
+            "it": "Problema di connessione",
+            "no": "Tilkoblingsproblem",
+            "sv": "Anslutningsproblem",
+            "pl": "Problem z połączeniem",
+            "ru": "Проблема с подключением",
+            "ko": "연결 문제"
+          },
+          "insightsTitleTrue": {
+            "en": "Connection lost",
+            "nl": "Verbinding verbroken",
+            "da": "Forbindelse mistet",
+            "de": "Verbindung verloren",
+            "es": "Conexión perdida",
+            "fr": "Connexion perdue",
+            "it": "Connessione persa",
+            "no": "Tilkobling mistet",
+            "sv": "Anslutning förlorad",
+            "pl": "Utracono połączenie",
+            "ru": "Соединение потеряно",
+            "ko": "연결 끊김"
+          },
+          "insightsTitleFalse": {
+            "en": "Connection restored",
+            "nl": "Verbinding hersteld",
+            "da": "Forbindelse genoprettet",
+            "de": "Verbindung wiederhergestellt",
+            "es": "Conexión restaurada",
+            "fr": "Connexion rétablie",
+            "it": "Connessione ripristinata",
+            "no": "Tilkobling gjenopprettet",
+            "sv": "Anslutning återställd",
+            "pl": "Połączenie przywrócone",
+            "ru": "Соединение восстановлено",
+            "ko": "연결 복구됨"
+          }
+        },
+        "measure_weight": {
+          "title": {
+            "en": "Last measured weight",
+            "nl": "Laatst gemeten gewicht",
+            "da": "Sidst målte vægt",
+            "de": "Zuletzt gemessenes Gewicht",
+            "es": "Último peso medido",
+            "fr": "Dernier poids mesuré",
+            "it": "Ultimo peso misurato",
+            "no": "Sist målte vekt",
+            "sv": "Senast uppmätt vikt",
+            "pl": "Ostatnia zmierzona waga",
+            "ru": "Последний измеренный вес",
+            "ko": "마지막 측정 무게"
+          }
+        },
+        "dim.night_light": {
+          "title": {
+            "en": "Globe light brightness",
+            "nl": "Nachtlamp helderheid",
+            "de": "Nachtlicht-Helligkeit",
+            "fr": "Luminosité veilleuse",
+            "it": "Luminosità luce notturna",
+            "sv": "Nattlamp ljusstyrka",
+            "no": "Nattlys lysstyrke",
+            "es": "Brillo luz nocturna",
+            "da": "Natlys lysstyrke",
+            "ru": "Яркость ночного света",
+            "pl": "Jasność światła nocnego",
+            "ko": "야간 조명 밝기"
+          }
+        }
+      },
+      "connectivity": [
+        "cloud"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "pair": [
+        {
+          "id": "loading",
+          "template": "loading"
+        },
+        {
+          "id": "login",
+          "template": "login_credentials",
+          "options": {
+            "logo": "whisker-logo.png",
+            "title": {
+              "en": "Log in with your Whisker account",
+              "nl": "Log in met je Whisker-account",
+              "da": "Log ind med din Whisker-konto",
+              "de": "Melden Sie sich mit Ihrem Whisker-Konto an",
+              "es": "Inicia sesión con tu cuenta de Whisker",
+              "fr": "Connectez-vous avec votre compte Whisker",
+              "it": "Accedi con il tuo account Whisker",
+              "no": "Logg inn med Whisker-kontoen din",
+              "sv": "Logga in med ditt Whisker-konto",
+              "pl": "Zaloguj się na swoje konto Whisker",
+              "ru": "Войдите в свой аккаунт Whisker",
+              "ko": "Whisker 계정으로 로그인"
+            },
+            "usernameLabel": {
+              "en": "E-mail address",
+              "nl": "E-mailadres",
+              "da": "E-mail-adresse",
+              "de": "E-Mail Adresse",
+              "es": "Dirección de correo electrónico",
+              "fr": "Adresse e-mail",
+              "it": "Indirizzo e-mail",
+              "no": "E-postadresse",
+              "sv": "E-postadress",
+              "pl": "Adres e-mail",
+              "ru": "Электронная почта",
+              "ko": "이메일 주소"
+            },
+            "usernamePlaceholder": {
+              "en": "john@doe.com",
+              "da": "john@doe.com",
+              "de": "john@doe.com",
+              "es": "john@doe.com",
+              "fr": "john@doe.com",
+              "it": "john@doe.com",
+              "no": "john@doe.com",
+              "sv": "john@doe.com",
+              "pl": "john@doe.com",
+              "ru": "john@doe.com",
+              "ko": "john@doe.com"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "login",
+          "template": "login_credentials",
+          "options": {
+            "logo": "whisker-logo.png",
+            "title": {
+              "en": "Log in with your Whisker account",
+              "nl": "Log in met je Whisker-account",
+              "da": "Log ind med din Whisker-konto",
+              "de": "Melden Sie sich mit Ihrem Whisker-Konto an",
+              "es": "Inicia sesión con tu cuenta de Whisker",
+              "fr": "Connectez-vous avec votre compte Whisker",
+              "it": "Accedi con il tuo account Whisker",
+              "no": "Logg inn med Whisker-kontoen din",
+              "sv": "Logga in med ditt Whisker-konto",
+              "pl": "Zaloguj się na swoje konto Whisker",
+              "ru": "Войдите в свой аккаунт Whisker",
+              "ko": "Whisker 계정으로 로그인"
+            },
+            "usernameLabel": {
+              "en": "E-mail address",
+              "nl": "E-mailadres",
+              "da": "E-mail-adresse",
+              "de": "E-Mail Adresse",
+              "es": "Dirección de correo electrónico",
+              "fr": "Adresse e-mail",
+              "it": "Indirizzo e-mail",
+              "no": "E-postadresse",
+              "sv": "E-postadress",
+              "pl": "Adres e-mail",
+              "ru": "Электронная почта",
+              "ko": "이메일 주소"
+            },
+            "usernamePlaceholder": {
+              "en": "john@doe.com",
+              "da": "john@doe.com",
+              "de": "john@doe.com",
+              "es": "john@doe.com",
+              "fr": "john@doe.com",
+              "it": "john@doe.com",
+              "no": "john@doe.com",
+              "sv": "john@doe.com",
+              "pl": "john@doe.com",
+              "ru": "john@doe.com",
+              "ko": "john@doe.com"
+            }
+          }
+        }
+      ],
+      "id": "litter-robot5",
+      "settings": [
+        {
+          "id": "lr5_history_enabled",
+          "type": "checkbox",
+          "label": {
+            "en": "Retrieve visit history",
+            "nl": "Bezoekgeschiedenis ophalen"
+          },
+          "value": true,
+          "hint": {
+            "en": "Refresh every minute and retain up to 48 hours / 1000 visits locally. New visits can start Flows; initial history is not replayed.",
+            "nl": "Elke minuut vernieuwen; lokaal maximaal 48 uur / 1000 bezoeken bewaren. Nieuwe bezoeken kunnen Flows starten; de eerste geschiedenis wordt niet afgespeeld."
+          }
+        }
+      ]
+    },
+    {
+      "name": {
         "en": "Pet Information",
         "nl": "Huisdier Informatie",
         "de": "Haustier-Informationen",
@@ -4591,6 +5723,26 @@
       "setable": false,
       "uiComponent": "sensor",
       "icon": "/assets/capabilities/alarm_litter_hopper_empty.svg"
+    },
+    "alarm_lr5_filter_due": {
+      "type": "boolean",
+      "title": {
+        "en": "Filter replacement due",
+        "nl": "Filter vervangen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "alarm_lr5_hopper_low": {
+      "type": "boolean",
+      "title": {
+        "en": "LitterHopper litter low",
+        "nl": "Weinig strooisel in LitterHopper"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
     },
     "alarm_sleep_mode_active": {
       "type": "boolean",
@@ -5929,6 +7081,41 @@
             "pl": "Nieznany status LitterHopper",
             "ko": "알 수 없는 LitterHopper 상태"
           }
+        },
+        {
+          "id": "READY",
+          "title": {
+            "en": "Ready",
+            "nl": "Gereed"
+          }
+        },
+        {
+          "id": "LITTER_LOW",
+          "title": {
+            "en": "Litter low",
+            "nl": "Weinig strooisel"
+          }
+        },
+        {
+          "id": "JAMMED",
+          "title": {
+            "en": "Jammed",
+            "nl": "Vastgelopen"
+          }
+        },
+        {
+          "id": "OFFLINE",
+          "title": {
+            "en": "Offline",
+            "nl": "Offline"
+          }
+        },
+        {
+          "id": "NOT_INSTALLED",
+          "title": {
+            "en": "Not attached",
+            "nl": "Niet aangesloten"
+          }
         }
       ]
     },
@@ -6533,6 +7720,116 @@
         }
       ]
     },
+    "lr5_fault_details": {
+      "type": "string",
+      "title": {
+        "en": "Problem details",
+        "nl": "Details van problemen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "lr5_filter_replacement_date": {
+      "type": "string",
+      "title": {
+        "en": "Filter replacement date",
+        "nl": "Datum filtervervanging"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "lr5_history_status": {
+      "type": "enum",
+      "title": {
+        "en": "Visit history",
+        "nl": "Bezoekgeschiedenis"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "values": [
+        {
+          "id": "up_to_date",
+          "title": {
+            "en": "Up to date",
+            "nl": "Bijgewerkt"
+          }
+        },
+        {
+          "id": "partial",
+          "title": {
+            "en": "Incomplete history",
+            "nl": "Onvolledige geschiedenis"
+          }
+        },
+        {
+          "id": "unavailable",
+          "title": {
+            "en": "Temporarily unavailable",
+            "nl": "Tijdelijk niet beschikbaar"
+          }
+        },
+        {
+          "id": "disabled",
+          "title": {
+            "en": "Disabled",
+            "nl": "Uitgeschakeld"
+          }
+        }
+      ]
+    },
+    "lr5_hopper_enabled": {
+      "type": "boolean",
+      "title": {
+        "en": "LitterHopper enabled",
+        "nl": "LitterHopper ingeschakeld"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "lr5_last_pet_name": {
+      "type": "string",
+      "title": {
+        "en": "Last visiting pet",
+        "nl": "Laatste bezoeker"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "lr5_last_visit_time": {
+      "type": "string",
+      "title": {
+        "en": "Last visit",
+        "nl": "Laatste bezoek"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "lr5_last_waste_type": {
+      "type": "string",
+      "title": {
+        "en": "Last visit waste type",
+        "nl": "Type van laatste bezoek"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "lr5_reset_filter": {
+      "type": "boolean",
+      "title": {
+        "en": "Confirm filter replacement",
+        "nl": "Filtervervanging bevestigen"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "button"
+    },
     "measure_clean_cycles_since_empty": {
       "title": {
         "en": "Clean cycles since empty",
@@ -6604,6 +7901,88 @@
       },
       "uiComponent": "sensor",
       "insights": true
+    },
+    "measure_lr5_feces_visits_today": {
+      "type": "number",
+      "title": {
+        "en": "Feces visits today",
+        "nl": "Ontlastingsbezoeken vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "min": 0,
+      "decimals": 0,
+      "insights": true,
+      "units": {
+        "en": "visits",
+        "nl": "bezoeken"
+      }
+    },
+    "measure_lr5_filter_days_remaining": {
+      "type": "number",
+      "title": {
+        "en": "Days until filter replacement",
+        "nl": "Dagen tot filtervervanging"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "units": {
+        "en": "days",
+        "nl": "dagen"
+      },
+      "decimals": 0
+    },
+    "measure_lr5_last_visit_weight": {
+      "type": "number",
+      "title": {
+        "en": "Last visit weight",
+        "nl": "Gewicht bij laatste bezoek"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "min": 0,
+      "decimals": 0,
+      "units": {
+        "en": "g",
+        "nl": "g"
+      }
+    },
+    "measure_lr5_urine_visits_today": {
+      "type": "number",
+      "title": {
+        "en": "Urine visits today",
+        "nl": "Urinebezoeken vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "min": 0,
+      "decimals": 0,
+      "insights": true,
+      "units": {
+        "en": "visits",
+        "nl": "bezoeken"
+      }
+    },
+    "measure_lr5_visits_today": {
+      "type": "number",
+      "title": {
+        "en": "Visits today",
+        "nl": "Bezoeken vandaag"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "min": 0,
+      "decimals": 0,
+      "insights": true,
+      "units": {
+        "en": "visits",
+        "nl": "bezoeken"
+      }
     },
     "measure_odometer_clean_cycles": {
       "title": {

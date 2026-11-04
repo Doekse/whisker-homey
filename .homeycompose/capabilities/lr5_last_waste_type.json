@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Last visit waste type",
+    "nl": "Type van laatste bezoek"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

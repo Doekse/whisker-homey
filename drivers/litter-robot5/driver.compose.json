@@ -1,0 +1,294 @@
+{
+  "name": {
+    "en": "Litter-Robot 5 / 5 Pro",
+    "nl": "Litter-Robot 5 / 5 Pro",
+    "de": "Litter-Robot 5 / 5 Pro",
+    "fr": "Litter-Robot 5 / 5 Pro",
+    "it": "Litter-Robot 5 / 5 Pro",
+    "sv": "Litter-Robot 5 / 5 Pro",
+    "no": "Litter-Robot 5 / 5 Pro",
+    "es": "Litter-Robot 5 / 5 Pro",
+    "da": "Litter-Robot 5 / 5 Pro",
+    "ru": "Litter-Robot 5 / 5 Pro",
+    "pl": "Litter-Robot 5 / 5 Pro",
+    "ko": "Litter-Robot 5 / 5 Pro"
+  },
+  "icon": [
+    "/assets/icon.svg"
+  ],
+  "images": {
+    "small": "/drivers/litter-robot5/assets/images/small.png",
+    "large": "/drivers/litter-robot5/assets/images/large.png",
+    "xlarge": "/drivers/litter-robot5/assets/images/xlarge.png"
+  },
+  "class": "other",
+  "capabilities": [
+    "onoff",
+    "clean_cycle_status",
+    "litter_robot_status",
+    "alarm_cat_detected",
+    "alarm_waste_drawer_full",
+    "measure_litter_level_percentage",
+    "measure_waste_drawer_level_percentage",
+    "measure_odometer_clean_cycles",
+    "measure_scoops_saved_count",
+    "alarm_sleep_mode_active",
+    "measure_weight",
+    "clean_cycle_wait_time",
+    "panel_brightness",
+    "dim.night_light",
+    "key_pad_lock_out",
+    "start_clean_cycle",
+    "short_reset_press",
+    "night_light_mode",
+    "alarm_connectivity",
+    "reset_waste_drawer",
+    "alarm_problem",
+    "lr5_fault_details",
+    "sleep_mode_enabled",
+    "alarm_sleep_mode_scheduled",
+    "sleep_mode_start_time",
+    "sleep_mode_end_time",
+    "alarm_lr5_filter_due",
+    "measure_lr5_filter_days_remaining",
+    "lr5_filter_replacement_date",
+    "lr5_reset_filter",
+    "measure_lr5_visits_today",
+    "measure_lr5_urine_visits_today",
+    "measure_lr5_feces_visits_today",
+    "lr5_last_visit_time",
+    "lr5_last_pet_name",
+    "lr5_last_waste_type",
+    "lr5_history_status"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "insightsTitleTrue": {
+        "en": "Turned on",
+        "nl": "Aangezet",
+        "da": "Tændt",
+        "de": "Eingeschaltet",
+        "es": "Encendido",
+        "fr": "Activé",
+        "it": "Attivato",
+        "no": "Aktivert",
+        "sv": "Aktiverad",
+        "pl": "Włączone",
+        "ru": "Включено",
+        "ko": "전원 켜짐"
+      },
+      "insightsTitleFalse": {
+        "en": "Turned off",
+        "nl": "Uitgezet",
+        "da": "Slukket",
+        "de": "Ausgeschaltet",
+        "es": "Apagado",
+        "fr": "Désactivé",
+        "it": "Disattivato",
+        "no": "Deaktivert",
+        "sv": "Inaktiverad",
+        "pl": "Wyłączone",
+        "ru": "Выключено",
+        "ko": "전원 꺼짐"
+      }
+    },
+    "alarm_connectivity": {
+      "title": {
+        "en": "Connection issue",
+        "nl": "Verbindingsprobleem",
+        "da": "Forbindelsesproblem",
+        "de": "Verbindungsproblem",
+        "es": "Problema de conexión",
+        "fr": "Problème de connexion",
+        "it": "Problema di connessione",
+        "no": "Tilkoblingsproblem",
+        "sv": "Anslutningsproblem",
+        "pl": "Problem z połączeniem",
+        "ru": "Проблема с подключением",
+        "ko": "연결 문제"
+      },
+      "insightsTitleTrue": {
+        "en": "Connection lost",
+        "nl": "Verbinding verbroken",
+        "da": "Forbindelse mistet",
+        "de": "Verbindung verloren",
+        "es": "Conexión perdida",
+        "fr": "Connexion perdue",
+        "it": "Connessione persa",
+        "no": "Tilkobling mistet",
+        "sv": "Anslutning förlorad",
+        "pl": "Utracono połączenie",
+        "ru": "Соединение потеряно",
+        "ko": "연결 끊김"
+      },
+      "insightsTitleFalse": {
+        "en": "Connection restored",
+        "nl": "Verbinding hersteld",
+        "da": "Forbindelse genoprettet",
+        "de": "Verbindung wiederhergestellt",
+        "es": "Conexión restaurada",
+        "fr": "Connexion rétablie",
+        "it": "Connessione ripristinata",
+        "no": "Tilkobling gjenopprettet",
+        "sv": "Anslutning återställd",
+        "pl": "Połączenie przywrócone",
+        "ru": "Соединение восстановлено",
+        "ko": "연결 복구됨"
+      }
+    },
+    "measure_weight": {
+      "title": {
+        "en": "Last measured weight",
+        "nl": "Laatst gemeten gewicht",
+        "da": "Sidst målte vægt",
+        "de": "Zuletzt gemessenes Gewicht",
+        "es": "Último peso medido",
+        "fr": "Dernier poids mesuré",
+        "it": "Ultimo peso misurato",
+        "no": "Sist målte vekt",
+        "sv": "Senast uppmätt vikt",
+        "pl": "Ostatnia zmierzona waga",
+        "ru": "Последний измеренный вес",
+        "ko": "마지막 측정 무게"
+      }
+    },
+    "dim.night_light": {
+      "title": {
+        "en": "Globe light brightness",
+        "nl": "Nachtlamp helderheid",
+        "de": "Nachtlicht-Helligkeit",
+        "fr": "Luminosité veilleuse",
+        "it": "Luminosità luce notturna",
+        "sv": "Nattlamp ljusstyrka",
+        "no": "Nattlys lysstyrke",
+        "es": "Brillo luz nocturna",
+        "da": "Natlys lysstyrke",
+        "ru": "Яркость ночного света",
+        "pl": "Jasność światła nocnego",
+        "ko": "야간 조명 밝기"
+      }
+    }
+  },
+  "connectivity": [
+    "cloud"
+  ],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "pair": [
+    {
+      "id": "loading",
+      "template": "loading"
+    },
+    {
+      "id": "login",
+      "template": "login_credentials",
+      "options": {
+        "logo": "whisker-logo.png",
+        "title": {
+          "en": "Log in with your Whisker account",
+          "nl": "Log in met je Whisker-account",
+          "da": "Log ind med din Whisker-konto",
+          "de": "Melden Sie sich mit Ihrem Whisker-Konto an",
+          "es": "Inicia sesión con tu cuenta de Whisker",
+          "fr": "Connectez-vous avec votre compte Whisker",
+          "it": "Accedi con il tuo account Whisker",
+          "no": "Logg inn med Whisker-kontoen din",
+          "sv": "Logga in med ditt Whisker-konto",
+          "pl": "Zaloguj się na swoje konto Whisker",
+          "ru": "Войдите в свой аккаунт Whisker",
+          "ko": "Whisker 계정으로 로그인"
+        },
+        "usernameLabel": {
+          "en": "E-mail address",
+          "nl": "E-mailadres",
+          "da": "E-mail-adresse",
+          "de": "E-Mail Adresse",
+          "es": "Dirección de correo electrónico",
+          "fr": "Adresse e-mail",
+          "it": "Indirizzo e-mail",
+          "no": "E-postadresse",
+          "sv": "E-postadress",
+          "pl": "Adres e-mail",
+          "ru": "Электронная почта",
+          "ko": "이메일 주소"
+        },
+        "usernamePlaceholder": {
+          "en": "john@doe.com",
+          "da": "john@doe.com",
+          "de": "john@doe.com",
+          "es": "john@doe.com",
+          "fr": "john@doe.com",
+          "it": "john@doe.com",
+          "no": "john@doe.com",
+          "sv": "john@doe.com",
+          "pl": "john@doe.com",
+          "ru": "john@doe.com",
+          "ko": "john@doe.com"
+        }
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "repair": [
+    {
+      "id": "login",
+      "template": "login_credentials",
+      "options": {
+        "logo": "whisker-logo.png",
+        "title": {
+          "en": "Log in with your Whisker account",
+          "nl": "Log in met je Whisker-account",
+          "da": "Log ind med din Whisker-konto",
+          "de": "Melden Sie sich mit Ihrem Whisker-Konto an",
+          "es": "Inicia sesión con tu cuenta de Whisker",
+          "fr": "Connectez-vous avec votre compte Whisker",
+          "it": "Accedi con il tuo account Whisker",
+          "no": "Logg inn med Whisker-kontoen din",
+          "sv": "Logga in med ditt Whisker-konto",
+          "pl": "Zaloguj się na swoje konto Whisker",
+          "ru": "Войдите в свой аккаунт Whisker",
+          "ko": "Whisker 계정으로 로그인"
+        },
+        "usernameLabel": {
+          "en": "E-mail address",
+          "nl": "E-mailadres",
+          "da": "E-mail-adresse",
+          "de": "E-Mail Adresse",
+          "es": "Dirección de correo electrónico",
+          "fr": "Adresse e-mail",
+          "it": "Indirizzo e-mail",
+          "no": "E-postadresse",
+          "sv": "E-postadress",
+          "pl": "Adres e-mail",
+          "ru": "Электронная почта",
+          "ko": "이메일 주소"
+        },
+        "usernamePlaceholder": {
+          "en": "john@doe.com",
+          "da": "john@doe.com",
+          "de": "john@doe.com",
+          "es": "john@doe.com",
+          "fr": "john@doe.com",
+          "it": "john@doe.com",
+          "no": "john@doe.com",
+          "sv": "john@doe.com",
+          "pl": "john@doe.com",
+          "ru": "john@doe.com",
+          "ko": "john@doe.com"
+        }
+      }
+    }
+  ]
+}

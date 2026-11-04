@@ -6,7 +6,9 @@
     "node": ">=16"
   },
   "scripts": {
-    "lint": "eslint --ext .js,.ts --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.ts,.cjs --ignore-path .gitignore .",
+    "test:lr5": "node --test tests/lr5*.test.cjs",
+    "test": "node --test tests/*.test.cjs"
   },
   "devDependencies": {
     "graphql": "^16.8.1",

@@ -1,0 +1,10 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "LitterHopper enabled",
+    "nl": "LitterHopper ingeschakeld"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

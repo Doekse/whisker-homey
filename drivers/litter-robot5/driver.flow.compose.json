@@ -1,0 +1,749 @@
+{
+  "triggers": [
+    {
+      "id": "lr5_visit",
+      "title": {
+        "en": "A pet visit is recorded",
+        "nl": "Een huisdierbezoek is geregistreerd"
+      },
+      "tokens": [
+        {
+          "name": "pet_id",
+          "type": "string",
+          "title": {
+            "en": "Pet ID",
+            "nl": "Huisdier-ID"
+          }
+        },
+        {
+          "name": "pet_name",
+          "type": "string",
+          "title": {
+            "en": "Pet name",
+            "nl": "Naam van huisdier"
+          }
+        },
+        {
+          "name": "pet_identified",
+          "type": "boolean",
+          "title": {
+            "en": "Single pet identified",
+            "nl": "Eén huisdier herkend"
+          }
+        },
+        {
+          "name": "weight",
+          "type": "number",
+          "title": {
+            "en": "Weight (g)",
+            "nl": "Gewicht (g)"
+          }
+        },
+        {
+          "name": "has_weight",
+          "type": "boolean",
+          "title": {
+            "en": "Weight available",
+            "nl": "Gewicht beschikbaar"
+          }
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "title": {
+            "en": "Duration (seconds)",
+            "nl": "Duur (seconden)"
+          }
+        },
+        {
+          "name": "has_duration",
+          "type": "boolean",
+          "title": {
+            "en": "Duration available",
+            "nl": "Duur beschikbaar"
+          }
+        },
+        {
+          "name": "waste_type",
+          "type": "string",
+          "title": {
+            "en": "Waste type",
+            "nl": "Type ontlasting"
+          }
+        },
+        {
+          "name": "waste_weight",
+          "type": "number",
+          "title": {
+            "en": "Waste weight (g)",
+            "nl": "Gewicht van ontlasting (g)"
+          }
+        },
+        {
+          "name": "has_waste_weight",
+          "type": "boolean",
+          "title": {
+            "en": "Valid waste weight",
+            "nl": "Geldig ontlastingsgewicht"
+          }
+        },
+        {
+          "name": "visit_time",
+          "type": "string",
+          "title": {
+            "en": "Visit time (ISO)",
+            "nl": "Tijd van bezoek (ISO)"
+          }
+        },
+        {
+          "name": "delayed",
+          "type": "boolean",
+          "title": {
+            "en": "Recovered after a delay",
+            "nl": "Met vertraging opgehaald"
+          }
+        }
+      ],
+      "hint": {
+        "en": "Uses Whisker activity history. Events may arrive later; initial history is not replayed. Missing measurements are 0 with their availability flag false.",
+        "nl": "Gebruikt de Whisker-bezoekgeschiedenis. Gebeurtenissen kunnen later binnenkomen; de eerste geschiedenis wordt niet afgespeeld. Ontbrekende metingen zijn 0 en hun beschikbaarheidsvlag is onwaar."
+      }
+    },
+    {
+      "id": "lr5_pet_visit",
+      "title": {
+        "en": "A visit from a specific pet is recorded",
+        "nl": "Een bezoek van een gekozen huisdier is geregistreerd"
+      },
+      "tokens": [
+        {
+          "name": "pet_id",
+          "type": "string",
+          "title": {
+            "en": "Pet ID",
+            "nl": "Huisdier-ID"
+          }
+        },
+        {
+          "name": "pet_name",
+          "type": "string",
+          "title": {
+            "en": "Pet name",
+            "nl": "Naam van huisdier"
+          }
+        },
+        {
+          "name": "pet_identified",
+          "type": "boolean",
+          "title": {
+            "en": "Single pet identified",
+            "nl": "Eén huisdier herkend"
+          }
+        },
+        {
+          "name": "weight",
+          "type": "number",
+          "title": {
+            "en": "Weight (g)",
+            "nl": "Gewicht (g)"
+          }
+        },
+        {
+          "name": "has_weight",
+          "type": "boolean",
+          "title": {
+            "en": "Weight available",
+            "nl": "Gewicht beschikbaar"
+          }
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "title": {
+            "en": "Duration (seconds)",
+            "nl": "Duur (seconden)"
+          }
+        },
+        {
+          "name": "has_duration",
+          "type": "boolean",
+          "title": {
+            "en": "Duration available",
+            "nl": "Duur beschikbaar"
+          }
+        },
+        {
+          "name": "waste_type",
+          "type": "string",
+          "title": {
+            "en": "Waste type",
+            "nl": "Type ontlasting"
+          }
+        },
+        {
+          "name": "waste_weight",
+          "type": "number",
+          "title": {
+            "en": "Waste weight (g)",
+            "nl": "Gewicht van ontlasting (g)"
+          }
+        },
+        {
+          "name": "has_waste_weight",
+          "type": "boolean",
+          "title": {
+            "en": "Valid waste weight",
+            "nl": "Geldig ontlastingsgewicht"
+          }
+        },
+        {
+          "name": "visit_time",
+          "type": "string",
+          "title": {
+            "en": "Visit time (ISO)",
+            "nl": "Tijd van bezoek (ISO)"
+          }
+        },
+        {
+          "name": "delayed",
+          "type": "boolean",
+          "title": {
+            "en": "Recovered after a delay",
+            "nl": "Met vertraging opgehaald"
+          }
+        }
+      ],
+      "hint": {
+        "en": "Uses Whisker activity history. Events may arrive later; initial history is not replayed. Missing measurements are 0 with their availability flag false.",
+        "nl": "Gebruikt de Whisker-bezoekgeschiedenis. Gebeurtenissen kunnen later binnenkomen; de eerste geschiedenis wordt niet afgespeeld. Ontbrekende metingen zijn 0 en hun beschikbaarheidsvlag is onwaar."
+      },
+      "args": [
+        {
+          "name": "pet",
+          "type": "autocomplete",
+          "title": {
+            "en": "Pet",
+            "nl": "Huisdier"
+          }
+        }
+      ],
+      "titleFormatted": {
+        "en": "A visit from [[pet]] is recorded",
+        "nl": "Een bezoek van [[pet]] is geregistreerd"
+      }
+    },
+    {
+      "id": "lr5_urine_visit",
+      "title": {
+        "en": "A urine visit is recorded",
+        "nl": "Een urinebezoek is geregistreerd"
+      },
+      "tokens": [
+        {
+          "name": "pet_id",
+          "type": "string",
+          "title": {
+            "en": "Pet ID",
+            "nl": "Huisdier-ID"
+          }
+        },
+        {
+          "name": "pet_name",
+          "type": "string",
+          "title": {
+            "en": "Pet name",
+            "nl": "Naam van huisdier"
+          }
+        },
+        {
+          "name": "pet_identified",
+          "type": "boolean",
+          "title": {
+            "en": "Single pet identified",
+            "nl": "Eén huisdier herkend"
+          }
+        },
+        {
+          "name": "weight",
+          "type": "number",
+          "title": {
+            "en": "Weight (g)",
+            "nl": "Gewicht (g)"
+          }
+        },
+        {
+          "name": "has_weight",
+          "type": "boolean",
+          "title": {
+            "en": "Weight available",
+            "nl": "Gewicht beschikbaar"
+          }
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "title": {
+            "en": "Duration (seconds)",
+            "nl": "Duur (seconden)"
+          }
+        },
+        {
+          "name": "has_duration",
+          "type": "boolean",
+          "title": {
+            "en": "Duration available",
+            "nl": "Duur beschikbaar"
+          }
+        },
+        {
+          "name": "waste_type",
+          "type": "string",
+          "title": {
+            "en": "Waste type",
+            "nl": "Type ontlasting"
+          }
+        },
+        {
+          "name": "waste_weight",
+          "type": "number",
+          "title": {
+            "en": "Waste weight (g)",
+            "nl": "Gewicht van ontlasting (g)"
+          }
+        },
+        {
+          "name": "has_waste_weight",
+          "type": "boolean",
+          "title": {
+            "en": "Valid waste weight",
+            "nl": "Geldig ontlastingsgewicht"
+          }
+        },
+        {
+          "name": "visit_time",
+          "type": "string",
+          "title": {
+            "en": "Visit time (ISO)",
+            "nl": "Tijd van bezoek (ISO)"
+          }
+        },
+        {
+          "name": "delayed",
+          "type": "boolean",
+          "title": {
+            "en": "Recovered after a delay",
+            "nl": "Met vertraging opgehaald"
+          }
+        }
+      ],
+      "hint": {
+        "en": "Uses Whisker activity history. Events may arrive later; initial history is not replayed. Missing measurements are 0 with their availability flag false.",
+        "nl": "Gebruikt de Whisker-bezoekgeschiedenis. Gebeurtenissen kunnen later binnenkomen; de eerste geschiedenis wordt niet afgespeeld. Ontbrekende metingen zijn 0 en hun beschikbaarheidsvlag is onwaar."
+      }
+    },
+    {
+      "id": "lr5_feces_visit",
+      "title": {
+        "en": "A feces visit is recorded",
+        "nl": "Een ontlastingsbezoek is geregistreerd"
+      },
+      "tokens": [
+        {
+          "name": "pet_id",
+          "type": "string",
+          "title": {
+            "en": "Pet ID",
+            "nl": "Huisdier-ID"
+          }
+        },
+        {
+          "name": "pet_name",
+          "type": "string",
+          "title": {
+            "en": "Pet name",
+            "nl": "Naam van huisdier"
+          }
+        },
+        {
+          "name": "pet_identified",
+          "type": "boolean",
+          "title": {
+            "en": "Single pet identified",
+            "nl": "Eén huisdier herkend"
+          }
+        },
+        {
+          "name": "weight",
+          "type": "number",
+          "title": {
+            "en": "Weight (g)",
+            "nl": "Gewicht (g)"
+          }
+        },
+        {
+          "name": "has_weight",
+          "type": "boolean",
+          "title": {
+            "en": "Weight available",
+            "nl": "Gewicht beschikbaar"
+          }
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "title": {
+            "en": "Duration (seconds)",
+            "nl": "Duur (seconden)"
+          }
+        },
+        {
+          "name": "has_duration",
+          "type": "boolean",
+          "title": {
+            "en": "Duration available",
+            "nl": "Duur beschikbaar"
+          }
+        },
+        {
+          "name": "waste_type",
+          "type": "string",
+          "title": {
+            "en": "Waste type",
+            "nl": "Type ontlasting"
+          }
+        },
+        {
+          "name": "waste_weight",
+          "type": "number",
+          "title": {
+            "en": "Waste weight (g)",
+            "nl": "Gewicht van ontlasting (g)"
+          }
+        },
+        {
+          "name": "has_waste_weight",
+          "type": "boolean",
+          "title": {
+            "en": "Valid waste weight",
+            "nl": "Geldig ontlastingsgewicht"
+          }
+        },
+        {
+          "name": "visit_time",
+          "type": "string",
+          "title": {
+            "en": "Visit time (ISO)",
+            "nl": "Tijd van bezoek (ISO)"
+          }
+        },
+        {
+          "name": "delayed",
+          "type": "boolean",
+          "title": {
+            "en": "Recovered after a delay",
+            "nl": "Met vertraging opgehaald"
+          }
+        }
+      ],
+      "hint": {
+        "en": "Uses Whisker activity history. Events may arrive later; initial history is not replayed. Missing measurements are 0 with their availability flag false.",
+        "nl": "Gebruikt de Whisker-bezoekgeschiedenis. Gebeurtenissen kunnen later binnenkomen; de eerste geschiedenis wordt niet afgespeeld. Ontbrekende metingen zijn 0 en hun beschikbaarheidsvlag is onwaar."
+      }
+    },
+    {
+      "id": "lr5_fault_changed",
+      "title": {
+        "en": "Problem details change",
+        "nl": "De details van een probleem veranderen"
+      },
+      "tokens": [
+        {
+          "name": "faults",
+          "type": "string",
+          "title": {
+            "en": "Problem details",
+            "nl": "Probleemdetails"
+          }
+        },
+        {
+          "name": "codes",
+          "type": "string",
+          "title": {
+            "en": "Problem codes",
+            "nl": "Probleemcodes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lr5_filter_due",
+      "title": {
+        "en": "Filter replacement becomes due",
+        "nl": "Het filter moet worden vervangen"
+      }
+    },
+    {
+      "id": "lr5_hopper_low",
+      "title": {
+        "en": "The LitterHopper litter level becomes low",
+        "nl": "Het strooiselniveau van de LitterHopper wordt laag"
+      },
+      "$filter": {
+        "capabilities": "alarm_lr5_hopper_low"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "id": "lr5_pet_visited_today",
+      "title": {
+        "en": "A specific pet has visited today",
+        "nl": "Een gekozen huisdier is vandaag geweest"
+      },
+      "args": [
+        {
+          "name": "pet",
+          "type": "autocomplete",
+          "title": {
+            "en": "Pet",
+            "nl": "Huisdier"
+          }
+        }
+      ],
+      "hint": {
+        "en": "An incomplete history cannot prove that no visit occurred.",
+        "nl": "Een onvolledige geschiedenis kan niet aantonen dat er geen bezoek was."
+      },
+      "titleFormatted": {
+        "en": "[[pet]] has visited today",
+        "nl": "[[pet]] is vandaag geweest"
+      }
+    },
+    {
+      "id": "lr5_filter_due_condition",
+      "title": {
+        "en": "Filter replacement is due",
+        "nl": "Het filter moet worden vervangen"
+      }
+    },
+    {
+      "id": "lr5_hopper_enabled_condition",
+      "title": {
+        "en": "The LitterHopper is enabled",
+        "nl": "De LitterHopper is ingeschakeld"
+      },
+      "$filter": {
+        "capabilities": "lr5_hopper_enabled"
+      }
+    },
+    {
+      "id": "lr5_hopper_low_condition",
+      "title": {
+        "en": "The LitterHopper litter level is low",
+        "nl": "Het strooiselniveau van de LitterHopper is laag"
+      },
+      "$filter": {
+        "capabilities": "alarm_lr5_hopper_low"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "lr5_set_sleep_schedule",
+      "title": {
+        "en": "Set sleep schedule",
+        "nl": "Slaapschema instellen"
+      },
+      "titleFormatted": {
+        "en": "Sleep on [[day]] from [[start]] until [[end]]",
+        "nl": "Slapen op [[day]] van [[start]] tot [[end]]"
+      },
+      "args": [
+        {
+          "name": "day",
+          "type": "dropdown",
+          "title": {
+            "en": "Day",
+            "nl": "Dag"
+          },
+          "values": [
+            {
+              "id": "all",
+              "label": {
+                "en": "Every day",
+                "nl": "Iedere dag"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Sunday",
+                "nl": "Zondag"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Monday",
+                "nl": "Maandag"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Tuesday",
+                "nl": "Dinsdag"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Wednesday",
+                "nl": "Woensdag"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Thursday",
+                "nl": "Donderdag"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Friday",
+                "nl": "Vrijdag"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Saturday",
+                "nl": "Zaterdag"
+              }
+            }
+          ]
+        },
+        {
+          "name": "start",
+          "type": "text",
+          "title": {
+            "en": "Start (HH:mm)",
+            "nl": "Begin (HH:mm)"
+          },
+          "placeholder": {
+            "en": "23:00",
+            "nl": "23:00"
+          }
+        },
+        {
+          "name": "end",
+          "type": "text",
+          "title": {
+            "en": "End (HH:mm)",
+            "nl": "Einde (HH:mm)"
+          },
+          "placeholder": {
+            "en": "07:00",
+            "nl": "07:00"
+          }
+        }
+      ],
+      "hint": {
+        "en": "Uses the robot's timezone. For an overnight window, choose the wake-up day (Sunday=0 in the API). Other days are preserved.",
+        "nl": "Gebruikt de tijdzone van de robot. Kies bij een nachtelijk tijdvak de dag van wakker worden (zondag=0 in de API). Andere dagen blijven behouden."
+      }
+    },
+    {
+      "id": "lr5_disable_sleep_schedule",
+      "title": {
+        "en": "Disable sleep schedule",
+        "nl": "Slaapschema uitschakelen"
+      },
+      "args": [
+        {
+          "name": "day",
+          "type": "dropdown",
+          "title": {
+            "en": "Day",
+            "nl": "Dag"
+          },
+          "values": [
+            {
+              "id": "all",
+              "label": {
+                "en": "Every day",
+                "nl": "Iedere dag"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Sunday",
+                "nl": "Zondag"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Monday",
+                "nl": "Maandag"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Tuesday",
+                "nl": "Dinsdag"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Wednesday",
+                "nl": "Woensdag"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Thursday",
+                "nl": "Donderdag"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Friday",
+                "nl": "Vrijdag"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Saturday",
+                "nl": "Zaterdag"
+              }
+            }
+          ]
+        }
+      ],
+      "titleFormatted": {
+        "en": "Disable sleep schedule for [[day]]",
+        "nl": "Slaapschema uitschakelen voor [[day]]"
+      }
+    },
+    {
+      "id": "lr5_confirm_filter_replacement",
+      "title": {
+        "en": "Confirm that the filter was replaced",
+        "nl": "Bevestigen dat het filter is vervangen"
+      },
+      "hint": {
+        "en": "Resets the filter replacement counter. Only run after physically replacing the filter.",
+        "nl": "Reset de filtervervangingsteller. Alleen uitvoeren nadat het filter daadwerkelijk is vervangen."
+      }
+    }
+  ]
+}

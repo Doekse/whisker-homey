@@ -9,7 +9,10 @@
     "invalid_night_light_brightness": "Valor de brillo de la luz nocturna no válido",
     "invalid_night_light_mode": "Modo de luz nocturna no válido",
     "robot_not_found": "Robot con número de serie __serial__ no encontrado",
-    "network_unreachable": "No se puede acceder a la nube de Whisker. Comprueba tu red o la configuración DNS."
+    "network_unreachable": "No se puede acceder a la nube de Whisker. Comprueba tu red o la configuración DNS.",
+    "invalid_boolean_value": "Valor de encendido/apagado no válido",
+    "invalid_api_response": "Respuesta inesperada de la API de Whisker. Inténtalo de nuevo.",
+    "authentication_refreshed_retry": "Tu sesión se ha renovado. Vuelve a ejecutar el comando."
   },
   "pairing": {
     "credentials_required": "Se requieren nombre de usuario y contraseña para emparejar",

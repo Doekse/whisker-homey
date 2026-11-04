@@ -1,0 +1,15 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Days until filter replacement",
+    "nl": "Dagen tot filtervervanging"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "days",
+    "nl": "dagen"
+  },
+  "decimals": 0
+}

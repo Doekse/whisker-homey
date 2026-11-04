@@ -1,0 +1,10 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Confirm filter replacement",
+    "nl": "Filtervervanging bevestigen"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "button"
+}

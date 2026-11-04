@@ -1,0 +1,157 @@
+{
+  "serial": "LR5-00-00-00-0000-000002",
+  "userId": "000001",
+  "type": "LR5_PRO",
+  "name": "Litter-Robot 5 Pro test",
+  "isOnboarded": true,
+  "timezone": "America/Denver",
+  "language": "en",
+  "updatedAt": "2025-11-26T23:36:36.848000Z",
+  "state": {
+    "serial": "LR5-00-00-00-0000-000002",
+    "userId": "000001",
+    "powerStatus": "On",
+    "isOnline": true,
+    "state": "StRobotIdle",
+    "type": "LR5_PRO",
+    "isSleeping": false,
+    "isNightLightOn": true,
+    "espFirmwareVersion": "v2.5.6",
+    "stmFirmwareVersion": "v5.7.4 2904_106",
+    "wifiRssi": 58,
+    "dfiLevelPercent": 16,
+    "isOnlineUpdatedAt": "2025-12-11T04:26:39Z",
+    "setupDateTime": "2025-11-28T20:01:58.649000Z",
+    "firstSetupDateTime": null,
+    "lastSeen": "2025-12-11T04:26:39Z",
+    "weightSensor": 1104.0,
+    "globeLitterLevel": 431,
+    "optimalLitterLevel": 434,
+    "lastResetOdometerCleanCycles": 1,
+    "hopperStatus": "Disabled",
+    "hopperFault": null,
+    "isHopperInstalled": false,
+    "dfiFullCounter": 0,
+    "odometerCleanCycles": 81,
+    "isLaserDirty": false,
+    "cycleState": "StProcess",
+    "cycleType": "StCycleIdle",
+    "catDetect": "WeightClear",
+    "isBonnetRemoved": false,
+    "isDrawerRemoved": false,
+    "isDrawerFull": false,
+    "extendedScaleActivity": false,
+    "globeMotorFaultStatus": "MtrFaultClear",
+    "globeMotorRetractFaultStatus": "MtrFaultClear",
+    "pinchStatus": "Clear",
+    "isUsbFaultDetected": false,
+    "isGasSensorFaultDetected": false,
+    "isKeypadLockout": false,
+    "odometerEmptyCycles": 0,
+    "odometerFilterCycles": 3,
+    "odometerPowerCycles": 14,
+    "espUpdateStatus": "UpdateSuccessful",
+    "stmUpdateStatus": "UpdateSuccessful",
+    "displayCode": "DcModeIdle",
+    "status": "Ready",
+    "statusIndicator": {
+      "title": "Ready",
+      "type": "READY"
+    },
+    "firmwareVersions": {
+      "mcuVersion": {
+        "title": "Robot Firmware",
+        "value": "v5.7.5 2904_0106"
+      },
+      "cameraVersion": {
+        "title": "Camera Firmware",
+        "value": "1.2.2-1233"
+      },
+      "wifiVersion": null,
+      "edgeVersion": {
+        "title": "Edge Firmware",
+        "value": "1.5.22"
+      },
+      "aiVersion": {
+        "title": "AI Firmware",
+        "value": "0.0.41"
+      }
+    },
+    "scoopsSaved": 80,
+    "litterLevelPercent": 100.0,
+    "globeLitterLevelIndicator": "Optimal",
+    "privacyMode": "Normal",
+    "isFirmwareUpdating": false
+  },
+  "nextFilterReplacementDate": "2025-12-28T20:01:58.649000Z",
+  "panelSettings": {
+    "brightness": 70,
+    "displayIntensity": "Low",
+    "sleepTime": 0,
+    "wakeTime": 0,
+    "isKeypadLocked": false
+  },
+  "nightLightSettings": {
+    "mode": "Auto",
+    "brightness": 70,
+    "color": "#665F5F"
+  },
+  "litterRobotSettings": {
+    "isSmartWeightEnabled": false,
+    "optimalLitterLevel": 434,
+    "cycleDelay": 7
+  },
+  "sleepSchedules": [
+    {
+      "dayOfWeek": 0,
+      "isEnabled": false,
+      "sleepTime": 0,
+      "wakeTime": 0
+    },
+    {
+      "dayOfWeek": 1,
+      "isEnabled": false,
+      "sleepTime": 0,
+      "wakeTime": 0
+    },
+    {
+      "dayOfWeek": 2,
+      "isEnabled": false,
+      "sleepTime": 0,
+      "wakeTime": 0
+    },
+    {
+      "dayOfWeek": 3,
+      "isEnabled": false,
+      "sleepTime": 0,
+      "wakeTime": 0
+    },
+    {
+      "dayOfWeek": 4,
+      "isEnabled": false,
+      "sleepTime": 0,
+      "wakeTime": 0
+    },
+    {
+      "dayOfWeek": 5,
+      "isEnabled": false,
+      "sleepTime": 0,
+      "wakeTime": 0
+    },
+    {
+      "dayOfWeek": 6,
+      "isEnabled": false,
+      "sleepTime": 0,
+      "wakeTime": 0
+    }
+  ],
+  "soundSettings": {
+    "volume": 50,
+    "cameraAudioEnabled": false
+  },
+  "cameraMetadata": {
+    "deviceId": "test-camera-device",
+    "serialNumber": "TEST-CAMERA-SERIAL",
+    "spaceId": "test-camera-space"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Problem details",
+    "nl": "Details van problemen"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

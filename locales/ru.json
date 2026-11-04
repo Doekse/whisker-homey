@@ -9,7 +9,10 @@
     "invalid_night_light_brightness": "Неверное значение яркости ночного света",
     "invalid_night_light_mode": "Неверный режим ночного света",
     "robot_not_found": "Робот с серийным номером __serial__ не найден",
-    "network_unreachable": "Не удаётся подключиться к облаку Whisker. Проверьте сеть или настройки DNS."
+    "network_unreachable": "Не удаётся подключиться к облаку Whisker. Проверьте сеть или настройки DNS.",
+    "invalid_boolean_value": "Недопустимое значение включения/выключения",
+    "invalid_api_response": "Неожиданный ответ API Whisker. Повторите попытку.",
+    "authentication_refreshed_retry": "Сеанс обновлён. Повторите команду."
   },
   "pairing": {
     "credentials_required": "Для сопряжения требуются имя пользователя и пароль",
